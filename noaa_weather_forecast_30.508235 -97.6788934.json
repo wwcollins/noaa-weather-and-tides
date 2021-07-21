@@ -1,0 +1,264 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -97.704962800000004,
+                    30.5097533
+                ],
+                [
+                    -97.7044365,
+                    30.487026100000001
+                ],
+                [
+                    -97.678064599999999,
+                    30.487477200000001
+                ],
+                [
+                    -97.678585699999999,
+                    30.5102045
+                ],
+                [
+                    -97.704962800000004,
+                    30.5097533
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "updated": "2020-08-04T22:43:40+00:00",
+        "units": "us",
+        "forecastGenerator": "BaselineForecastGenerator",
+        "generatedAt": "2020-08-04T23:24:25+00:00",
+        "updateTime": "2020-08-04T22:43:40+00:00",
+        "validTimes": "2020-08-04T16:00:00+00:00/P7DT21H",
+        "elevation": {
+            "value": 234.0864,
+            "unitCode": "unit:m"
+        },
+        "periods": [
+            {
+                "number": 1,
+                "name": "Tonight",
+                "startTime": "2020-08-04T18:00:00-05:00",
+                "endTime": "2020-08-05T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 76,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/tsra_hi/few?size=medium",
+                "shortForecast": "Slight Chance Showers And Thunderstorms then Mostly Clear",
+                "detailedForecast": "A slight chance of showers and thunderstorms before 10pm. Mostly clear, with a low around 76. South wind around 5 mph."
+            },
+            {
+                "number": 2,
+                "name": "Wednesday",
+                "startTime": "2020-08-05T06:00:00-05:00",
+                "endTime": "2020-08-05T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 99,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "SSW",
+                "icon": "https://api.weather.gov/icons/land/day/hot/tsra_hi?size=medium",
+                "shortForecast": "Sunny then Slight Chance Showers And Thunderstorms",
+                "detailedForecast": "A slight chance of showers and thunderstorms after 1pm. Sunny, with a high near 99. Heat index values as high as 102. South southwest wind 5 to 10 mph."
+            },
+            {
+                "number": 3,
+                "name": "Wednesday Night",
+                "startTime": "2020-08-05T18:00:00-05:00",
+                "endTime": "2020-08-06T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 75,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/tsra_hi/few?size=medium",
+                "shortForecast": "Slight Chance Showers And Thunderstorms then Mostly Clear",
+                "detailedForecast": "A slight chance of showers and thunderstorms before 7pm. Mostly clear, with a low around 75. South wind 5 to 10 mph."
+            },
+            {
+                "number": 4,
+                "name": "Thursday",
+                "startTime": "2020-08-06T06:00:00-05:00",
+                "endTime": "2020-08-06T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 100,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/hot?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 100. Heat index values as high as 105. South wind around 5 mph."
+            },
+            {
+                "number": 5,
+                "name": "Thursday Night",
+                "startTime": "2020-08-06T18:00:00-05:00",
+                "endTime": "2020-08-07T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 75,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 75. South wind around 5 mph."
+            },
+            {
+                "number": 6,
+                "name": "Friday",
+                "startTime": "2020-08-07T06:00:00-05:00",
+                "endTime": "2020-08-07T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 100,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/hot?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 100. South wind around 5 mph."
+            },
+            {
+                "number": 7,
+                "name": "Friday Night",
+                "startTime": "2020-08-07T18:00:00-05:00",
+                "endTime": "2020-08-08T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 75,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 75. South southeast wind around 5 mph."
+            },
+            {
+                "number": 8,
+                "name": "Saturday",
+                "startTime": "2020-08-08T06:00:00-05:00",
+                "endTime": "2020-08-08T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 99,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/hot?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 99. South wind 0 to 5 mph."
+            },
+            {
+                "number": 9,
+                "name": "Saturday Night",
+                "startTime": "2020-08-08T18:00:00-05:00",
+                "endTime": "2020-08-09T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 76,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 76. South southeast wind around 5 mph."
+            },
+            {
+                "number": 10,
+                "name": "Sunday",
+                "startTime": "2020-08-09T06:00:00-05:00",
+                "endTime": "2020-08-09T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 99,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/hot?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 99."
+            },
+            {
+                "number": 11,
+                "name": "Sunday Night",
+                "startTime": "2020-08-09T18:00:00-05:00",
+                "endTime": "2020-08-10T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 76,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 76."
+            },
+            {
+                "number": 12,
+                "name": "Monday",
+                "startTime": "2020-08-10T06:00:00-05:00",
+                "endTime": "2020-08-10T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 99,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/hot?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 99."
+            },
+            {
+                "number": 13,
+                "name": "Monday Night",
+                "startTime": "2020-08-10T18:00:00-05:00",
+                "endTime": "2020-08-11T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 76,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 76."
+            },
+            {
+                "number": 14,
+                "name": "Tuesday",
+                "startTime": "2020-08-11T06:00:00-05:00",
+                "endTime": "2020-08-11T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 99,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/hot?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 99."
+            }
+        ]
+    }
+}

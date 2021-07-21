@@ -1,0 +1,108 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b56e50ac3b78225b469c75a276ec53480f7dbac5.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b56e50ac3b78225b469c75a276ec53480f7dbac5.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.b56e50ac3b78225b469c75a276ec53480f7dbac5.001.1",
+                "areaDesc": "District of Columbia; Frederick; Northwest Montgomery; Central and Southeast Montgomery; Prince Georges; Charles; St. Marys; Calvert; Western Loudoun; Eastern Loudoun; Prince William/Manassas/Manassas Park; Fairfax; Arlington/Falls Church/Alexandria",
+                "geocode": {
+                    "SAME": [
+                        "011001",
+                        "024021",
+                        "024031",
+                        "024033",
+                        "024017",
+                        "024037",
+                        "024009",
+                        "051107",
+                        "051153",
+                        "051683",
+                        "051685",
+                        "051059",
+                        "051600",
+                        "051013",
+                        "051510",
+                        "051610"
+                    ],
+                    "UGC": [
+                        "DCZ001",
+                        "MDZ004",
+                        "MDZ503",
+                        "MDZ504",
+                        "MDZ013",
+                        "MDZ016",
+                        "MDZ017",
+                        "MDZ018",
+                        "VAZ505",
+                        "VAZ506",
+                        "VAZ052",
+                        "VAZ053",
+                        "VAZ054"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/DCZ001",
+                    "https://api.weather.gov/zones/forecast/MDZ004",
+                    "https://api.weather.gov/zones/forecast/MDZ503",
+                    "https://api.weather.gov/zones/forecast/MDZ504",
+                    "https://api.weather.gov/zones/forecast/MDZ013",
+                    "https://api.weather.gov/zones/forecast/MDZ016",
+                    "https://api.weather.gov/zones/forecast/MDZ017",
+                    "https://api.weather.gov/zones/forecast/MDZ018",
+                    "https://api.weather.gov/zones/forecast/VAZ505",
+                    "https://api.weather.gov/zones/forecast/VAZ506",
+                    "https://api.weather.gov/zones/forecast/VAZ052",
+                    "https://api.weather.gov/zones/forecast/VAZ053",
+                    "https://api.weather.gov/zones/forecast/VAZ054"
+                ],
+                "references": [],
+                "sent": "2021-07-20T16:46:00-04:00",
+                "effective": "2021-07-20T16:40:00-04:00",
+                "onset": "2021-07-20T16:40:00-04:00",
+                "expires": "2021-07-22T00:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Unknown",
+                "certainty": "Unknown",
+                "urgency": "Unknown",
+                "event": "Air Quality Alert",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Baltimore MD/Washington DC",
+                "headline": "Air Quality Alert issued July 20 at 4:40PM EDT by NWS Baltimore MD/Washington DC",
+                "description": "The Metropolitan Washington Council of Governments in association\nwith Maryland Department of the Environment, Virginia Department\nof Environmental Quality, and District Department of Environment\nhas issued a Code ORANGE Air Quality Alert Wednesday for\nthe DC metro area.\n\nA Code Orange Air Quality Alert means that air pollution\nconcentrations within the region may become unhealthy for\nsensitive groups. Sensitive groups include children, people\nsuffering from asthma, heart disease or other lung diseases and\nthe elderly. The effects of air pollution can be minimized by\navoiding strenuous activity or exercise outdoors.\n\nFor more information on ground-level ozone and fine particles\nplease visit the www.mde.maryland.gov/programs/air/.",
+                "instruction": "",
+                "response": "Monitor",
+                "parameters": {
+                    "PIL": [
+                        "LWXAQALWX"
+                    ],
+                    "NWSheadline": [
+                        "AIR QUALITY ALERT IS IN EFFECT FOR WEDNESDAY JULY 21 2021"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "current watches, warnings, and advisories for District of Columbia",
+    "updated": "2021-07-20T20:46:36+00:00"
+}

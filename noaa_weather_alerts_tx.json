@@ -1,0 +1,231 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-4531274",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-4531274",
+                "@type": "wx:Alert",
+                "id": "NWS-IDP-PROD-4531274",
+                "areaDesc": "Live Oak; Inland Kleberg; Inland San Patricio; Goliad; Inland Refugio; Victoria; Inland Calhoun; Duval; Inland Nueces; Jim Wells; Bee",
+                "geocode": {
+                    "UGC": [
+                        "TXZ231",
+                        "TXZ242",
+                        "TXZ244",
+                        "TXZ233",
+                        "TXZ246",
+                        "TXZ234",
+                        "TXZ247",
+                        "TXZ240",
+                        "TXZ243",
+                        "TXZ241",
+                        "TXZ232"
+                    ],
+                    "SAME": [
+                        "048297",
+                        "048273",
+                        "048409",
+                        "048175",
+                        "048391",
+                        "048469",
+                        "048057",
+                        "048131",
+                        "048355",
+                        "048249",
+                        "048025"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ231",
+                    "https://api.weather.gov/zones/forecast/TXZ242",
+                    "https://api.weather.gov/zones/forecast/TXZ244",
+                    "https://api.weather.gov/zones/forecast/TXZ233",
+                    "https://api.weather.gov/zones/forecast/TXZ246",
+                    "https://api.weather.gov/zones/forecast/TXZ234",
+                    "https://api.weather.gov/zones/forecast/TXZ247",
+                    "https://api.weather.gov/zones/forecast/TXZ240",
+                    "https://api.weather.gov/zones/forecast/TXZ243",
+                    "https://api.weather.gov/zones/forecast/TXZ241",
+                    "https://api.weather.gov/zones/forecast/TXZ232"
+                ],
+                "references": [],
+                "sent": "2020-11-15T03:52:00-06:00",
+                "effective": "2020-11-15T03:52:00-06:00",
+                "onset": "2020-11-15T03:52:00-06:00",
+                "expires": "2020-11-15T08:00:00-06:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Observed",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Corpus Christi TX",
+                "headline": "Special Weather Statement issued November 15 at 3:52AM CST by NWS Corpus Christi TX",
+                "description": "Areas of fog have develop across portions of South Texas\nthis morning. Expect visibilities generally 2 to 3 miles with\npatchy fog in a few locations liming visibilities to 1/4 mile or\nless at times.\n\nUse caution if traveling as visibility may change rapidly\nin a short amount of time. Use low beam headlights and leave\nextra distance between your vehicle and others on the road.",
+                "instruction": null,
+                "response": "Execute",
+                "parameters": {
+                    "NWSheadline": [
+                        "AREAS OF FOG THIS MORNING"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "PIL": [
+                        "CRPSPSCRP"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "CMAS",
+                        "EAS",
+                        "NWEM"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-4531223-3760127",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-4531223-3760127",
+                "@type": "wx:Alert",
+                "id": "NWS-IDP-PROD-4531223-3760127",
+                "areaDesc": "Kleberg Islands; Nueces Islands",
+                "geocode": {
+                    "UGC": [
+                        "TXZ442",
+                        "TXZ443"
+                    ],
+                    "SAME": [
+                        "048273",
+                        "048355"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ442",
+                    "https://api.weather.gov/zones/forecast/TXZ443"
+                ],
+                "references": [],
+                "sent": "2020-11-15T03:26:00-06:00",
+                "effective": "2020-11-15T03:26:00-06:00",
+                "onset": "2020-11-15T13:00:00-06:00",
+                "expires": "2020-11-15T15:00:00-06:00",
+                "ends": "2020-11-15T22:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Coastal Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Corpus Christi TX",
+                "headline": "Coastal Flood Advisory issued November 15 at 3:26AM CST until November 15 at 10:00PM CST by NWS Corpus Christi TX",
+                "description": "* WHAT...Minor coastal flooding expected. Up to 1 foot of\ninundation possible.\n\n* WHERE...Kleberg Islands and Nueces Islands Counties.\n\n* WHEN...From 1 PM this afternoon to 10 PM CST this evening.\n\n* IMPACTS...Poor driving conditions are expected as water reaches\nthe dunes, mainly near times of high tide. Some beach access\nroads will be impassable.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.",
+                "response": "Monitor",
+                "parameters": {
+                    "NWSheadline": [
+                        "COASTAL FLOOD ADVISORY IN EFFECT FROM 1 PM THIS AFTERNOON TO 10 PM CST THIS EVENING"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KCRP.CF.Y.0059.201115T1900Z-201116T0400Z/"
+                    ],
+                    "PIL": [
+                        "CRPCFWCRP"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "CMAS",
+                        "EAS",
+                        "NWEM"
+                    ],
+                    "eventEndingTime": [
+                        "2020-11-16T04:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-4530822-3759792",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-4530822-3759792",
+                "@type": "wx:Alert",
+                "id": "NWS-IDP-PROD-4530822-3759792",
+                "areaDesc": "Coastal Cameron; Coastal Kenedy; Coastal Willacy",
+                "geocode": {
+                    "UGC": [
+                        "TXZ257",
+                        "TXZ351",
+                        "TXZ256"
+                    ],
+                    "SAME": [
+                        "048061",
+                        "048261",
+                        "048489"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ257",
+                    "https://api.weather.gov/zones/forecast/TXZ351",
+                    "https://api.weather.gov/zones/forecast/TXZ256"
+                ],
+                "references": [],
+                "sent": "2020-11-14T23:03:00-06:00",
+                "effective": "2020-11-14T23:03:00-06:00",
+                "onset": "2020-11-15T14:00:00-06:00",
+                "expires": "2020-11-15T20:00:00-06:00",
+                "ends": "2020-11-15T20:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Coastal Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Brownsville TX",
+                "headline": "Coastal Flood Advisory issued November 14 at 11:03PM CST until November 15 at 8:00PM CST by NWS Brownsville TX",
+                "description": "* WHAT...Minor coastal flooding expected.\n\n* WHERE...Coastal Willacy, Coastal Cameron and Coastal Kenedy\nCounties.\n\n* WHEN...From 2 PM to 8 PM CST Sunday.\n\n* IMPACTS...Nuisance flooding is expected, with water reaching\nor pushing into the dunes on South Padre Island. Vehicles,\nexcept those with four wheel drive and high wheel bases, will\nbe unable to be driven on the beach. This includes locations\nnorth of Public Beach Access #3. Minor to moderate beach\nerosion is expected.\n\n* ADDITIONAL DETAILS...Flooding potential will be highest near\nhigh tide. High tide at Brazos Santiago will be at 5:02 PM.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.",
+                "response": "Monitor",
+                "parameters": {
+                    "NWSheadline": [
+                        "COASTAL FLOOD ADVISORY IN EFFECT FROM 2 PM TO 8 PM CST SUNDAY"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KBRO.CF.Y.0021.201115T2000Z-201116T0200Z/"
+                    ],
+                    "PIL": [
+                        "BROCFWBRO"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "CMAS",
+                        "EAS",
+                        "NWEM"
+                    ],
+                    "eventEndingTime": [
+                        "2020-11-16T02:00:00+00:00"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "current watches, warnings, and advisories for Texas",
+    "updated": "2020-11-15T09:53:22+00:00"
+}

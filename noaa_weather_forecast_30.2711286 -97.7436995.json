@@ -1,0 +1,264 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -97.752364099999994,
+                    30.281509
+                ],
+                [
+                    -97.751829499999999,
+                    30.258771100000001
+                ],
+                [
+                    -97.725500699999998,
+                    30.259230500000001
+                ],
+                [
+                    -97.726030100000003,
+                    30.281968600000003
+                ],
+                [
+                    -97.752364099999994,
+                    30.281509
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "updated": "2020-11-15T07:55:54+00:00",
+        "units": "us",
+        "forecastGenerator": "BaselineForecastGenerator",
+        "generatedAt": "2020-11-15T09:21:25+00:00",
+        "updateTime": "2020-11-15T07:55:54+00:00",
+        "validTimes": "2020-11-15T01:00:00+00:00/P8DT6H",
+        "elevation": {
+            "value": 155.14320000000001,
+            "unitCode": "unit:m"
+        },
+        "periods": [
+            {
+                "number": 1,
+                "name": "Overnight",
+                "startTime": "2020-11-15T03:00:00-06:00",
+                "endTime": "2020-11-15T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 58,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "NNW",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 58. North northwest wind 10 to 15 mph, with gusts as high as 25 mph."
+            },
+            {
+                "number": 2,
+                "name": "Sunday",
+                "startTime": "2020-11-15T06:00:00-06:00",
+                "endTime": "2020-11-15T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 71,
+                "temperatureUnit": "F",
+                "temperatureTrend": "falling",
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "N",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny. High near 71, with temperatures falling to around 67 in the afternoon. North wind 10 to 15 mph, with gusts as high as 30 mph."
+            },
+            {
+                "number": 3,
+                "name": "Sunday Night",
+                "startTime": "2020-11-15T18:00:00-06:00",
+                "endTime": "2020-11-16T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 41,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "N",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 41. North wind 0 to 5 mph."
+            },
+            {
+                "number": 4,
+                "name": "Monday",
+                "startTime": "2020-11-16T06:00:00-06:00",
+                "endTime": "2020-11-16T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 73,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "ENE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 73. East northeast wind 0 to 5 mph."
+            },
+            {
+                "number": 5,
+                "name": "Monday Night",
+                "startTime": "2020-11-16T18:00:00-06:00",
+                "endTime": "2020-11-17T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 43,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 mph",
+                "windDirection": "NE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 43. Northeast wind around 0 mph."
+            },
+            {
+                "number": 6,
+                "name": "Tuesday",
+                "startTime": "2020-11-17T06:00:00-06:00",
+                "endTime": "2020-11-17T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 74,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "NE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 74. Northeast wind 0 to 5 mph."
+            },
+            {
+                "number": 7,
+                "name": "Tuesday Night",
+                "startTime": "2020-11-17T18:00:00-06:00",
+                "endTime": "2020-11-18T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 44,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 mph",
+                "windDirection": "SE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 44. Southeast wind around 0 mph."
+            },
+            {
+                "number": 8,
+                "name": "Wednesday",
+                "startTime": "2020-11-18T06:00:00-06:00",
+                "endTime": "2020-11-18T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 77,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 77. South southeast wind 0 to 5 mph."
+            },
+            {
+                "number": 9,
+                "name": "Wednesday Night",
+                "startTime": "2020-11-18T18:00:00-06:00",
+                "endTime": "2020-11-19T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 52,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/sct?size=medium",
+                "shortForecast": "Partly Cloudy",
+                "detailedForecast": "Partly cloudy, with a low around 52. South southeast wind 0 to 5 mph."
+            },
+            {
+                "number": 10,
+                "name": "Thursday",
+                "startTime": "2020-11-19T06:00:00-06:00",
+                "endTime": "2020-11-19T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 79,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 10 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+                "shortForecast": "Mostly Sunny",
+                "detailedForecast": "Mostly sunny, with a high near 79."
+            },
+            {
+                "number": 11,
+                "name": "Thursday Night",
+                "startTime": "2020-11-19T18:00:00-06:00",
+                "endTime": "2020-11-20T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 56,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 56."
+            },
+            {
+                "number": 12,
+                "name": "Friday",
+                "startTime": "2020-11-20T06:00:00-06:00",
+                "endTime": "2020-11-20T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 80,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+                "shortForecast": "Partly Sunny",
+                "detailedForecast": "Partly sunny, with a high near 80."
+            },
+            {
+                "number": 13,
+                "name": "Friday Night",
+                "startTime": "2020-11-20T18:00:00-06:00",
+                "endTime": "2020-11-21T06:00:00-06:00",
+                "isDaytime": false,
+                "temperature": 60,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 5 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/sct?size=medium",
+                "shortForecast": "Partly Cloudy",
+                "detailedForecast": "Partly cloudy, with a low around 60."
+            },
+            {
+                "number": 14,
+                "name": "Saturday",
+                "startTime": "2020-11-21T06:00:00-06:00",
+                "endTime": "2020-11-21T18:00:00-06:00",
+                "isDaytime": true,
+                "temperature": 78,
+                "temperatureUnit": "F",
+                "temperatureTrend": null,
+                "windSpeed": "0 to 10 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+                "shortForecast": "Partly Sunny",
+                "detailedForecast": "Partly sunny, with a high near 78."
+            }
+        ]
+    }
+}
