@@ -1,21 +1,80 @@
-#noaa weather api collection
-#William Collins 2020, all rights reserved
+# noaa weather api collection
+# William Collins 2021, all rights reserved
 
 import requests
 import json
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from pyld import jsonld
 import socket
 import os
 from urllib.request import urlopen
-import requests
 
-print("Welcome to NOAA weather api collection. Alkemie Technologies LLC, William Collins 2020, All Rights Reserved")
-time.sleep(3)
+# ------------------------------ CONSTANTS ---------------------------------------
+WELCOME_MSG = 'Welcome to NOAA weather api collection.'
+COMPANY_INFO = 'Alkemie Technologies LLC, William Collins'
+COPYRIGHT = ' CR 2021, All Rights Reserved'
+
+#------------- API KEYS ------------------
+KEY_DARKSKY = 'f03351387f6ea21ce5e4bfc5b503a508' # Darksky Weather REST API
+KEY_GOOGLE_GEO = 'AIzaSyDphYfny8p8asmBlgFxz2htAMnB6m-4yoA' # Google Geocoding REST API
+KEY_OPENWEATHERMAP = '212e677c073ca9cf225496aa0fe55e04'
+#mqkey = JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA  secret:  iSW0xhglv6TBWTeI TBD:  -secure keys in hash later
+KEY_MAPQUEST = 'JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA'
+
+
+print(WELCOME_MSG + COMPANY_INFO + COPYRIGHT)
+print('Todays date is ' + str(date.today()))
+time.sleep(1)
+
+auto_locate = False
+location_choice = input ('Enter location by City,State or press Enter to Autolocate your position (not always accurate)')
+if location_choice == "":
+    auto_locate = True
+    
 
 #------------------------------- METHODS ------------------------------------------
 
+def geoforward(location): #e.g. Round Rock, TX
+    #https://www.mapquestapi.com/geocoding/v1/address?key=JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA&inFormat=kvp&outFormat=json&location=Denver%2C+CO&thumbMaps=false
+    url = 'http://open.mapquestapi.com/geocoding/v1/address?key='+KEY_MAPQUEST+'&location='+location+'&thumbMaps=false'
+    print(url)
+    r = requests.get(url)
+    print(r)
+    json_object = r.json()
+    lat = str(float(json_object['results'][0]['locations'][0]['latLng']['lat']))
+    lon = str(float(json_object['results'][0]['locations'][0]['latLng']['lng']))
+    latlon = str(lat) + ',' + str(lon)
+    return lat, lon, latlon
+    
+
+#test geoforward
+location = 'round rock tx'
+print(geoforward(location))
+lat,lon,latlon = geoforward(location)
+
+
+# quit()
+
+def georeverse(lat,lon):
+    coord = str(lat) + ',' + str(lon)
+    #r = requests.get ('http://open.mapquestapi.com/geocoding/v1/reverse?key=JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA&location=30.333472,-81.470448&includeRoadMetadata=true&includeNearestIntersection=true')
+    url = 'http://open.mapquestapi.com/geocoding/v1/reverse?key='+KEY_MAPQUEST+'&location='+coord+'&includeRoadMetadata=true&includeNearestIntersection=true'
+    print(url)
+    r = requests.get(url)
+    print(r)
+    json_object = r.json()
+    try:
+        summary = json_object['currently']['summary'] 
+    except Exception as e:
+        print(e)
+    city = str(json_object['results'][0]['locations'][0]['adminArea5'])
+    if (city==''):
+        city ="GeoUnkown"
+    state = str(json_object['results'][0]['locations'][0]['adminArea3'])
+    street = str(json_object['results'][0]['locations'][0]['street'])
+    return street, city, state
+    
 def write2file(filename,attrib,content): #attrib is w or a.  w overwrites, a appends
     #f = open("demofile2.txt", "a")
     f = open(filename, attrib)
@@ -34,8 +93,7 @@ def txt2jsonobj(json_string):
 #DATA - Collect Information re. User IP addresses, location by IP, etc.
 print("-------------------ACQUIRING LOCAL USER DATA--------------------------------")
 
-
-def get_us_state_abbrev(state):
+def get_us_state_abbrev(state):  # method to convert state to state abbrev via dictionary us_state_abbrev
     print(state)
     us_state_abbrev = {
     'Alabama': 'AL',
@@ -128,11 +186,13 @@ def getuser_location(): #pip install socket
     #print(type(geoloc_out))
     geo_dict = json.loads(geoloc_out)
     #iterate through dictionary
+    
     """ CMD and Output
     ip2geotools 24.27.43.198 -d dbipcity -f json
     {"ip_address": "24.27.43.198", "city": "Round Rock", "region": "Texas", "country": "US", "latitude": 30.508235, "longitude": -97.6788934}
     geoloc_out: {"ip_address": "24.27.43.198", "city": "Round Rock", "region": "Texas", "country": "US", "latitude": 30.508235, "longitude": -97.6788934}
     """
+    
     for key, value in geo_dict.items(): 
         print(key, ":", value) 
     print(geo_dict['region'])
@@ -141,22 +201,30 @@ def getuser_location(): #pip install socket
     
     return hostname, localip, public_ip, state, state_abrev, geo_dict
     
-hostname, localip, public_ip, state, state_abrev, geo_dict = getuser_location()
-#testget_host_ip = getuser_location() 
-#print(testget_host_ip)
-state = get_us_state_abbrev(geo_dict['region']) #return 2 letter abbrev for state
-lat = geo_dict['latitude']
-lon = geo_dict['longitude']
+if auto_locate:
+    print('...Autolocating and acquiring hostname, localip, public_ip, state, state_abrev using getuser_location() method') 
+    hostname, localip, public_ip, state, state_abrev, geo_dict = getuser_location()
+    #testget_host_ip = getuser_location() 
+    #print(testget_host_ip)
+    state = get_us_state_abbrev(geo_dict['region']) #return 2 letter abbrev for state
+    lat = geo_dict['latitude']
+    lon = geo_dict['longitude']
+else: # get required information via Geolocation and Reverse Geolocation TODO:  Port methods over from existing code in another script
+    print('...getting lat/lon or city,state from geolocation methods' + '->TBD')
+    
+# quit()
 
-#quit()
-
-#Alerts:  https://api.weather.gov/alerts/active?area=TX  an alert for TX Extreme Weather
+# Alerts:  https://api.weather.gov/alerts/active?area=TX  an alert for TX Extreme Weather
 print("-------------------ALERTS--------------------------------")
 
-def alerts(state):
+NOAA_ALERTS_BY_STATE_PRE = "https://api.weather.gov/alerts/active?area='"
+
+def alerts(state): # method to get alerts by state
     try:
         r = ""
-        url = 'https://api.weather.gov/alerts/active?area=' + str(state)
+        #url = 'https://api.weather.gov/alerts/active?area=' + str(state)
+        url = NOAA_ALERTS_BY_STATE_PRE + str(state)
+
         print (url)
         r = requests.get(url)
         print("requests status code=" + str(r.status_code))
@@ -178,16 +246,24 @@ def alerts(state):
 #test above
 #state = "tx" #use state per def return above - TBD add exception and null string handling
 r = alerts(state)  #get NOAA weather alerts by state
-#print (r)
-#print(type(r))
+#print (r) # print json text
+#print(type(r)) # print var type
 
-print('*********************ALERTS INFORMATION********************')
+filepath = './data/' + str(state) + '_alerts_' + str(date.today()) + '.json'
+print('...writing JSON text to file in data directory: ' + filepath)
+write2file(filepath, 'w', r)
+
+print('*********************ALERTS INFORMATION (from returned JSON data from https://api.weather.gov/alerts/active?area={state} ******')
+time.sleep(1)
+
+print('...converting JSON text to JSON Object')
 try:
-    r_obj = txt2jsonobj(r) #returns JSON obj from text
+    r_obj = txt2jsonobj(r) #returns JSON object from JSON text
 except Exception as e:
     print (e)
-    
-try:
+
+print('...getting title, updated, areaDesc, headline, description, affected zones from JSON obj')
+try: # Get specific information from JSON object
     title = r_obj['title']
     updated = r_obj['updated']
     areaDesc = r_obj['features'][0]['properties']['areaDesc']
@@ -423,7 +499,7 @@ filename = "noaa_weather__stations_" + str(lat) + " " + str(lon) + ".json"
 print(".....Writing Weather Station content to " + filename)
 write2file(filename,attrib,content)
 
-quit()
+# quit()
 
 """
 https://api.weather.gov/points/{latitude},{longitude}

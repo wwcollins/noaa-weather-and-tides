@@ -1,0 +1,960 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            },
+            "observationStations": {
+                "@container": "@list",
+                "@type": "@id"
+            }
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/stations/KBFI",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.31361,
+                    47.545830000000002
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KBFI",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 4.8768000000000002,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KBFI",
+                "name": "Seattle, Seattle Boeing Field",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ558",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KRNT",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.21278,
+                    47.494439999999997
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KRNT",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 7.9248000000000003,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KRNT",
+                "name": "Renton, Renton Municipal Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ558",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ657"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TSR18",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.88500000000001,
+                    47.509
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TSR18",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 143.8656,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "TSR18",
+                "name": "EB I-90 SR-18 Echo Lake",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ555",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ657"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KSEA",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.31361,
+                    47.444719900000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KSEA",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 130.14959999999999,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KSEA",
+                "name": "Seattle, Seattle-Tacoma International Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ558",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KPAE",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.28305,
+                    47.923310000000001
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KPAE",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 157.88640000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KPAE",
+                "name": "Everett Snohomish County",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ507",
+                "county": "https://api.weather.gov/zones/county/WAC061",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/FTAW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.665167,
+                    47.456778
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/FTAW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 481.584,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "FTAW1",
+                "name": "FIRE TRNG. ACADEMY",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ568",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ657"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KPWT",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.75,
+                    47.5
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KPWT",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 134.11199999999999,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KPWT",
+                "name": "Bremerton, Bremerton National Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ559",
+                "county": "https://api.weather.gov/zones/county/WAC035",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/ENCW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.96388899999999,
+                    47.220278
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/ENCW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 230.4288,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "ENCW1",
+                "name": "ENUMCLAW",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ555",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ657"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KAWO",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.16667,
+                    48.166670000000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KAWO",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 42.062399999999997,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KAWO",
+                "name": "Arlington Municipal",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ507",
+                "county": "https://api.weather.gov/zones/county/WAC061",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ656"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KTIW",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.57611,
+                    47.267499999999998
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KTIW",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 96.012,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KTIW",
+                "name": "Tacoma, Tacoma Narrows Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ509",
+                "county": "https://api.weather.gov/zones/county/WAC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/QCNW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.883056,
+                    47.823056000000001
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/QCNW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 18.897600000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "QCNW1",
+                "name": "QUILCENE",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ511",
+                "county": "https://api.weather.gov/zones/county/WAC031",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TALPE",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.41800000000001,
+                    47.427
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TALPE",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 875.99519999999995,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "TALPE",
+                "name": "Alpental Exit",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ568",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ659"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KTCM",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.48333,
+                    47.149999999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KTCM",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 98.145600000000002,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KTCM",
+                "name": "Tacoma / McChord Air Force Base",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ509",
+                "county": "https://api.weather.gov/zones/county/WAC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KPLU",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.28700000000001,
+                    47.103999999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KPLU",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 163.98240000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KPLU",
+                "name": "Pierce County-Thun Field",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ509",
+                "county": "https://api.weather.gov/zones/county/WAC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ657"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TSTEV",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.0891,
+                    47.745899999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TSTEV",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1224.9911999999999,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "TSTEV",
+                "name": "Stevens Pass",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ568",
+                "county": "https://api.weather.gov/zones/county/WAC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ658"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KNUW",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.65056,
+                    48.349170000000001
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KNUW",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 14.020799999999999,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KNUW",
+                "name": "Whidbey Island, Naval Air Station",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ510",
+                "county": "https://api.weather.gov/zones/county/WAC029",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KBVS",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.42083,
+                    48.470829999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KBVS",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 43.891199999999998,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KBVS",
+                "name": "Burlington/Mount Vernon, Skagit Regional Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ506",
+                "county": "https://api.weather.gov/zones/county/WAC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KSHN",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.14082999999999,
+                    47.238059999999997
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KSHN",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 81.991200000000006,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KSHN",
+                "name": "Shelton, Shelton Sanderson Field",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ511",
+                "county": "https://api.weather.gov/zones/county/WAC045",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ654"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SUN64",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.64417,
+                    46.914369999999998
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SUN64",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1953.768,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "SUN64",
+                "name": "Sunrise Base",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ569",
+                "county": "https://api.weather.gov/zones/county/WAC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ659"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SWYW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.22369999999999,
+                    48.521599999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SWYW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 52.425600000000003,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "SWYW1",
+                "name": "SEDRO WOOLLEY",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ506",
+                "county": "https://api.weather.gov/zones/county/WAC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ656"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KOLM",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.90333,
+                    46.973329999999997
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KOLM",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 61.874400000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KOLM",
+                "name": "Olympia, Olympia Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ504",
+                "county": "https://api.weather.gov/zones/county/WAC067",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ655"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/ASHW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.10975000000001,
+                    46.755218900000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/ASHW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 433.12079999999997,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "ASHW1",
+                "name": "ASHFORD",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ569",
+                "county": "https://api.weather.gov/zones/county/WAC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ657"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MBMW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.446111,
+                    48.539444000000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MBMW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 108.81359999999999,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "MBMW1",
+                "name": "MARBLEMOUNT",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ567",
+                "county": "https://api.weather.gov/zones/county/WAC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ656"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KCLM",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.50660999999999,
+                    48.121940000000002
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KCLM",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 79.857600000000005,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KCLM",
+                "name": "Port Angeles Fairchild International Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ514",
+                "county": "https://api.weather.gov/zones/county/WAC009",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KFHR",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.02528,
+                    48.52028
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KFHR",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 32.918399999999998,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KFHR",
+                "name": "Friday Harbor, Friday Harbor Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ001",
+                "county": "https://api.weather.gov/zones/county/WAC055",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KBLI",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.54064,
+                    48.799109999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KBLI",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 45.110399999999998,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KBLI",
+                "name": "Bellingham, Bellingham International Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ503",
+                "county": "https://api.weather.gov/zones/county/WAC073",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KORS",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.91028,
+                    48.708060000000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KORS",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 9.1440000000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KORS",
+                "name": "Eastsound, Orcas Island Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ001",
+                "county": "https://api.weather.gov/zones/county/WAC055",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ653"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KCLS",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.98269999999999,
+                    46.677
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KCLS",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 53.949599999999997,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KCLS",
+                "name": "Chehalis-Centralia Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ504",
+                "county": "https://api.weather.gov/zones/county/WAC041",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ655"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/WAP55",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.65525,
+                    48.525779999999997
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/WAP55",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1661.1600000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "WAP55",
+                "name": "Washington Pass Base",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ042",
+                "county": "https://api.weather.gov/zones/county/WAC007",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ685"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/THECK",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -124.047,
+                    48.069000000000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/THECK",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 282.8544,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "THECK",
+                "name": "Heckelville Shed",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ513",
+                "county": "https://api.weather.gov/zones/county/WAC009",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ650"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KHQM",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.92,
+                    46.971110000000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KHQM",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 3.9624000000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KHQM",
+                "name": "Hoquiam, Bowerman Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/PZZ110"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/HZCW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.078333,
+                    48.980832900000003
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/HZCW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 518.15999999999997,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "HZCW1",
+                "name": "HOZOMEEN",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ567",
+                "county": "https://api.weather.gov/zones/county/WAC073",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ658"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TR950",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.891944,
+                    46.271388999999999
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TR950",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 64.922399999999996,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "TR950",
+                "name": "CASTLE ROCK",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ022",
+                "county": "https://api.weather.gov/zones/county/WAC015",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ665"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KUIL",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -124.55500000000001,
+                    47.9375
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KUIL",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 59.1312,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KUIL",
+                "name": "Quillayute, Quillayute State Airport",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/WAZ516",
+                "county": "https://api.weather.gov/zones/county/WAC009",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/WAZ649"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TTIW1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -124.73999999999999,
+                    48.390000000000001
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TTIW1",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 30.784800000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "TTIW1",
+                "name": "Tatoosh Island",
+                "timeZone": "America/Los_Angeles",
+                "forecast": "https://api.weather.gov/zones/forecast/PZZ150"
+            }
+        }
+    ],
+    "observationStations": [
+        "https://api.weather.gov/stations/KBFI",
+        "https://api.weather.gov/stations/KRNT",
+        "https://api.weather.gov/stations/TSR18",
+        "https://api.weather.gov/stations/KSEA",
+        "https://api.weather.gov/stations/KPAE",
+        "https://api.weather.gov/stations/FTAW1",
+        "https://api.weather.gov/stations/KPWT",
+        "https://api.weather.gov/stations/ENCW1",
+        "https://api.weather.gov/stations/KAWO",
+        "https://api.weather.gov/stations/KTIW",
+        "https://api.weather.gov/stations/QCNW1",
+        "https://api.weather.gov/stations/TALPE",
+        "https://api.weather.gov/stations/KTCM",
+        "https://api.weather.gov/stations/KPLU",
+        "https://api.weather.gov/stations/TSTEV",
+        "https://api.weather.gov/stations/KNUW",
+        "https://api.weather.gov/stations/KBVS",
+        "https://api.weather.gov/stations/KSHN",
+        "https://api.weather.gov/stations/SUN64",
+        "https://api.weather.gov/stations/SWYW1",
+        "https://api.weather.gov/stations/KOLM",
+        "https://api.weather.gov/stations/ASHW1",
+        "https://api.weather.gov/stations/MBMW1",
+        "https://api.weather.gov/stations/KCLM",
+        "https://api.weather.gov/stations/KFHR",
+        "https://api.weather.gov/stations/KBLI",
+        "https://api.weather.gov/stations/KORS",
+        "https://api.weather.gov/stations/KCLS",
+        "https://api.weather.gov/stations/WAP55",
+        "https://api.weather.gov/stations/THECK",
+        "https://api.weather.gov/stations/KHQM",
+        "https://api.weather.gov/stations/HZCW1",
+        "https://api.weather.gov/stations/TR950",
+        "https://api.weather.gov/stations/KUIL",
+        "https://api.weather.gov/stations/TTIW1"
+    ]
+}

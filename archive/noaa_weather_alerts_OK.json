@@ -1,0 +1,1569 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.001.1",
+                "areaDesc": "Grant; Kay; Garfield; Noble; Logan; Oklahoma; McClain; Cleveland; Garvin; Murray; Carter; Love",
+                "geocode": {
+                    "SAME": [
+                        "040053",
+                        "040071",
+                        "040047",
+                        "040103",
+                        "040083",
+                        "040109",
+                        "040087",
+                        "040027",
+                        "040049",
+                        "040099",
+                        "040019",
+                        "040085"
+                    ],
+                    "UGC": [
+                        "OKZ007",
+                        "OKZ008",
+                        "OKZ012",
+                        "OKZ013",
+                        "OKZ019",
+                        "OKZ025",
+                        "OKZ028",
+                        "OKZ029",
+                        "OKZ040",
+                        "OKZ041",
+                        "OKZ046",
+                        "OKZ050"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ007",
+                    "https://api.weather.gov/zones/forecast/OKZ008",
+                    "https://api.weather.gov/zones/forecast/OKZ012",
+                    "https://api.weather.gov/zones/forecast/OKZ013",
+                    "https://api.weather.gov/zones/forecast/OKZ019",
+                    "https://api.weather.gov/zones/forecast/OKZ025",
+                    "https://api.weather.gov/zones/forecast/OKZ028",
+                    "https://api.weather.gov/zones/forecast/OKZ029",
+                    "https://api.weather.gov/zones/forecast/OKZ040",
+                    "https://api.weather.gov/zones/forecast/OKZ041",
+                    "https://api.weather.gov/zones/forecast/OKZ046",
+                    "https://api.weather.gov/zones/forecast/OKZ050"
+                ],
+                "references": [],
+                "sent": "2021-07-29T14:35:00-05:00",
+                "effective": "2021-07-29T14:35:00-05:00",
+                "onset": "2021-07-30T12:00:00-05:00",
+                "expires": "2021-07-30T04:00:00-05:00",
+                "ends": "2021-07-30T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Norman OK",
+                "headline": "Heat Advisory issued July 29 at 2:35PM CDT until July 30 at 7:00PM CDT by NWS Norman OK",
+                "description": "* WHAT...For the Heat Advisory today, heat index values up to\n107 expected. For the Heat Advisory Friday, heat index values\nup to 105 expected.\n\n* WHERE...Portions of central, northern and southern Oklahoma.\n\n* WHEN...From noon today to 7 PM CDT this evening, and then from\nnoon to 7 PM CDT Friday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "OUNNPWOUN"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING... ...HEAT ADVISORY IN EFFECT FROM NOON TO 7 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.EXA.KOUN.HT.Y.0010.210730T1700Z-210731T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-31T00:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.001.2",
+                "areaDesc": "Grant; Kay; Garfield; Noble; Logan; Oklahoma; McClain; Cleveland; Garvin; Murray; Carter; Love",
+                "geocode": {
+                    "SAME": [
+                        "040053",
+                        "040071",
+                        "040047",
+                        "040103",
+                        "040083",
+                        "040109",
+                        "040087",
+                        "040027",
+                        "040049",
+                        "040099",
+                        "040019",
+                        "040085"
+                    ],
+                    "UGC": [
+                        "OKZ007",
+                        "OKZ008",
+                        "OKZ012",
+                        "OKZ013",
+                        "OKZ019",
+                        "OKZ025",
+                        "OKZ028",
+                        "OKZ029",
+                        "OKZ040",
+                        "OKZ041",
+                        "OKZ046",
+                        "OKZ050"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ007",
+                    "https://api.weather.gov/zones/forecast/OKZ008",
+                    "https://api.weather.gov/zones/forecast/OKZ012",
+                    "https://api.weather.gov/zones/forecast/OKZ013",
+                    "https://api.weather.gov/zones/forecast/OKZ019",
+                    "https://api.weather.gov/zones/forecast/OKZ025",
+                    "https://api.weather.gov/zones/forecast/OKZ028",
+                    "https://api.weather.gov/zones/forecast/OKZ029",
+                    "https://api.weather.gov/zones/forecast/OKZ040",
+                    "https://api.weather.gov/zones/forecast/OKZ041",
+                    "https://api.weather.gov/zones/forecast/OKZ046",
+                    "https://api.weather.gov/zones/forecast/OKZ050"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T03:36:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:35:00-05:00",
+                "effective": "2021-07-29T14:35:00-05:00",
+                "onset": "2021-07-29T14:35:00-05:00",
+                "expires": "2021-07-30T04:00:00-05:00",
+                "ends": "2021-07-29T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Norman OK",
+                "headline": "Heat Advisory issued July 29 at 2:35PM CDT until July 29 at 7:00PM CDT by NWS Norman OK",
+                "description": "* WHAT...For the Heat Advisory today, heat index values up to\n107 expected. For the Heat Advisory Friday, heat index values\nup to 105 expected.\n\n* WHERE...Portions of central, northern and southern Oklahoma.\n\n* WHEN...From noon today to 7 PM CDT this evening, and then from\nnoon to 7 PM CDT Friday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "OUNNPWOUN"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING... ...HEAT ADVISORY IN EFFECT FROM NOON TO 7 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KOUN.HT.Y.0009.000000T0000Z-210730T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T00:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3ede9e365a023d4ca11aedab8a128def6ec8a45b.001.1,2021-07-29T01:57:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.202e61740d5f9fc228ed52cea9cb3704aa682dde.001.1,2021-07-28T20:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e9b51849057d29512bbec34aad767016d35171ee.001.1,2021-07-28T13:58:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.002.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.002.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.002.2",
+                "areaDesc": "Payne; Lincoln; Pottawatomie; Seminole; Hughes; Pontotoc; Coal; Johnston; Atoka; Marshall; Bryan",
+                "geocode": {
+                    "SAME": [
+                        "040119",
+                        "040081",
+                        "040125",
+                        "040133",
+                        "040063",
+                        "040123",
+                        "040029",
+                        "040069",
+                        "040005",
+                        "040095",
+                        "040013"
+                    ],
+                    "UGC": [
+                        "OKZ020",
+                        "OKZ026",
+                        "OKZ030",
+                        "OKZ031",
+                        "OKZ032",
+                        "OKZ042",
+                        "OKZ043",
+                        "OKZ047",
+                        "OKZ048",
+                        "OKZ051",
+                        "OKZ052"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ020",
+                    "https://api.weather.gov/zones/forecast/OKZ026",
+                    "https://api.weather.gov/zones/forecast/OKZ030",
+                    "https://api.weather.gov/zones/forecast/OKZ031",
+                    "https://api.weather.gov/zones/forecast/OKZ032",
+                    "https://api.weather.gov/zones/forecast/OKZ042",
+                    "https://api.weather.gov/zones/forecast/OKZ043",
+                    "https://api.weather.gov/zones/forecast/OKZ047",
+                    "https://api.weather.gov/zones/forecast/OKZ048",
+                    "https://api.weather.gov/zones/forecast/OKZ051",
+                    "https://api.weather.gov/zones/forecast/OKZ052"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T03:36:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:35:00-05:00",
+                "effective": "2021-07-29T14:35:00-05:00",
+                "onset": "2021-07-30T12:00:00-05:00",
+                "expires": "2021-07-30T04:00:00-05:00",
+                "ends": "2021-07-30T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Norman OK",
+                "headline": "Heat Advisory issued July 29 at 2:35PM CDT until July 30 at 7:00PM CDT by NWS Norman OK",
+                "description": "* WHAT...For the Heat Advisory today, heat index values up to\n107 expected. For the Heat Advisory Friday, heat index values\nup to 105 expected.\n\n* WHERE...Portions of central, east central and southeast\nOklahoma.\n\n* WHEN...From noon today to 7 PM CDT this evening, and then from\nnoon to 7 PM CDT Friday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "OUNNPWOUN"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING... ...HEAT ADVISORY REMAINS IN EFFECT FROM NOON TO 7 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KOUN.HT.Y.0010.210730T1700Z-210731T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-31T00:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.003.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.003.1",
+                "areaDesc": "Kingfisher; Canadian; Grady; Stephens; Jefferson",
+                "geocode": {
+                    "SAME": [
+                        "040073",
+                        "040017",
+                        "040051",
+                        "040137",
+                        "040067"
+                    ],
+                    "UGC": [
+                        "OKZ018",
+                        "OKZ024",
+                        "OKZ027",
+                        "OKZ039",
+                        "OKZ045"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ018",
+                    "https://api.weather.gov/zones/forecast/OKZ024",
+                    "https://api.weather.gov/zones/forecast/OKZ027",
+                    "https://api.weather.gov/zones/forecast/OKZ039",
+                    "https://api.weather.gov/zones/forecast/OKZ045"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T03:36:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:35:00-05:00",
+                "effective": "2021-07-29T14:35:00-05:00",
+                "onset": "2021-07-29T14:35:00-05:00",
+                "expires": "2021-07-29T19:00:00-05:00",
+                "ends": "2021-07-29T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Norman OK",
+                "headline": "Heat Advisory issued July 29 at 2:35PM CDT until July 29 at 7:00PM CDT by NWS Norman OK",
+                "description": "* WHAT...Heat index values up to 105 expected.\n\n* WHERE...Portions of central, northern and southern Oklahoma.\n\n* WHEN...From noon today to 7 PM CDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "OUNNPWOUN"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KOUN.HT.Y.0009.000000T0000Z-210730T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T00:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3ede9e365a023d4ca11aedab8a128def6ec8a45b.001.1,2021-07-29T01:57:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.202e61740d5f9fc228ed52cea9cb3704aa682dde.001.1,2021-07-28T20:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e9b51849057d29512bbec34aad767016d35171ee.001.1,2021-07-28T13:58:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1cfecfc94ae349accfa026fab6a87d8261b146e6.002.1",
+                "areaDesc": "Payne; Lincoln; Pottawatomie; Seminole; Hughes; Pontotoc; Coal; Johnston; Atoka; Marshall; Bryan",
+                "geocode": {
+                    "SAME": [
+                        "040119",
+                        "040081",
+                        "040125",
+                        "040133",
+                        "040063",
+                        "040123",
+                        "040029",
+                        "040069",
+                        "040005",
+                        "040095",
+                        "040013"
+                    ],
+                    "UGC": [
+                        "OKZ020",
+                        "OKZ026",
+                        "OKZ030",
+                        "OKZ031",
+                        "OKZ032",
+                        "OKZ042",
+                        "OKZ043",
+                        "OKZ047",
+                        "OKZ048",
+                        "OKZ051",
+                        "OKZ052"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/OKZ020",
+                    "https://api.weather.gov/zones/forecast/OKZ026",
+                    "https://api.weather.gov/zones/forecast/OKZ030",
+                    "https://api.weather.gov/zones/forecast/OKZ031",
+                    "https://api.weather.gov/zones/forecast/OKZ032",
+                    "https://api.weather.gov/zones/forecast/OKZ042",
+                    "https://api.weather.gov/zones/forecast/OKZ043",
+                    "https://api.weather.gov/zones/forecast/OKZ047",
+                    "https://api.weather.gov/zones/forecast/OKZ048",
+                    "https://api.weather.gov/zones/forecast/OKZ051",
+                    "https://api.weather.gov/zones/forecast/OKZ052"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.3d9b5d4e917072c9948b3c0e91e449d3b29537c9.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T03:36:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:35:00-05:00",
+                "effective": "2021-07-29T14:35:00-05:00",
+                "onset": "2021-07-29T14:35:00-05:00",
+                "expires": "2021-07-30T04:00:00-05:00",
+                "ends": "2021-07-29T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Norman OK",
+                "headline": "Heat Advisory issued July 29 at 2:35PM CDT until July 29 at 7:00PM CDT by NWS Norman OK",
+                "description": "* WHAT...For the Heat Advisory today, heat index values up to\n107 expected. For the Heat Advisory Friday, heat index values\nup to 105 expected.\n\n* WHERE...Portions of central, east central and southeast\nOklahoma.\n\n* WHEN...From noon today to 7 PM CDT this evening, and then from\nnoon to 7 PM CDT Friday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "OUNNPWOUN"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING... ...HEAT ADVISORY REMAINS IN EFFECT FROM NOON TO 7 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KOUN.HT.Y.0009.000000T0000Z-210730T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T00:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3ede9e365a023d4ca11aedab8a128def6ec8a45b.001.1,2021-07-29T01:57:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.202e61740d5f9fc228ed52cea9cb3704aa682dde.001.1,2021-07-28T20:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e9b51849057d29512bbec34aad767016d35171ee.001.1,2021-07-28T13:58:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.002.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.002.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.002.2",
+                "areaDesc": "Benton; Carroll; Washington; Madison; Pushmataha; Choctaw; Osage; Pawnee; Delaware; Creek; Okfuskee; Cherokee; Adair; Pittsburg; Haskell; Latimer; Le Flore",
+                "geocode": {
+                    "SAME": [
+                        "005007",
+                        "005015",
+                        "005143",
+                        "005087",
+                        "040127",
+                        "040023",
+                        "040113",
+                        "040117",
+                        "040041",
+                        "040037",
+                        "040107",
+                        "040021",
+                        "040001",
+                        "040121",
+                        "040061",
+                        "040077",
+                        "040079"
+                    ],
+                    "UGC": [
+                        "ARZ001",
+                        "ARZ002",
+                        "ARZ010",
+                        "ARZ011",
+                        "OKZ049",
+                        "OKZ053",
+                        "OKZ054",
+                        "OKZ059",
+                        "OKZ063",
+                        "OKZ064",
+                        "OKZ065",
+                        "OKZ068",
+                        "OKZ069",
+                        "OKZ073",
+                        "OKZ074",
+                        "OKZ075",
+                        "OKZ076"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ001",
+                    "https://api.weather.gov/zones/forecast/ARZ002",
+                    "https://api.weather.gov/zones/forecast/ARZ010",
+                    "https://api.weather.gov/zones/forecast/ARZ011",
+                    "https://api.weather.gov/zones/forecast/OKZ049",
+                    "https://api.weather.gov/zones/forecast/OKZ053",
+                    "https://api.weather.gov/zones/forecast/OKZ054",
+                    "https://api.weather.gov/zones/forecast/OKZ059",
+                    "https://api.weather.gov/zones/forecast/OKZ063",
+                    "https://api.weather.gov/zones/forecast/OKZ064",
+                    "https://api.weather.gov/zones/forecast/OKZ065",
+                    "https://api.weather.gov/zones/forecast/OKZ068",
+                    "https://api.weather.gov/zones/forecast/OKZ069",
+                    "https://api.weather.gov/zones/forecast/OKZ073",
+                    "https://api.weather.gov/zones/forecast/OKZ074",
+                    "https://api.weather.gov/zones/forecast/OKZ075",
+                    "https://api.weather.gov/zones/forecast/OKZ076"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.002.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.002.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T10:46:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:24:00-05:00",
+                "effective": "2021-07-29T14:24:00-05:00",
+                "onset": "2021-07-30T12:00:00-05:00",
+                "expires": "2021-07-29T22:30:00-05:00",
+                "ends": "2021-07-30T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tulsa OK",
+                "headline": "Heat Advisory issued July 29 at 2:24PM CDT until July 30 at 8:00PM CDT by NWS Tulsa OK",
+                "description": "* WHAT...Heat index values 103 to 108 expected both days.\n\n* WHERE...Portions of east central, northeast and southeast\nOklahoma and northwest Arkansas.\n\n* WHEN...From noon today to 8 PM CDT this evening, and from noon\nto 8 PM CDT Friday.\n\n* IMPACTS...The combination of hot temperatures and high humidity\nwill combine to create a dangerous situation in which heat\nillnesses are possible.",
+                "instruction": "Take extra precautions if you work or spend time outside. When\npossible, reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear light weight and loose fitting clothing when\npossible and drink plenty of water. To reduce risk during outdoor\nwork the occupational safety and health administration recommends\nscheduling frequent rest breaks in shaded or air conditioned\nenvironments. Anyone overcome by heat should be moved to a cool\nand shaded location. Heat stroke is an emergency, call 911.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "TSANPWTSA"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 8 PM CDT THIS EVENING... ...HEAT ADVISORY REMAINS IN EFFECT FROM NOON TO 8 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTSA.HT.Y.0013.210730T1700Z-210731T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-31T01:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1a8ad67e658b87865b6dabd7a4375e05baa16f68.002.1,2021-07-29T03:27:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.001.2",
+                "areaDesc": "Crawford; Franklin; Sebastian; Washington; Nowata; Craig; Ottawa; Tulsa; Rogers; Mayes; Okmulgee; Wagoner; Muskogee; McIntosh; Sequoyah",
+                "geocode": {
+                    "SAME": [
+                        "005033",
+                        "005047",
+                        "005131",
+                        "040147",
+                        "040105",
+                        "040035",
+                        "040115",
+                        "040143",
+                        "040131",
+                        "040097",
+                        "040111",
+                        "040145",
+                        "040101",
+                        "040091",
+                        "040135"
+                    ],
+                    "UGC": [
+                        "ARZ019",
+                        "ARZ020",
+                        "ARZ029",
+                        "OKZ055",
+                        "OKZ056",
+                        "OKZ057",
+                        "OKZ058",
+                        "OKZ060",
+                        "OKZ061",
+                        "OKZ062",
+                        "OKZ066",
+                        "OKZ067",
+                        "OKZ070",
+                        "OKZ071",
+                        "OKZ072"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ019",
+                    "https://api.weather.gov/zones/forecast/ARZ020",
+                    "https://api.weather.gov/zones/forecast/ARZ029",
+                    "https://api.weather.gov/zones/forecast/OKZ055",
+                    "https://api.weather.gov/zones/forecast/OKZ056",
+                    "https://api.weather.gov/zones/forecast/OKZ057",
+                    "https://api.weather.gov/zones/forecast/OKZ058",
+                    "https://api.weather.gov/zones/forecast/OKZ060",
+                    "https://api.weather.gov/zones/forecast/OKZ061",
+                    "https://api.weather.gov/zones/forecast/OKZ062",
+                    "https://api.weather.gov/zones/forecast/OKZ066",
+                    "https://api.weather.gov/zones/forecast/OKZ067",
+                    "https://api.weather.gov/zones/forecast/OKZ070",
+                    "https://api.weather.gov/zones/forecast/OKZ071",
+                    "https://api.weather.gov/zones/forecast/OKZ072"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T10:46:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:24:00-05:00",
+                "effective": "2021-07-29T14:24:00-05:00",
+                "onset": "2021-07-30T12:00:00-05:00",
+                "expires": "2021-07-29T22:30:00-05:00",
+                "ends": "2021-07-30T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tulsa OK",
+                "headline": "Heat Advisory issued July 29 at 2:24PM CDT until July 30 at 8:00PM CDT by NWS Tulsa OK",
+                "description": "* WHAT...For the Excessive Heat Warning, dangerously hot\nconditions with heat index values of 105 to 110 expected. For\nthe Heat Advisory, forecast heat index values of 103 to 108.\n\n* WHERE...Portions of east central, northeast and southeast\nOklahoma and northwest and west central Arkansas.\n\n* WHEN...For the Excessive Heat Warning, from noon today to 8 PM\nCDT this evening. For the Heat Advisory, from noon to 8 PM CDT\nFriday.\n\n* IMPACTS...He combination of hot temperatures and high humidity\nwill combine to create a dangerous situation in which heat\nillnesses are possible.",
+                "instruction": "Take extra precautions if you work or spend time outside. When\npossible, reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear light weight and loose fitting clothing when\npossible and drink plenty of water. To reduce risk during outdoor\nwork the occupational safety and health administration recommends\nscheduling frequent rest breaks in shaded or air conditioned\nenvironments. Anyone overcome by heat should be moved to a cool\nand shaded location. Heat stroke is an emergency, call 911.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "TSANPWTSA"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM CDT THIS EVENING... ...HEAT ADVISORY REMAINS IN EFFECT FROM NOON TO 8 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTSA.HT.Y.0013.210730T1700Z-210731T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-31T01:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1a8ad67e658b87865b6dabd7a4375e05baa16f68.001.1,2021-07-29T03:27:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.002.1",
+                "areaDesc": "Benton; Carroll; Washington; Madison; Pushmataha; Choctaw; Osage; Pawnee; Delaware; Creek; Okfuskee; Cherokee; Adair; Pittsburg; Haskell; Latimer; Le Flore",
+                "geocode": {
+                    "SAME": [
+                        "005007",
+                        "005015",
+                        "005143",
+                        "005087",
+                        "040127",
+                        "040023",
+                        "040113",
+                        "040117",
+                        "040041",
+                        "040037",
+                        "040107",
+                        "040021",
+                        "040001",
+                        "040121",
+                        "040061",
+                        "040077",
+                        "040079"
+                    ],
+                    "UGC": [
+                        "ARZ001",
+                        "ARZ002",
+                        "ARZ010",
+                        "ARZ011",
+                        "OKZ049",
+                        "OKZ053",
+                        "OKZ054",
+                        "OKZ059",
+                        "OKZ063",
+                        "OKZ064",
+                        "OKZ065",
+                        "OKZ068",
+                        "OKZ069",
+                        "OKZ073",
+                        "OKZ074",
+                        "OKZ075",
+                        "OKZ076"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ001",
+                    "https://api.weather.gov/zones/forecast/ARZ002",
+                    "https://api.weather.gov/zones/forecast/ARZ010",
+                    "https://api.weather.gov/zones/forecast/ARZ011",
+                    "https://api.weather.gov/zones/forecast/OKZ049",
+                    "https://api.weather.gov/zones/forecast/OKZ053",
+                    "https://api.weather.gov/zones/forecast/OKZ054",
+                    "https://api.weather.gov/zones/forecast/OKZ059",
+                    "https://api.weather.gov/zones/forecast/OKZ063",
+                    "https://api.weather.gov/zones/forecast/OKZ064",
+                    "https://api.weather.gov/zones/forecast/OKZ065",
+                    "https://api.weather.gov/zones/forecast/OKZ068",
+                    "https://api.weather.gov/zones/forecast/OKZ069",
+                    "https://api.weather.gov/zones/forecast/OKZ073",
+                    "https://api.weather.gov/zones/forecast/OKZ074",
+                    "https://api.weather.gov/zones/forecast/OKZ075",
+                    "https://api.weather.gov/zones/forecast/OKZ076"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T10:46:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:24:00-05:00",
+                "effective": "2021-07-29T14:24:00-05:00",
+                "onset": "2021-07-29T14:24:00-05:00",
+                "expires": "2021-07-29T22:30:00-05:00",
+                "ends": "2021-07-29T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tulsa OK",
+                "headline": "Heat Advisory issued July 29 at 2:24PM CDT until July 29 at 8:00PM CDT by NWS Tulsa OK",
+                "description": "* WHAT...Heat index values 103 to 108 expected both days.\n\n* WHERE...Portions of east central, northeast and southeast\nOklahoma and northwest Arkansas.\n\n* WHEN...From noon today to 8 PM CDT this evening, and from noon\nto 8 PM CDT Friday.\n\n* IMPACTS...The combination of hot temperatures and high humidity\nwill combine to create a dangerous situation in which heat\nillnesses are possible.",
+                "instruction": "Take extra precautions if you work or spend time outside. When\npossible, reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear light weight and loose fitting clothing when\npossible and drink plenty of water. To reduce risk during outdoor\nwork the occupational safety and health administration recommends\nscheduling frequent rest breaks in shaded or air conditioned\nenvironments. Anyone overcome by heat should be moved to a cool\nand shaded location. Heat stroke is an emergency, call 911.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "TSANPWTSA"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 8 PM CDT THIS EVENING... ...HEAT ADVISORY REMAINS IN EFFECT FROM NOON TO 8 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTSA.HT.Y.0012.000000T0000Z-210730T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T01:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1a8ad67e658b87865b6dabd7a4375e05baa16f68.002.2,2021-07-29T03:27:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d144e316c8b07e026b5669e5fe1deed815a5704c.002.2,2021-07-28T20:05:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d144e316c8b07e026b5669e5fe1deed815a5704c.004.1,2021-07-28T20:05:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d144e316c8b07e026b5669e5fe1deed815a5704c.003.2,2021-07-28T20:05:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d86f1821a8c98c9de0cad4beca7c73f4d8744e0e.002.1,2021-07-28T14:33:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d86f1821a8c98c9de0cad4beca7c73f4d8744e0e.003.1,2021-07-28T14:33:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d86f1821a8c98c9de0cad4beca7c73f4d8744e0e.004.1,2021-07-28T14:33:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0e1edcf4a8f0e1be6d4b8b282c6edf09f6e83839.001.1",
+                "areaDesc": "Crawford; Franklin; Sebastian; Washington; Nowata; Craig; Ottawa; Tulsa; Rogers; Mayes; Okmulgee; Wagoner; Muskogee; McIntosh; Sequoyah",
+                "geocode": {
+                    "SAME": [
+                        "005033",
+                        "005047",
+                        "005131",
+                        "040147",
+                        "040105",
+                        "040035",
+                        "040115",
+                        "040143",
+                        "040131",
+                        "040097",
+                        "040111",
+                        "040145",
+                        "040101",
+                        "040091",
+                        "040135"
+                    ],
+                    "UGC": [
+                        "ARZ019",
+                        "ARZ020",
+                        "ARZ029",
+                        "OKZ055",
+                        "OKZ056",
+                        "OKZ057",
+                        "OKZ058",
+                        "OKZ060",
+                        "OKZ061",
+                        "OKZ062",
+                        "OKZ066",
+                        "OKZ067",
+                        "OKZ070",
+                        "OKZ071",
+                        "OKZ072"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ019",
+                    "https://api.weather.gov/zones/forecast/ARZ020",
+                    "https://api.weather.gov/zones/forecast/ARZ029",
+                    "https://api.weather.gov/zones/forecast/OKZ055",
+                    "https://api.weather.gov/zones/forecast/OKZ056",
+                    "https://api.weather.gov/zones/forecast/OKZ057",
+                    "https://api.weather.gov/zones/forecast/OKZ058",
+                    "https://api.weather.gov/zones/forecast/OKZ060",
+                    "https://api.weather.gov/zones/forecast/OKZ061",
+                    "https://api.weather.gov/zones/forecast/OKZ062",
+                    "https://api.weather.gov/zones/forecast/OKZ066",
+                    "https://api.weather.gov/zones/forecast/OKZ067",
+                    "https://api.weather.gov/zones/forecast/OKZ070",
+                    "https://api.weather.gov/zones/forecast/OKZ071",
+                    "https://api.weather.gov/zones/forecast/OKZ072"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.b49a8e35789aac10a7d06f4444360a865d442020.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-29T10:46:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T14:24:00-05:00",
+                "effective": "2021-07-29T14:24:00-05:00",
+                "onset": "2021-07-29T14:24:00-05:00",
+                "expires": "2021-07-29T22:30:00-05:00",
+                "ends": "2021-07-29T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Excessive Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tulsa OK",
+                "headline": "Excessive Heat Warning issued July 29 at 2:24PM CDT until July 29 at 8:00PM CDT by NWS Tulsa OK",
+                "description": "* WHAT...For the Excessive Heat Warning, dangerously hot\nconditions with heat index values of 105 to 110 expected. For\nthe Heat Advisory, forecast heat index values of 103 to 108.\n\n* WHERE...Portions of east central, northeast and southeast\nOklahoma and northwest and west central Arkansas.\n\n* WHEN...For the Excessive Heat Warning, from noon today to 8 PM\nCDT this evening. For the Heat Advisory, from noon to 8 PM CDT\nFriday.\n\n* IMPACTS...He combination of hot temperatures and high humidity\nwill combine to create a dangerous situation in which heat\nillnesses are possible.",
+                "instruction": "Take extra precautions if you work or spend time outside. When\npossible, reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear light weight and loose fitting clothing when\npossible and drink plenty of water. To reduce risk during outdoor\nwork the occupational safety and health administration recommends\nscheduling frequent rest breaks in shaded or air conditioned\nenvironments. Anyone overcome by heat should be moved to a cool\nand shaded location. Heat stroke is an emergency, call 911.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "TSANPWTSA"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM CDT THIS EVENING... ...HEAT ADVISORY REMAINS IN EFFECT FROM NOON TO 8 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTSA.EH.W.0003.000000T0000Z-210730T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T01:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1a8ad67e658b87865b6dabd7a4375e05baa16f68.001.2,2021-07-29T03:27:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d144e316c8b07e026b5669e5fe1deed815a5704c.001.2,2021-07-28T20:05:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d86f1821a8c98c9de0cad4beca7c73f4d8744e0e.001.1,2021-07-28T14:33:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f5e2da168488fd8144e722ff89231aa3d973d3.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f5e2da168488fd8144e722ff89231aa3d973d3.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.85f5e2da168488fd8144e722ff89231aa3d973d3.001.2",
+                "areaDesc": "Sevier; Howard; Little River; Hempstead; Nevada; Miller; Lafayette; Columbia; Union; Caddo; Bossier; Webster; Claiborne; Lincoln; Union; De Soto; Red River; Bienville; Jackson; Ouachita; Sabine; Natchitoches; Winn; Grant; Caldwell; La Salle; McCurtain; Red River; Bowie; Franklin; Titus; Camp; Morris; Cass; Wood; Upshur; Marion; Smith; Gregg; Harrison; Cherokee; Rusk; Panola; Nacogdoches; Shelby; Angelina; San Augustine; Sabine",
+                "geocode": {
+                    "SAME": [
+                        "005133",
+                        "005061",
+                        "005081",
+                        "005057",
+                        "005099",
+                        "005091",
+                        "005073",
+                        "005027",
+                        "005139",
+                        "022017",
+                        "022015",
+                        "022119",
+                        "022027",
+                        "022061",
+                        "022111",
+                        "022031",
+                        "022081",
+                        "022013",
+                        "022049",
+                        "022073",
+                        "022085",
+                        "022069",
+                        "022127",
+                        "022043",
+                        "022021",
+                        "022059",
+                        "040089",
+                        "048387",
+                        "048037",
+                        "048159",
+                        "048449",
+                        "048063",
+                        "048343",
+                        "048067",
+                        "048499",
+                        "048459",
+                        "048315",
+                        "048423",
+                        "048183",
+                        "048203",
+                        "048073",
+                        "048401",
+                        "048365",
+                        "048347",
+                        "048419",
+                        "048005",
+                        "048405",
+                        "048403"
+                    ],
+                    "UGC": [
+                        "ARZ050",
+                        "ARZ051",
+                        "ARZ059",
+                        "ARZ060",
+                        "ARZ061",
+                        "ARZ070",
+                        "ARZ071",
+                        "ARZ072",
+                        "ARZ073",
+                        "LAZ001",
+                        "LAZ002",
+                        "LAZ003",
+                        "LAZ004",
+                        "LAZ005",
+                        "LAZ006",
+                        "LAZ010",
+                        "LAZ011",
+                        "LAZ012",
+                        "LAZ013",
+                        "LAZ014",
+                        "LAZ017",
+                        "LAZ018",
+                        "LAZ019",
+                        "LAZ020",
+                        "LAZ021",
+                        "LAZ022",
+                        "OKZ077",
+                        "TXZ096",
+                        "TXZ097",
+                        "TXZ108",
+                        "TXZ109",
+                        "TXZ110",
+                        "TXZ111",
+                        "TXZ112",
+                        "TXZ124",
+                        "TXZ125",
+                        "TXZ126",
+                        "TXZ136",
+                        "TXZ137",
+                        "TXZ138",
+                        "TXZ149",
+                        "TXZ150",
+                        "TXZ151",
+                        "TXZ152",
+                        "TXZ153",
+                        "TXZ165",
+                        "TXZ166",
+                        "TXZ167"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ050",
+                    "https://api.weather.gov/zones/forecast/ARZ051",
+                    "https://api.weather.gov/zones/forecast/ARZ059",
+                    "https://api.weather.gov/zones/forecast/ARZ060",
+                    "https://api.weather.gov/zones/forecast/ARZ061",
+                    "https://api.weather.gov/zones/forecast/ARZ070",
+                    "https://api.weather.gov/zones/forecast/ARZ071",
+                    "https://api.weather.gov/zones/forecast/ARZ072",
+                    "https://api.weather.gov/zones/forecast/ARZ073",
+                    "https://api.weather.gov/zones/forecast/LAZ001",
+                    "https://api.weather.gov/zones/forecast/LAZ002",
+                    "https://api.weather.gov/zones/forecast/LAZ003",
+                    "https://api.weather.gov/zones/forecast/LAZ004",
+                    "https://api.weather.gov/zones/forecast/LAZ005",
+                    "https://api.weather.gov/zones/forecast/LAZ006",
+                    "https://api.weather.gov/zones/forecast/LAZ010",
+                    "https://api.weather.gov/zones/forecast/LAZ011",
+                    "https://api.weather.gov/zones/forecast/LAZ012",
+                    "https://api.weather.gov/zones/forecast/LAZ013",
+                    "https://api.weather.gov/zones/forecast/LAZ014",
+                    "https://api.weather.gov/zones/forecast/LAZ017",
+                    "https://api.weather.gov/zones/forecast/LAZ018",
+                    "https://api.weather.gov/zones/forecast/LAZ019",
+                    "https://api.weather.gov/zones/forecast/LAZ020",
+                    "https://api.weather.gov/zones/forecast/LAZ021",
+                    "https://api.weather.gov/zones/forecast/LAZ022",
+                    "https://api.weather.gov/zones/forecast/OKZ077",
+                    "https://api.weather.gov/zones/forecast/TXZ096",
+                    "https://api.weather.gov/zones/forecast/TXZ097",
+                    "https://api.weather.gov/zones/forecast/TXZ108",
+                    "https://api.weather.gov/zones/forecast/TXZ109",
+                    "https://api.weather.gov/zones/forecast/TXZ110",
+                    "https://api.weather.gov/zones/forecast/TXZ111",
+                    "https://api.weather.gov/zones/forecast/TXZ112",
+                    "https://api.weather.gov/zones/forecast/TXZ124",
+                    "https://api.weather.gov/zones/forecast/TXZ125",
+                    "https://api.weather.gov/zones/forecast/TXZ126",
+                    "https://api.weather.gov/zones/forecast/TXZ136",
+                    "https://api.weather.gov/zones/forecast/TXZ137",
+                    "https://api.weather.gov/zones/forecast/TXZ138",
+                    "https://api.weather.gov/zones/forecast/TXZ149",
+                    "https://api.weather.gov/zones/forecast/TXZ150",
+                    "https://api.weather.gov/zones/forecast/TXZ151",
+                    "https://api.weather.gov/zones/forecast/TXZ152",
+                    "https://api.weather.gov/zones/forecast/TXZ153",
+                    "https://api.weather.gov/zones/forecast/TXZ165",
+                    "https://api.weather.gov/zones/forecast/TXZ166",
+                    "https://api.weather.gov/zones/forecast/TXZ167"
+                ],
+                "references": [],
+                "sent": "2021-07-29T13:58:00-05:00",
+                "effective": "2021-07-29T13:58:00-05:00",
+                "onset": "2021-07-29T13:58:00-05:00",
+                "expires": "2021-07-30T07:00:00-05:00",
+                "ends": "2021-07-29T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Shreveport LA",
+                "headline": "Heat Advisory issued July 29 at 1:58PM CDT until July 29 at 7:00PM CDT by NWS Shreveport LA",
+                "description": "* WHAT...For both Heat Advisories, heat index values up to 110\nare expected.\n\n* WHERE...Portions of north central and northwest Louisiana,\nsoutheast Oklahoma, south central and southwest Arkansas and\neast and northeast Texas.\n\n* WHEN...For the first Heat Advisory, until 7 PM CDT this\nevening. For the second Heat Advisory, from noon to 7 PM CDT\nFriday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SHVNPWSHV"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING... ...HEAT ADVISORY IN EFFECT FROM NOON TO 7 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSHV.HT.Y.0008.000000T0000Z-210730T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T00:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.32ce926e061c00edb1fa6d2c6f1908e237326043.001.1,2021-07-29T03:49:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c4870e9b0df2535dee2c174d44607cfca32aa6cf.001.1,2021-07-28T22:55:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2fcc3f7746131e3ddf4a5ec6a6d88b9be065876e.001.1,2021-07-28T14:27:00-05:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f5e2da168488fd8144e722ff89231aa3d973d3.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f5e2da168488fd8144e722ff89231aa3d973d3.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.85f5e2da168488fd8144e722ff89231aa3d973d3.001.1",
+                "areaDesc": "Sevier; Howard; Little River; Hempstead; Nevada; Miller; Lafayette; Columbia; Union; Caddo; Bossier; Webster; Claiborne; Lincoln; Union; De Soto; Red River; Bienville; Jackson; Ouachita; Sabine; Natchitoches; Winn; Grant; Caldwell; La Salle; McCurtain; Red River; Bowie; Franklin; Titus; Camp; Morris; Cass; Wood; Upshur; Marion; Smith; Gregg; Harrison; Cherokee; Rusk; Panola; Nacogdoches; Shelby; Angelina; San Augustine; Sabine",
+                "geocode": {
+                    "SAME": [
+                        "005133",
+                        "005061",
+                        "005081",
+                        "005057",
+                        "005099",
+                        "005091",
+                        "005073",
+                        "005027",
+                        "005139",
+                        "022017",
+                        "022015",
+                        "022119",
+                        "022027",
+                        "022061",
+                        "022111",
+                        "022031",
+                        "022081",
+                        "022013",
+                        "022049",
+                        "022073",
+                        "022085",
+                        "022069",
+                        "022127",
+                        "022043",
+                        "022021",
+                        "022059",
+                        "040089",
+                        "048387",
+                        "048037",
+                        "048159",
+                        "048449",
+                        "048063",
+                        "048343",
+                        "048067",
+                        "048499",
+                        "048459",
+                        "048315",
+                        "048423",
+                        "048183",
+                        "048203",
+                        "048073",
+                        "048401",
+                        "048365",
+                        "048347",
+                        "048419",
+                        "048005",
+                        "048405",
+                        "048403"
+                    ],
+                    "UGC": [
+                        "ARZ050",
+                        "ARZ051",
+                        "ARZ059",
+                        "ARZ060",
+                        "ARZ061",
+                        "ARZ070",
+                        "ARZ071",
+                        "ARZ072",
+                        "ARZ073",
+                        "LAZ001",
+                        "LAZ002",
+                        "LAZ003",
+                        "LAZ004",
+                        "LAZ005",
+                        "LAZ006",
+                        "LAZ010",
+                        "LAZ011",
+                        "LAZ012",
+                        "LAZ013",
+                        "LAZ014",
+                        "LAZ017",
+                        "LAZ018",
+                        "LAZ019",
+                        "LAZ020",
+                        "LAZ021",
+                        "LAZ022",
+                        "OKZ077",
+                        "TXZ096",
+                        "TXZ097",
+                        "TXZ108",
+                        "TXZ109",
+                        "TXZ110",
+                        "TXZ111",
+                        "TXZ112",
+                        "TXZ124",
+                        "TXZ125",
+                        "TXZ126",
+                        "TXZ136",
+                        "TXZ137",
+                        "TXZ138",
+                        "TXZ149",
+                        "TXZ150",
+                        "TXZ151",
+                        "TXZ152",
+                        "TXZ153",
+                        "TXZ165",
+                        "TXZ166",
+                        "TXZ167"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ050",
+                    "https://api.weather.gov/zones/forecast/ARZ051",
+                    "https://api.weather.gov/zones/forecast/ARZ059",
+                    "https://api.weather.gov/zones/forecast/ARZ060",
+                    "https://api.weather.gov/zones/forecast/ARZ061",
+                    "https://api.weather.gov/zones/forecast/ARZ070",
+                    "https://api.weather.gov/zones/forecast/ARZ071",
+                    "https://api.weather.gov/zones/forecast/ARZ072",
+                    "https://api.weather.gov/zones/forecast/ARZ073",
+                    "https://api.weather.gov/zones/forecast/LAZ001",
+                    "https://api.weather.gov/zones/forecast/LAZ002",
+                    "https://api.weather.gov/zones/forecast/LAZ003",
+                    "https://api.weather.gov/zones/forecast/LAZ004",
+                    "https://api.weather.gov/zones/forecast/LAZ005",
+                    "https://api.weather.gov/zones/forecast/LAZ006",
+                    "https://api.weather.gov/zones/forecast/LAZ010",
+                    "https://api.weather.gov/zones/forecast/LAZ011",
+                    "https://api.weather.gov/zones/forecast/LAZ012",
+                    "https://api.weather.gov/zones/forecast/LAZ013",
+                    "https://api.weather.gov/zones/forecast/LAZ014",
+                    "https://api.weather.gov/zones/forecast/LAZ017",
+                    "https://api.weather.gov/zones/forecast/LAZ018",
+                    "https://api.weather.gov/zones/forecast/LAZ019",
+                    "https://api.weather.gov/zones/forecast/LAZ020",
+                    "https://api.weather.gov/zones/forecast/LAZ021",
+                    "https://api.weather.gov/zones/forecast/LAZ022",
+                    "https://api.weather.gov/zones/forecast/OKZ077",
+                    "https://api.weather.gov/zones/forecast/TXZ096",
+                    "https://api.weather.gov/zones/forecast/TXZ097",
+                    "https://api.weather.gov/zones/forecast/TXZ108",
+                    "https://api.weather.gov/zones/forecast/TXZ109",
+                    "https://api.weather.gov/zones/forecast/TXZ110",
+                    "https://api.weather.gov/zones/forecast/TXZ111",
+                    "https://api.weather.gov/zones/forecast/TXZ112",
+                    "https://api.weather.gov/zones/forecast/TXZ124",
+                    "https://api.weather.gov/zones/forecast/TXZ125",
+                    "https://api.weather.gov/zones/forecast/TXZ126",
+                    "https://api.weather.gov/zones/forecast/TXZ136",
+                    "https://api.weather.gov/zones/forecast/TXZ137",
+                    "https://api.weather.gov/zones/forecast/TXZ138",
+                    "https://api.weather.gov/zones/forecast/TXZ149",
+                    "https://api.weather.gov/zones/forecast/TXZ150",
+                    "https://api.weather.gov/zones/forecast/TXZ151",
+                    "https://api.weather.gov/zones/forecast/TXZ152",
+                    "https://api.weather.gov/zones/forecast/TXZ153",
+                    "https://api.weather.gov/zones/forecast/TXZ165",
+                    "https://api.weather.gov/zones/forecast/TXZ166",
+                    "https://api.weather.gov/zones/forecast/TXZ167"
+                ],
+                "references": [],
+                "sent": "2021-07-29T13:58:00-05:00",
+                "effective": "2021-07-29T13:58:00-05:00",
+                "onset": "2021-07-30T12:00:00-05:00",
+                "expires": "2021-07-30T07:00:00-05:00",
+                "ends": "2021-07-30T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Shreveport LA",
+                "headline": "Heat Advisory issued July 29 at 1:58PM CDT until July 30 at 7:00PM CDT by NWS Shreveport LA",
+                "description": "* WHAT...For both Heat Advisories, heat index values up to 110\nare expected.\n\n* WHERE...Portions of north central and northwest Louisiana,\nsoutheast Oklahoma, south central and southwest Arkansas and\neast and northeast Texas.\n\n* WHEN...For the first Heat Advisory, until 7 PM CDT this\nevening. For the second Heat Advisory, from noon to 7 PM CDT\nFriday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SHVNPWSHV"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT UNTIL 7 PM CDT THIS EVENING... ...HEAT ADVISORY IN EFFECT FROM NOON TO 7 PM CDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSHV.HT.Y.0009.210730T1700Z-210731T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-31T00:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.32ce926e061c00edb1fa6d2c6f1908e237326043.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.32ce926e061c00edb1fa6d2c6f1908e237326043.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.32ce926e061c00edb1fa6d2c6f1908e237326043.001.1",
+                "areaDesc": "Sevier; Howard; Little River; Hempstead; Nevada; Miller; Lafayette; Columbia; Union; Caddo; Bossier; Webster; Claiborne; Lincoln; Union; De Soto; Red River; Bienville; Jackson; Ouachita; Sabine; Natchitoches; Winn; Grant; Caldwell; La Salle; McCurtain; Red River; Bowie; Franklin; Titus; Camp; Morris; Cass; Wood; Upshur; Marion; Smith; Gregg; Harrison; Cherokee; Rusk; Panola; Nacogdoches; Shelby; Angelina; San Augustine; Sabine",
+                "geocode": {
+                    "SAME": [
+                        "005133",
+                        "005061",
+                        "005081",
+                        "005057",
+                        "005099",
+                        "005091",
+                        "005073",
+                        "005027",
+                        "005139",
+                        "022017",
+                        "022015",
+                        "022119",
+                        "022027",
+                        "022061",
+                        "022111",
+                        "022031",
+                        "022081",
+                        "022013",
+                        "022049",
+                        "022073",
+                        "022085",
+                        "022069",
+                        "022127",
+                        "022043",
+                        "022021",
+                        "022059",
+                        "040089",
+                        "048387",
+                        "048037",
+                        "048159",
+                        "048449",
+                        "048063",
+                        "048343",
+                        "048067",
+                        "048499",
+                        "048459",
+                        "048315",
+                        "048423",
+                        "048183",
+                        "048203",
+                        "048073",
+                        "048401",
+                        "048365",
+                        "048347",
+                        "048419",
+                        "048005",
+                        "048405",
+                        "048403"
+                    ],
+                    "UGC": [
+                        "ARZ050",
+                        "ARZ051",
+                        "ARZ059",
+                        "ARZ060",
+                        "ARZ061",
+                        "ARZ070",
+                        "ARZ071",
+                        "ARZ072",
+                        "ARZ073",
+                        "LAZ001",
+                        "LAZ002",
+                        "LAZ003",
+                        "LAZ004",
+                        "LAZ005",
+                        "LAZ006",
+                        "LAZ010",
+                        "LAZ011",
+                        "LAZ012",
+                        "LAZ013",
+                        "LAZ014",
+                        "LAZ017",
+                        "LAZ018",
+                        "LAZ019",
+                        "LAZ020",
+                        "LAZ021",
+                        "LAZ022",
+                        "OKZ077",
+                        "TXZ096",
+                        "TXZ097",
+                        "TXZ108",
+                        "TXZ109",
+                        "TXZ110",
+                        "TXZ111",
+                        "TXZ112",
+                        "TXZ124",
+                        "TXZ125",
+                        "TXZ126",
+                        "TXZ136",
+                        "TXZ137",
+                        "TXZ138",
+                        "TXZ149",
+                        "TXZ150",
+                        "TXZ151",
+                        "TXZ152",
+                        "TXZ153",
+                        "TXZ165",
+                        "TXZ166",
+                        "TXZ167"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ050",
+                    "https://api.weather.gov/zones/forecast/ARZ051",
+                    "https://api.weather.gov/zones/forecast/ARZ059",
+                    "https://api.weather.gov/zones/forecast/ARZ060",
+                    "https://api.weather.gov/zones/forecast/ARZ061",
+                    "https://api.weather.gov/zones/forecast/ARZ070",
+                    "https://api.weather.gov/zones/forecast/ARZ071",
+                    "https://api.weather.gov/zones/forecast/ARZ072",
+                    "https://api.weather.gov/zones/forecast/ARZ073",
+                    "https://api.weather.gov/zones/forecast/LAZ001",
+                    "https://api.weather.gov/zones/forecast/LAZ002",
+                    "https://api.weather.gov/zones/forecast/LAZ003",
+                    "https://api.weather.gov/zones/forecast/LAZ004",
+                    "https://api.weather.gov/zones/forecast/LAZ005",
+                    "https://api.weather.gov/zones/forecast/LAZ006",
+                    "https://api.weather.gov/zones/forecast/LAZ010",
+                    "https://api.weather.gov/zones/forecast/LAZ011",
+                    "https://api.weather.gov/zones/forecast/LAZ012",
+                    "https://api.weather.gov/zones/forecast/LAZ013",
+                    "https://api.weather.gov/zones/forecast/LAZ014",
+                    "https://api.weather.gov/zones/forecast/LAZ017",
+                    "https://api.weather.gov/zones/forecast/LAZ018",
+                    "https://api.weather.gov/zones/forecast/LAZ019",
+                    "https://api.weather.gov/zones/forecast/LAZ020",
+                    "https://api.weather.gov/zones/forecast/LAZ021",
+                    "https://api.weather.gov/zones/forecast/LAZ022",
+                    "https://api.weather.gov/zones/forecast/OKZ077",
+                    "https://api.weather.gov/zones/forecast/TXZ096",
+                    "https://api.weather.gov/zones/forecast/TXZ097",
+                    "https://api.weather.gov/zones/forecast/TXZ108",
+                    "https://api.weather.gov/zones/forecast/TXZ109",
+                    "https://api.weather.gov/zones/forecast/TXZ110",
+                    "https://api.weather.gov/zones/forecast/TXZ111",
+                    "https://api.weather.gov/zones/forecast/TXZ112",
+                    "https://api.weather.gov/zones/forecast/TXZ124",
+                    "https://api.weather.gov/zones/forecast/TXZ125",
+                    "https://api.weather.gov/zones/forecast/TXZ126",
+                    "https://api.weather.gov/zones/forecast/TXZ136",
+                    "https://api.weather.gov/zones/forecast/TXZ137",
+                    "https://api.weather.gov/zones/forecast/TXZ138",
+                    "https://api.weather.gov/zones/forecast/TXZ149",
+                    "https://api.weather.gov/zones/forecast/TXZ150",
+                    "https://api.weather.gov/zones/forecast/TXZ151",
+                    "https://api.weather.gov/zones/forecast/TXZ152",
+                    "https://api.weather.gov/zones/forecast/TXZ153",
+                    "https://api.weather.gov/zones/forecast/TXZ165",
+                    "https://api.weather.gov/zones/forecast/TXZ166",
+                    "https://api.weather.gov/zones/forecast/TXZ167"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2fcc3f7746131e3ddf4a5ec6a6d88b9be065876e.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.2fcc3f7746131e3ddf4a5ec6a6d88b9be065876e.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-28T14:27:00-05:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4870e9b0df2535dee2c174d44607cfca32aa6cf.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.c4870e9b0df2535dee2c174d44607cfca32aa6cf.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-07-28T22:55:00-05:00"
+                    }
+                ],
+                "sent": "2021-07-29T03:49:00-05:00",
+                "effective": "2021-07-29T03:49:00-05:00",
+                "onset": "2021-07-29T12:00:00-05:00",
+                "expires": "2021-07-29T12:00:00-05:00",
+                "ends": "2021-07-29T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Shreveport LA",
+                "headline": "Heat Advisory issued July 29 at 3:49AM CDT until July 29 at 7:00PM CDT by NWS Shreveport LA",
+                "description": "* WHAT...Heat index values from 105 to 110 expected.\n\n* WHERE...Portions of north central and northwest Louisiana,\nsoutheast Oklahoma, south central and southwest Arkansas and\neast and northeast Texas.\n\n* WHEN...From noon to 7 PM CDT Thursday.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SHVNPWSHV"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT FROM NOON TODAY TO 7 PM CDT THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSHV.HT.Y.0008.210729T1700Z-210730T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-07-30T00:00:00+00:00"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "current watches, warnings, and advisories for Oklahoma",
+    "updated": "2021-07-29T19:35:49+00:00"
+}
