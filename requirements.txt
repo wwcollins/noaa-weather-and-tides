@@ -32,7 +32,7 @@ packaging==20.4
 pip-review==1.1.0
 pkginfo==1.5.0.1
 pycodestyle==2.6.0
-Pygments==2.6.1
+Pygments==2.7.4
 PyLD==2.0.2
 pylint==2.5.3
 pyparsing==2.4.7
