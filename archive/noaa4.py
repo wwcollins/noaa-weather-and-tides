@@ -11,10 +11,10 @@ import os
 from urllib.request import urlopen
 
 # ------------------------------ CONSTANTS ---------------------------------------
-WELCOME_MSG = 'Welcome to NOAA Weather API Collection.'
+WELCOME_MSG = 'Welcome to NOAA weather api collection.'
 COMPANY_INFO = 'Alkemie Technologies LLC, William Collins'
 COPYRIGHT = ' CR 2021, All Rights Reserved'
-NOAA_ALERTS_BY_STATE_PRE = "https://api.weather.gov/alerts/active?area='" # NOAA API
+NOAA_ALERTS_BY_STATE_PRE = "https://api.weather.gov/alerts/active?area='"
 
 #------------- API KEYS ------------------
 KEY_DARKSKY = 'f03351387f6ea21ce5e4bfc5b503a508' # Darksky Weather REST API
@@ -23,30 +23,26 @@ KEY_OPENWEATHERMAP = '212e677c073ca9cf225496aa0fe55e04'
 #mqkey = JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA  secret:  iSW0xhglv6TBWTeI TBD:  -secure keys in hash later
 KEY_MAPQUEST = 'JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA'
 
-print(WELCOME_MSG + COMPANY_INFO + COPYRIGHT)
-print('Todays date is ' + str(date.today()))
-time.sleep(1)
-
-# ------------------------------- METHODS ------------------------------------------
+#------------------------------- METHODS ------------------------------------------
 
 def geoforward(location): #e.g. Round Rock, TX
     #https://www.mapquestapi.com/geocoding/v1/address?key=JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA&inFormat=kvp&outFormat=json&location=Denver%2C+CO&thumbMaps=false
-    url = 'http://open.mapquestapi.com/geocoding/v1/address?key='+ KEY_MAPQUEST+'&location=' + location + '&thumbMaps=false'
+    url = 'http://open.mapquestapi.com/geocoding/v1/address?key='+KEY_MAPQUEST+'&location='+location+'&thumbMaps=false'
     print(url)
     r = requests.get(url)
-    print('...json text response from mapquest geoforward request/n',r)
+    print(r)
     json_object = r.json()
     lat = str(float(json_object['results'][0]['locations'][0]['latLng']['lat']))
     lon = str(float(json_object['results'][0]['locations'][0]['latLng']['lng']))
     latlon = str(lat) + ',' + str(lon)
     return lat, lon, latlon
     
-# test geoforward
 """
+#test geoforward
 location = 'round rock tx'
 print(geoforward(location))
 lat,lon,latlon = geoforward(location)
-print('lat,lon,latlon', lat, lon, latlon)
+
 quit()
 """
 
@@ -68,111 +64,15 @@ def georeverse(lat,lon):
     state = str(json_object['results'][0]['locations'][0]['adminArea3'])
     street = str(json_object['results'][0]['locations'][0]['street'])
     return street, city, state
-
-# test
-# print(get_us_state_abbrev('Texas'))
-
-"""
-public_ip = requests.get("http://wtfismyip.com/text").text
-print(public_ip)
-ip2geotools 24.27.43.198 -d dbipcity -f json
-"""
-
-# Get user location via public IP (Note:  not always accurate)
-def getuser_location():  # pip install socket
-    # DATA - Collect Information re. User IP addresses, location by IP, etc.
-    print('-------------------ACQUIRING LOCAL USER DATA--------------------------------')
-    hostname = socket.gethostname()
-    localip = socket.gethostbyname(hostname)
-    public_ip = requests.get('http://wtfismyip.com/text').text
-    # ip2geotools 24.27.43.198 -d dbipcity -f json
-    geoloc_cmd = 'ip2geotools ' + public_ip + ' -d dbipcity -f json'
-    geoloc_cmd = geoloc_cmd.replace("\n", "")
-    # print (geoloc_cmd)
-    geoloc = os.system(geoloc_cmd)  # return success/fail code.  Fail !=0
-    geoloc_out = os.popen(geoloc_cmd).read()  # dictionary returned from CMD execute
-    print("geoloc_out: " + geoloc_out)
-    print(hostname + " " + str(localip) + " " + public_ip)
-    # https://api.ipgeolocationapi.com/geolocate/91.213.103.0 #does not return state info
-    # url = 'https://api.ipgeolocationapi.com/geolocate/' + public_ip
-    # print (url)
-    # r = requests.get(url)
-    # print (r.text)
-    # print(type(geoloc_out))
-    geo_dict = json.loads(geoloc_out)
-    # iterate through dictionary
-
-    """ CMD and Output
-    ip2geotools 24.27.43.198 -d dbipcity -f json
-    {"ip_address": "24.27.43.198", "city": "Round Rock", "region": "Texas", "country": "US", "latitude": 30.508235, "longitude": -97.6788934}
-    geoloc_out: {"ip_address": "24.27.43.198", "city": "Round Rock", "region": "Texas", "country": "US", "latitude": 30.508235, "longitude": -97.6788934}
-    """
-    for key, value in geo_dict.items():
-        print(key, ":", value)
-    print(geo_dict['region'])
-    state = geo_dict['region']
-    state_abrev = get_us_state_abbrev(state)
-
-    # testget_host_ip = getuser_location()
-    # print(testget_host_ip)
-    state = get_us_state_abbrev(geo_dict['region'])  # return 2 letter abbrev for state
-    lat = str(geo_dict['latitude'])
-    lon = str(geo_dict['longitude'])
-    latlon = lat + ',' + lon
-
-    return hostname, localip, public_ip, state, state_abrev, geo_dict, lat, lon, latlon
-
-def tide_forecast(days_out):
-    # https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
-
-    now = datetime.now()
-    begin_date = now.strftime('%Y%m%d')
-    end_date = datetime.today() + timedelta(days_out)
-    end_date = end_date.strftime('%Y%m%d')
-    stationID = "8775241"
-    print("start and end date")
-    print(begin_date)
-    print(end_date)
-    url = "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=" + begin_date + "&end_date=" + end_date + "&datum=MLLW&station=" + stationID + "&time_zone=lst_ldt&units=english&interval=hilo&format=json"
-    print(url)
-    try:
-        r = ""
-        print(url)
-        r = requests.get(url)
-        print("requests status code=" + str(r.status_code))
-        if r.status_code == 200:
-            time.sleep(2)
-            # print ("response=" + r.text)
-            print("NOAA Tide Data api success...")
-            jsonobj = r.json()
-            return r.text
-        else:
-            print("status=" + str(r.status_code))
-            print("trying again..." + url)
-            time.sleep(3)
-    except Exception as e:
-        print(e)
-        return e
-
-# test
-"""
-days_out = 15
-r = tide_forecast(days_out)
-r_obj = txt2jsonobj(r)  # returns JSON obj from text
-
-print(r_obj['predictions'][0]['t'])
-print(r_obj['predictions'][0]['v'])
-print(r_obj['predictions'][0]['type'])
-"""
-
-def write2file(filename, attrib, content):  # attrib is w or a.  w overwrites, a appends
-    # f = open("demofile2.txt", "a")
+    
+def write2file(filename,attrib,content): #attrib is w or a.  w overwrites, a appends
+    #f = open("demofile2.txt", "a")
     f = open(filename, attrib)
     f.write(content)
     f.close()
-
+    
 def openfile(filename):
-    # open and read the file
+    #open and read the file
     f = open(filename, "r")
     print(f.read())
 
@@ -183,116 +83,112 @@ def txt2jsonobj(json_string):
 def get_us_state_abbrev(state):  # method to convert state to state abbrev via dictionary us_state_abbrev
     print(state)
     us_state_abbrev = {
-        'Alabama': 'AL',
-        'Alaska': 'AK',
-        'American Samoa': 'AS',
-        'Arizona': 'AZ',
-        'Arkansas': 'AR',
-        'California': 'CA',
-        'Colorado': 'CO',
-        'Connecticut': 'CT',
-        'Delaware': 'DE',
-        'District of Columbia': 'DC',
-        'Florida': 'FL',
-        'Georgia': 'GA',
-        'Guam': 'GU',
-        'Hawaii': 'HI',
-        'Idaho': 'ID',
-        'Illinois': 'IL',
-        'Indiana': 'IN',
-        'Iowa': 'IA',
-        'Kansas': 'KS',
-        'Kentucky': 'KY',
-        'Louisiana': 'LA',
-        'Maine': 'ME',
-        'Maryland': 'MD',
-        'Massachusetts': 'MA',
-        'Michigan': 'MI',
-        'Minnesota': 'MN',
-        'Mississippi': 'MS',
-        'Missouri': 'MO',
-        'Montana': 'MT',
-        'Nebraska': 'NE',
-        'Nevada': 'NV',
-        'New Hampshire': 'NH',
-        'New Jersey': 'NJ',
-        'New Mexico': 'NM',
-        'New York': 'NY',
-        'North Carolina': 'NC',
-        'North Dakota': 'ND',
-        'Northern Mariana Islands': 'MP',
-        'Ohio': 'OH',
-        'Oklahoma': 'OK',
-        'Oregon': 'OR',
-        'Pennsylvania': 'PA',
-        'Puerto Rico': 'PR',
-        'Rhode Island': 'RI',
-        'South Carolina': 'SC',
-        'South Dakota': 'SD',
-        'Tennessee': 'TN',
-        'Texas': 'TX',
-        'Utah': 'UT',
-        'Vermont': 'VT',
-        'Virgin Islands': 'VI',
-        'Virginia': 'VA',
-        'Washington': 'WA',
-        'Washington DC': 'DC',
-        'West Virginia': 'WV',
-        'Wisconsin': 'WI',
-        'Wyoming': 'WY'
+    'Alabama': 'AL',
+    'Alaska': 'AK',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'Arkansas': 'AR',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'Delaware': 'DE',
+    'District of Columbia': 'DC',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Iowa': 'IA',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Maine': 'ME',
+    'Maryland': 'MD',
+    'Massachusetts': 'MA',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Mississippi': 'MS',
+    'Missouri': 'MO',
+    'Montana': 'MT',
+    'Nebraska': 'NE',
+    'Nevada': 'NV',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'New York': 'NY',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Northern Mariana Islands':'MP',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Vermont': 'VT',
+    'Virgin Islands': 'VI',
+    'Virginia': 'VA',
+    'Washington': 'WA',
+    'Washington DC': 'DC',
+    'West Virginia': 'WV',
+    'Wisconsin': 'WI',
+    'Wyoming': 'WY'
     }
-    return us_state_abbrev[state]
-
-# --------------  END METHOD MOVE SECTION --------------------------
-
-# Start main code block ....
-auto_locate = False
-loclist = []
-location = input ('Enter {City,State}, {lat,lon} or press just press Enter to Autolocate your position (not always accurate)')
-
-print('...analyzing input and returning necessary values')
-lat, lon, city, state = '','','',''
-if location == "":
-    auto_locate = True
-    print('...Autolocating and acquiring hostname, localip, public_ip, state, state_abrev using getuser_location() method')
-    hostname, localip, public_ip, state, state_abrev, geo_dict, lat, lon, latlon = getuser_location()
-else: # Identify input as city,state or lat,lon via generating error below
-    loclist = location.split(",")
-    try:
-        int(loclist[0]) # True if element can be cast as int-> means that first value is latitude
-        print('lat,lon input detected')
-        lat = loclist[0].strip()
-        lon = loclist[1].strip()
-        latlon = lat + ',' + lon
-        street, city, state = georeverse(location)
-    except:
-        print('city,state input detected')
-        city = loclist[0].strip()
-        state = loclist[1].strip()
-        city_state = city + ',' + state
-        lat,lon,latlon = geoforward(city_state)
-
-print('...retrieved data for selected location')
-print('...data for location: ',city,state,lat,lon,' latlon:',latlon)
-
-# now get extreme weather alerts -> TBD
-
-quit()
+    return us_state_abbrev [state]
     
-
+#test
+#print(get_us_state_abbrev('Texas'))
     
+"""
+public_ip = requests.get("http://wtfismyip.com/text").text
+print(public_ip)
+ip2geotools 24.27.43.198 -d dbipcity -f json
+"""
 
-
-
-
+#Get user location via public IP (Note:  not always accurate)
+def getuser_location(): #pip install socket
+    hostname = socket.gethostname()
+    localip = socket.gethostbyname(hostname) 
+    public_ip = requests.get('http://wtfismyip.com/text').text
+    #ip2geotools 24.27.43.198 -d dbipcity -f json
+    geoloc_cmd = 'ip2geotools ' + public_ip + ' -d dbipcity -f json'
+    geoloc_cmd = geoloc_cmd.replace("\n","")
+    #print (geoloc_cmd)
+    geoloc = os.system(geoloc_cmd) #return success/fail code.  Fail !=0
+    geoloc_out = os.popen(geoloc_cmd).read()  #dictionary returned from CMD execute
+    print ("geoloc_out: " + geoloc_out)
+    print(hostname + " " + str(localip) + " " + public_ip)
+    #https://api.ipgeolocationapi.com/geolocate/91.213.103.0 #does not return state info
+    #url = 'https://api.ipgeolocationapi.com/geolocate/' + public_ip
+    #print (url)
+    #r = requests.get(url)
+    #print (r.text)
+    #print(type(geoloc_out))
+    geo_dict = json.loads(geoloc_out)
+    #iterate through dictionary
     
-# quit()
+    """ CMD and Output
+    ip2geotools 24.27.43.198 -d dbipcity -f json
+    {"ip_address": "24.27.43.198", "city": "Round Rock", "region": "Texas", "country": "US", "latitude": 30.508235, "longitude": -97.6788934}
+    geoloc_out: {"ip_address": "24.27.43.198", "city": "Round Rock", "region": "Texas", "country": "US", "latitude": 30.508235, "longitude": -97.6788934}
+    """
+    
+    for key, value in geo_dict.items(): 
+        print(key, ":", value) 
+    print(geo_dict['region'])
+    state = geo_dict['region']
+    state_abrev = get_us_state_abbrev(state)
+    
+    return hostname, localip, public_ip, state, state_abrev, geo_dict
 
-# Alerts:  https://api.weather.gov/alerts/active?area=TX  an alert for TX Extreme Weather
-print('...executing alerts method and returning JSON text')
-def alerts(state): # method to get extreme weather alerts by state. Uses state abbreviation as input
-    if len(state) != 2: # check to see if state abbrev else get state abbrev
-        state = get_us_state_abbrev(state)
+def alerts(state): # method to get alerts by state
     try:
         r = ""
         #url = 'https://api.weather.gov/alerts/active?area=' + str(state)
@@ -316,115 +212,46 @@ def alerts(state): # method to get extreme weather alerts by state. Uses state a
         print (e)
         return e
 
-# test above
-# state = "tx" #use state per def return above - TBD add exception and null string handling
-# r = alerts(state)  #get NOAA weather alerts by state
-# print (r) # print json text
-# print(type(r)) # print var type
-
-print('********************* Get NOAA extreme weather alerts for state' + state)
-r = alerts(state)  # get NOAA extreme weather alerts by state
-
-filepath = './data/' + str(state) + '_alerts_' + str(date.today()) + '.json'
-print('...writing JSON text to file in data directory: ' + filepath)
-write2file(filepath, 'w', r)
-
-time.sleep(1)
-
-print('...converting JSON text to JSON Object')
-try:
-    r_obj = txt2jsonobj(r) #returns JSON object from JSON text
-except Exception as e:
-    print (e)
-
-print('...getting title, updated, areaDesc, headline, description, affected zones from JSON obj')
-try: # Get specific information from JSON object
-    title = r_obj['title']
-    updated = r_obj['updated']
-    areaDesc = r_obj['features'][0]['properties']['areaDesc']
-    headline = r_obj['features'][0]['properties']['headline']
-    description = r_obj['features'][0]['properties']['description']
-    affectedZones = r_obj['features'][0]['properties']['affectedZones']
-
-    print(title + " " + str(updated))
-    print (areaDesc)
-    print (headline)
-    print (description)
-    print ("affectedZones:")
-    print (affectedZones)
-except Exception as e:
-    print(e)
-
-print('... iterating throug JSON alerts data object. Getting data for each ID found')
-for n in range(100): 
-    try:
-        print("...ID=" + str(n))
-        areaDesc = r_obj['features'][n]['properties']['areaDesc']
-        headline = r_obj['features'][n]['properties']['headline']
-        description = r_obj['features'][n]['properties']['description']
-        affectedZones = r_obj['features'][n]['properties']['affectedZones']
-        print(title + " " + str(updated))
-        print (areaDesc)
-        print (headline)
-        print (description)
-        print ("affectedZones:" + str(affectedZones) + "\n")
-    except Exception as e:
-        # print (e)
-        print('...all extreme items processed')
-        break
-
-    quit()
-
-filename = "noaa_weather_alerts_" + state + ".json"
-attrib = "w"
-content = r
-print(".....Writing Alert content to " + filename)
-try:
-    write2file(filename,attrib,content)
-    #openfile(filename)
-except Exception as e: 
-    print(e)
-
-
-print('-------------------Getting TIDES AND CURRRENTS for location --------------------------------')
-#TBD - implement - levarage with WeatherX.py with LCD output
-#https://tidesandcurrents.noaa.gov/api/#products
-#Water Temp
-#Example:  https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20130808 15:00&end_date=20130808 15:06&station=8454000&product=water_temperature&units=english&time_zone=gmt&application=ports_screen&format=json
-#Example:  https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20200725 15:00&end_date=20200808 15:06&station=8454000&product=water_temperature&units=english&time_zone=gmt&application=ports_screen&format=json
-#Tides - product = tide_predictions
-#https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20200725%2015:00&end_date=20200725%2015:06&station=8775241&product=tide_prediction&format=json&units=english&time_zone=lst_ldt&datum=MLLW
-#8775241 - Aransas Pass TX
-#https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=8775241
-#https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200701&end_date=20200731&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
-
 #This is the format to use! Finally!!!
 #https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
 
-
-
-print('*********************TIDE INFORMATION - FORECAST****************')
-print()
-for n in range(0,100): 
+def tide_forecast(days_out):
+    #https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
+    
+    now = datetime.now()
+    begin_date = now.strftime('%Y%m%d')
+    end_date = datetime.today() + timedelta(days_out)
+    end_date = end_date.strftime('%Y%m%d')
+    stationID = "8775241"
+    print("start and end date")
+    print(begin_date)
+    print(end_date)
+    url = "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=" + begin_date + "&end_date=" + end_date + "&datum=MLLW&station=" + stationID + "&time_zone=lst_ldt&units=english&interval=hilo&format=json"
+    print(url)
     try:
-        #print("***************************** ID=" + str(n) + "***************************")
-        print()
-        print(r_obj['predictions'][n]['t'] + " " + r_obj['predictions'][n]['type'] + " " + r_obj['predictions'][n]['v'])
-        #print(r_obj['predictions'][n]['type'])
-        #print(r_obj['predictions'][n]['v'])
-        
+        r = ""
+        print (url)
+        r = requests.get(url)
+        print("requests status code=" + str(r.status_code))
+        if r.status_code == 200:
+            time.sleep(2)
+            #print ("response=" + r.text)
+            print("NOAA Tide Data api success...")
+            jsonobj = r.json()
+            return r.text
+        else:
+            print("status=" + str(r.status_code))
+            print("trying again..." + url)
+            time.sleep(3)
     except Exception as e:
-        #print (e)
-        break
-
-filename = "noaa_weather__tides_forecast_" + str(lat) + ".json"
-attrib = "w"
-content = r
-print(".....Writing Alert content to " + filename)
-write2file(filename,attrib,content)
-#openfile(filename)
-
-#quit()
+        print (e)
+        return e
+    
+"""
+print(r_obj['predictions'][0]['t'])
+print(r_obj['predictions'][0]['v'])
+print(r_obj['predictions'][0]['type'])
+"""
 
 """
 The CO-OPS API for data retrieval can be used to retrieve observations and predictions from CO-OPS stations.
@@ -464,45 +291,6 @@ def grid(lat,lon):
     except Exception as e:
         print (e)
 
-#test above
-#lat = '39.7456'
-#lon = '-97.0892'
-r = grid(lat,lon) #variables now defined via functions above
-#print (r)
-r_obj = txt2jsonobj(r) #returns JSON obj from text
-
-print("********************************* GRID INFORMATION " + str(lat) + " " + str(lon) + " *******************************")
-"""
-# TBD pull office,grid_x,grid_y from JSON obj to use in api call below...
-        "gridId": "EWX"
-        "gridX": 157
-        "gridY": 100
-        "forecast": "https://api.weather.gov/gridpoints/EWX/157,100/forecast",
-        "forecastHourly": "https://api.weather.gov/gridpoints/EWX/157,100/forecast/hourly",
-        "forecastGridData": "https://api.weather.gov/gridpoints/EWX/157,100",
-        "observationStations": "https://api.weather.gov/gridpoints/EWX/157,100/stations"
-"""
-gridId = r_obj['properties']['gridId']
-gridX = r_obj['properties']['gridX']
-gridY = r_obj['properties']['gridY']
-forecast = r_obj['properties']['forecast']
-forecastHourly = r_obj['properties']['forecastHourly']
-forecastGridData = r_obj['properties']['forecastGridData']
-observationStations = r_obj['properties']['observationStations']
-print(gridId)
-print(gridX)
-print(gridY)
-print("forecast:" + forecast)
-print("forecastHourly:" + forecastHourly)
-print("forecastGridData:" + forecastGridData)
-print("observationStations:" + observationStations)
-
-filename = "noaa_weather__grid_" + str(lat) + " " + str(lon) + ".json"
-attrib = "w"
-content = r
-print(".....Writing Alert content to " + filename)
-write2file(filename,attrib,content)
-#openfile(filename)
 
 def get_observation_stations(url):
     try:
@@ -526,26 +314,6 @@ def get_observation_stations(url):
         get_observation_stations(url)
 
 
-# Observation Stations Data
-url = observationStations
-r = get_observation_stations(url)
-content = r
-filename = "noaa_weather__stations_" + str(lat) + " " + str(lon) + ".json"
-print(".....Writing Weather Station content to " + filename)
-write2file(filename,attrib,content)
-
-# quit()
-
-"""
-https://api.weather.gov/points/{latitude},{longitude}
-For example: https://api.weather.gov/points/39.7456,-97.0892
-"""
-
-print("-------------------POINTS INFORMATION--------------------------------")
-
-# Get /points information
-# e.g. https://api.weather.gov/points/39.7456,-97.0892
-
 def getpoints(lat,lon):
     url = "https://api.weather.gov/points/" + str(lat) + "," + str(lon)
     #print (url)
@@ -553,21 +321,7 @@ def getpoints(lat,lon):
     #print (r.text)
     #jsonobj = r.json()
     return r.text
-    
-#test
-r = getpoints(lat,lon) #lat lon defined earlier in code
-filename = "noaa_weather_points_" + str(lat) + " " + str(lon) + ".json"
-attrib = "w"
-content = r
-print(".....Writing Points content to " + filename)
-write2file(filename,attrib,content)
-#openfile(filename)
 
-
-#quit()
-
-#Forecasts - Use Grid and Points Information to populate values: office, gridx, gridy"
-print("-------------------FORECASTS--------------------------------")
 
 """
 Forecasts are divided into 2.5km grids. Each NWS office is responsible for a section of the grid. The API endpoint for the forecast at a specific grid is:
@@ -604,18 +358,6 @@ def forecast(office,gridX,gridY):
     except Exception as e:
         #print (e)
         forecast(office,gridX,gridY)
-        
-#office = 'TOP' #Need to retrieve this from previous api call
-#grid_x = "31" #Need to retrieve this from previous api call
-#grid_y = "80" #Need to retrieve this from previous api call
-
-office = gridId
-r = forecast(office,gridX,gridY)
-#print(r)
-
-r_obj = txt2jsonobj(r) #returns JSON obj from text
-#print(r_obj)
-
 
 """
 "name": "This Afternoon",
@@ -632,25 +374,233 @@ r_obj = txt2jsonobj(r) #returns JSON obj from text
 "detailedForecast": "A slight chance of showers and thunderstorms. Mostly sunny, with a high near 98. Heat index values as high as 100. South wind around 5 mph."
 """
 
-"""
-name = r_obj['properties']['periods'][0]['name']
-temperature = r_obj['properties']['periods'][0]['temperature']
-temperatureUnit = r_obj['properties']['periods'][0]['temperatureUnit']
-temp = "Temperature: " + str(temperature) + temperatureUnit
-windSpeed = r_obj['properties']['periods'][0]['windSpeed']
-windDirection = r_obj['properties']['periods'][0]['windDirection']
-wind = "Wind: " + str(windSpeed) + " out of the " + windDirection
-shortForecast = r_obj['properties']['periods'][0]['shortForecast']
-detailedForecast = r_obj['properties']['periods'][0]['detailedForecast']
 
-print (name)
-print(temp)
-print(wind)
-print(shortForecast)
-print(detailedForecast)
-"""
+
+# ============================================================================================================================
+
+#  ---------------------------------------- MIGRATE NON-METHOD CODE TO THIS LOCATION --------------------------------------
+
+print(WELCOME_MSG + COMPANY_INFO + COPYRIGHT)
+print('Todays date is ' + str(date.today()))
+time.sleep(1)
+
+auto_locate = False
+location_choice = input ('Enter location by City,State or press Enter to Autolocate your position (not always accurate)')
+if location_choice == "":
+    auto_locate = True
+
+if auto_locate:
+    print('...Autolocating and acquiring hostname, localip, public_ip, state, state_abrev using getuser_location() method') 
+    hostname, localip, public_ip, state, state_abrev, geo_dict = getuser_location()
+    #testget_host_ip = getuser_location() 
+    #print(testget_host_ip)
+    state = get_us_state_abbrev(geo_dict['region']) #return 2 letter abbrev for state
+    lat = geo_dict['latitude']
+    lon = geo_dict['longitude']
+else: # get required information via Geolocation and Reverse Geolocation TODO:  Port methods over from existing code in another script
+    print('...getting lat/lon or city,state from geolocation methods' + '->TBD')
+    
+# quit()
+
+# Alerts:  https://api.weather.gov/alerts/active?area=TX  an alert for TX Extreme Weather
+print("-------------------ALERTS--------------------------------")
+
+# test
+days_out = 15
+r = tide_forecast(days_out)
+r_obj = txt2jsonobj(r) #returns JSON obj from text
+
+print('*********************TIDE INFORMATION - FORECAST****************')
+print()
+for n in range(0,100): 
+    try:
+        #print("***************************** ID=" + str(n) + "***************************")
+        print()
+        print(r_obj['predictions'][n]['t'] + " " + r_obj['predictions'][n]['type'] + " " + r_obj['predictions'][n]['v'])
+        #print(r_obj['predictions'][n]['type'])
+        #print(r_obj['predictions'][n]['v'])
+        
+    except Exception as e:
+        #print (e)
+        break
+
+filename = "noaa_weather__tides_forecast_" + str(lat) + ".json"
+attrib = "w"
+content = r
+print(".....Writing Alert content to " + filename)
+write2file(filename,attrib,content)
+#openfile(filename)
 
 #quit()
+
+#test above
+#state = "tx" #use state per def return above - TBD add exception and null string handling
+r = alerts(state)  #get NOAA weather alerts by state
+#print (r) # print json text
+#print(type(r)) # print var type
+
+filepath = './data/' + str(state) + '_alerts_' + str(date.today()) + '.json'
+print('...writing JSON text to file in data directory: ' + filepath)
+write2file(filepath, 'w', r)
+
+print('*********************ALERTS INFORMATION (from returned JSON data from https://api.weather.gov/alerts/active?area={state} ******')
+time.sleep(1)
+
+print('...converting JSON text to JSON Object')
+try:
+    r_obj = txt2jsonobj(r) #returns JSON object from JSON text
+except Exception as e:
+    print (e)
+
+print('...getting title, updated, areaDesc, headline, description, affected zones from JSON obj')
+try: # Get specific information from JSON object
+    title = r_obj['title']
+    updated = r_obj['updated']
+    areaDesc = r_obj['features'][0]['properties']['areaDesc']
+    headline = r_obj['features'][0]['properties']['headline']
+    description = r_obj['features'][0]['properties']['description']
+    affectedZones = r_obj['features'][0]['properties']['affectedZones']
+
+    print(title + " " + str(updated))
+    print (areaDesc)
+    print (headline)
+    print (description)
+    print ("affectedZones:")
+    print (affectedZones)
+except Exception as e:
+    print(e)
+    
+
+print('*********************ALERTS INFORMATION - ITERATE****************')
+for n in range(100): 
+    try:
+        print("***************************** ID=" + str(n) + "***************************")
+        areaDesc = r_obj['features'][n]['properties']['areaDesc']
+        headline = r_obj['features'][n]['properties']['headline']
+        description = r_obj['features'][n]['properties']['description']
+        affectedZones = r_obj['features'][n]['properties']['affectedZones']
+        print(title + " " + str(updated))
+        print (areaDesc)
+        print (headline)
+        print (description)
+        print ("affectedZones:" + str(affectedZones) + "\n")
+    except Exception as e:
+        print (e)
+        break
+
+filename = "noaa_weather_alerts_" + state + ".json"
+attrib = "w"
+content = r
+print(".....Writing Alert content to " + filename)
+try:
+    write2file(filename,attrib,content)
+    #openfile(filename)
+except Exception as e: 
+    print(e)
+
+
+print("-------------------TIDES AND CURRRENTS --------------------------------")
+
+#TBD - implement - levarage with WeatherX.py with LCD output
+#https://tidesandcurrents.noaa.gov/api/#products
+#Water Temp
+#Example:  https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20130808 15:00&end_date=20130808 15:06&station=8454000&product=water_temperature&units=english&time_zone=gmt&application=ports_screen&format=json
+#Example:  https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20200725 15:00&end_date=20200808 15:06&station=8454000&product=water_temperature&units=english&time_zone=gmt&application=ports_screen&format=json
+#Tides - product = tide_predictions
+#https://tidesandcurrents.noaa.gov/api/datagetter?begin_date=20200725%2015:00&end_date=20200725%2015:06&station=8775241&product=tide_prediction&format=json&units=english&time_zone=lst_ldt&datum=MLLW
+#8775241 - Aransas Pass TX
+#https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=8775241
+#https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200701&end_date=20200731&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
+
+#test above
+#lat = '39.7456'
+#lon = '-97.0892'
+r = grid(lat,lon) #variables now defined via functions above
+#print (r)
+r_obj = txt2jsonobj(r) #returns JSON obj from text
+
+
+print("********************************* GRID INFORMATION " + str(lat) + " " + str(lon) + " *******************************")
+
+"""
+# TBD pull office,grid_x,grid_y from JSON obj to use in api call below...
+    "gridId": "EWX"
+    "gridX": 157
+    "gridY": 100
+    "forecast": "https://api.weather.gov/gridpoints/EWX/157,100/forecast",
+    "forecastHourly": "https://api.weather.gov/gridpoints/EWX/157,100/forecast/hourly",
+    "forecastGridData": "https://api.weather.gov/gridpoints/EWX/157,100",
+    "observationStations": "https://api.weather.gov/gridpoints/EWX/157,100/stations"
+"""
+        
+gridId = r_obj['properties']['gridId']
+gridX = r_obj['properties']['gridX']
+gridY = r_obj['properties']['gridY']
+forecast = r_obj['properties']['forecast']
+forecastHourly = r_obj['properties']['forecastHourly']
+forecastGridData = r_obj['properties']['forecastGridData']
+observationStations = r_obj['properties']['observationStations']
+print(gridId)
+print(gridX)
+print(gridY)
+print("forecast:" + forecast)
+print("forecastHourly:" + forecastHourly)
+print("forecastGridData:" + forecastGridData)
+print("observationStations:" + observationStations)
+
+filename = "noaa_weather__grid_" + str(lat) + " " + str(lon) + ".json"
+attrib = "w"
+content = r
+print(".....Writing Alert content to " + filename)
+write2file(filename,attrib,content)
+#openfile(filename)
+
+#office = 'TOP' #Need to retrieve this from previous api call
+#grid_x = "31" #Need to retrieve this from previous api call
+#grid_y = "80" #Need to retrieve this from previous api call
+
+office = gridId
+r = forecast(office,gridX,gridY)
+#print(r)
+
+r_obj = txt2jsonobj(r) #returns JSON obj from text
+#print(r_obj)
+
+# Observation Stations Data
+url = observationStations
+r = get_observation_stations(url)
+content = r
+filename = "noaa_weather__stations_" + str(lat) + " " + str(lon) + ".json"
+print(".....Writing Weather Station content to " + filename)
+write2file(filename,attrib,content)
+
+# quit()
+
+"""
+https://api.weather.gov/points/{latitude},{longitude}
+For example: https://api.weather.gov/points/39.7456,-97.0892
+"""
+
+print("-------------------POINTS INFORMATION--------------------------------")
+
+# Get /points information
+# e.g. https://api.weather.gov/points/39.7456,-97.0892
+
+    
+#test
+r = getpoints(lat,lon) #lat lon defined earlier in code
+filename = "noaa_weather_points_" + str(lat) + " " + str(lon) + ".json"
+attrib = "w"
+content = r
+print(".....Writing Points content to " + filename)
+write2file(filename,attrib,content)
+#openfile(filename)
+
+
+#quit()
+
+#Forecasts - Use Grid and Points Information to populate values: office, gridx, gridy"
+print("-------------------FORECASTS--------------------------------")
 
 print('*********************FORECAST INFORMATION - ITERATE****************')
 for n in range(0,100): 
@@ -686,6 +636,28 @@ content = r
 print(".....Writing Forecast content to " + filename)
 write2file(filename,attrib,content)
 #openfile(filename)
+
+name = r_obj['properties']['periods'][0]['name']
+temperature = r_obj['properties']['periods'][0]['temperature']
+temperatureUnit = r_obj['properties']['periods'][0]['temperatureUnit']
+temp = "Temperature: " + str(temperature) + temperatureUnit
+windSpeed = r_obj['properties']['periods'][0]['windSpeed']
+windDirection = r_obj['properties']['periods'][0]['windDirection']
+wind = "Wind: " + str(windSpeed) + " out of the " + windDirection
+shortForecast = r_obj['properties']['periods'][0]['shortForecast']
+detailedForecast = r_obj['properties']['periods'][0]['detailedForecast']
+
+print (name)
+print(temp)
+print(wind)
+print(shortForecast)
+print(detailedForecast)
+
+#  ---------------------------------------- END MIGRATE NON-METHOD CODE TO THIS LOCATION --------------------------------------
+
+# ============================================================================================================================
+
+
 
 """
 json output examples
