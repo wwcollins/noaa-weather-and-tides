@@ -54,12 +54,13 @@ quit()
 """
 
 def georeverse(lat,lon):
+    print(lat,lon)
     coord = str(lat) + ',' + str(lon)
     #r = requests.get ('http://open.mapquestapi.com/geocoding/v1/reverse?key=JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA&location=30.333472,-81.470448&includeRoadMetadata=true&includeNearestIntersection=true')
-    url = 'http://open.mapquestapi.com/geocoding/v1/reverse?key='+KEY_MAPQUEST+'&location='+coord+'&includeRoadMetadata=true&includeNearestIntersection=true'
+    url = 'http://open.mapquestapi.com/geocoding/v1/reverse?key='+ KEY_MAPQUEST + '&location='+coord+'&includeRoadMetadata=true&includeNearestIntersection=true'
     print('getting georeverse data from ', url)
     r = requests.get(url)
-    print(r)
+    print(r.text)
     json_object = r.json()
     try:
         summary = json_object['currently']['summary'] 
@@ -360,14 +361,16 @@ if location == "":
     hostname, localip, public_ip, state, state_abrev, geo_dict, lat, lon, latlon = getuser_location()
 else: # Identify input as city,state or lat,lon via generating error below
     loclist = location.split(",")
+
     try:
-        int(loclist[0]) # True if element can be cast as int-> means that first value is latitude
+        float(loclist[0]) # True if element can be cast as int-> means that first value is latitude
         print('lat,lon input detected')
         lat = loclist[0]
         lon = loclist[1]
         latlon = lat + ',' + lon
-        street, city, state = georeverse(location)
-    except:
+        street, city, state = georeverse(lat,lon)
+        print('state=', state)
+    except Exception as e:
         print('city,state input detected')
         city = (loclist[0].strip()).upper()
         state = (loclist[1].strip()).upper()
@@ -383,7 +386,6 @@ alerts(state)
 
 quit()
 
-
 print('-------------------Getting TIDES AND CURRRENTS for location --------------------------------')
 #TBD - implement - levarage with WeatherX.py with LCD output
 #https://tidesandcurrents.noaa.gov/api/#products
@@ -398,7 +400,6 @@ print('-------------------Getting TIDES AND CURRRENTS for location -------------
 
 #This is the format to use! Finally!!!
 #https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
-
 
 
 print('*********************TIDE INFORMATION - FORECAST****************')
