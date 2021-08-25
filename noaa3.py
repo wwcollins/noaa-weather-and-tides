@@ -14,7 +14,7 @@ from urllib.request import urlopen
 WELCOME_MSG = 'Welcome to NOAA Weather API Collection.'
 COMPANY_INFO = 'Alkemie Technologies LLC, William Collins'
 COPYRIGHT = ' CR 2021, All Rights Reserved'
-NOAA_ALERTS_BY_STATE_PRE = "https://api.weather.gov/alerts/active?area='" # NOAA API
+NOAA_ALERTS_BY_STATE_PRE = "https://api.weather.gov/alerts/active?area=" # NOAA API
 
 #------------- API KEYS ------------------
 KEY_DARKSKY = 'f03351387f6ea21ce5e4bfc5b503a508' # Darksky Weather REST API
@@ -28,11 +28,14 @@ print('Todays date is ' + str(date.today()))
 time.sleep(1)
 
 # ------------------------------- METHODS ------------------------------------------
+def txt2jsonobj(json_string):
+    json_obj = json.loads(json_string)
+    return json_obj
 
 def geoforward(location): #e.g. Round Rock, TX
     #https://www.mapquestapi.com/geocoding/v1/address?key=JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA&inFormat=kvp&outFormat=json&location=Denver%2C+CO&thumbMaps=false
     url = 'http://open.mapquestapi.com/geocoding/v1/address?key='+ KEY_MAPQUEST+'&location=' + location + '&thumbMaps=false'
-    print(url)
+    print('...getting geoforward data from ', url)
     r = requests.get(url)
     print('...json text response from mapquest geoforward request/n',r)
     json_object = r.json()
@@ -54,7 +57,7 @@ def georeverse(lat,lon):
     coord = str(lat) + ',' + str(lon)
     #r = requests.get ('http://open.mapquestapi.com/geocoding/v1/reverse?key=JcW96p74AcCbAYHzdZGM5SSnXOXPwDLA&location=30.333472,-81.470448&includeRoadMetadata=true&includeNearestIntersection=true')
     url = 'http://open.mapquestapi.com/geocoding/v1/reverse?key='+KEY_MAPQUEST+'&location='+coord+'&includeRoadMetadata=true&includeNearestIntersection=true'
-    print(url)
+    print('getting georeverse data from ', url)
     r = requests.get(url)
     print(r)
     json_object = r.json()
@@ -122,21 +125,20 @@ def getuser_location():  # pip install socket
 
     return hostname, localip, public_ip, state, state_abrev, geo_dict, lat, lon, latlon
 
-def tide_forecast(days_out):
+def tide_forecast(stationID='8775241', days_out=30):
     # https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
-
-    now = datetime.now()
-    begin_date = now.strftime('%Y%m%d')
+    # stationID = "8775241"
+    begin_date = datetime.now().strftime('%Y%m%d')
     end_date = datetime.today() + timedelta(days_out)
     end_date = end_date.strftime('%Y%m%d')
-    stationID = "8775241"
-    print("start and end date")
-    print(begin_date)
-    print(end_date)
-    url = "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=" + begin_date + "&end_date=" + end_date + "&datum=MLLW&station=" + stationID + "&time_zone=lst_ldt&units=english&interval=hilo&format=json"
-    print(url)
+    print("begin and end date",begin_date,end_date)
+
+    url = "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=" + \
+          begin_date + "&end_date=" + end_date + "&datum=MLLW&station=" + stationID + \
+          "&time_zone=lst_ldt&units=english&interval=hilo&format=json"
+    print('...getting tide and currents from', url)
     try:
-        r = ""
+        r = ''
         print(url)
         r = requests.get(url)
         print("requests status code=" + str(r.status_code))
@@ -167,6 +169,8 @@ print(r_obj['predictions'][0]['type'])
 
 def write2file(filename, attrib, content):  # attrib is w or a.  w overwrites, a appends
     # f = open("demofile2.txt", "a")
+    if type(content) != "str":
+        content = str(content)
     f = open(filename, attrib)
     f.write(content)
     f.close()
@@ -176,12 +180,9 @@ def openfile(filename):
     f = open(filename, "r")
     print(f.read())
 
-def txt2jsonobj(json_string):
-    json_obj = json.loads(json_string)
-    return json_obj
-
 def get_us_state_abbrev(state):  # method to convert state to state abbrev via dictionary us_state_abbrev
     print(state)
+    print('getting get_us_state_abbrev data for ', state)
     us_state_abbrev = {
         'Alabama': 'AL',
         'Alaska': 'AK',
@@ -243,11 +244,112 @@ def get_us_state_abbrev(state):  # method to convert state to state abbrev via d
     }
     return us_state_abbrev[state]
 
+# Alerts:  https://api.weather.gov/alerts/active?area=TX (example alert for TX Extreme Weather)
+def alerts(state): # method to get extreme weather alerts by state. Uses state abbreviation as input
+    print ('...getting Alerts information from https://api.weather.gov/alerts/active?area={state abbrev}')
+    if len(state) != 2: # check to see if state abbrev else get state abbrev
+        state = get_us_state_abbrev(state)
+    try:
+        r = ""
+        #url = 'https://api.weather.gov/alerts/active?area=' + str(state)
+        url = NOAA_ALERTS_BY_STATE_PRE + str(state)
+
+        print('...executing alerts method and returning JSON text')
+        print (url)
+        r = requests.get(url)
+        print("requests status code=" + str(r.status_code))
+        if r.status_code == 200:
+            time.sleep(2)
+            #print ("response=" + r.text)
+            print("NOAA Alerts api success...")
+            # jsonobj = r.json()
+            # return r.text
+        else:
+            print("status=" + str(r.status_code))
+            print("trying again..." + url)
+            time.sleep(5)
+            alerts(state)
+    except Exception as e:
+        print (e)
+        # return e
+
+    filepath = './data/' + str(state) + '_alerts_' + str(date.today()) + '.json'
+    print('...writing JSON text to file in data directory: ' + filepath)
+    write2file(filepath, 'w', r.text)
+
+    time.sleep(1)
+    print('...converting JSON text to JSON Object')
+    try:
+        r_obj = txt2jsonobj(r.text) # returns JSON object from JSON text
+    except Exception as e:
+        print ('...!Error occured',e,'quitting')
+        quit()
+
+
+    print('...getting title, updated, areaDesc, headline, description, affected zones from JSON obj')
+    try: # Get specific information from JSON object
+        title = r_obj['title']
+        updated = r_obj['updated']
+        areaDesc = r_obj['features'][0]['properties']['areaDesc']
+        headline = r_obj['features'][0]['properties']['headline']
+        description = r_obj['features'][0]['properties']['description']
+        affectedZones = r_obj['features'][0]['properties']['affectedZones']
+
+        print(title + " " + str(updated))
+        print (areaDesc)
+        print (headline)
+        print (description)
+        print ("affectedZones:")
+        print (affectedZones)
+    except Exception as e:
+        print(e)
+
+    print('... iterating through JSON alerts data object. Getting data for each ID found')
+    for n in range(100):
+        try:
+            print("...ID=" + str(n))
+            areaDesc = r_obj['features'][n]['properties']['areaDesc']
+            headline = r_obj['features'][n]['properties']['headline']
+            description = r_obj['features'][n]['properties']['description']
+            affectedZones = r_obj['features'][n]['properties']['affectedZones']
+            print(title + " " + str(updated))
+            print (areaDesc)
+            print (headline)
+            print (description)
+            print ("affectedZones:" + str(affectedZones) + "\n")
+        except Exception as e:
+            # print (e)
+            print('...all extreme items processed')
+            break
+
+    filename = './data/' + state + '_noaa_extreme_weather_alerts_' + str(date.today()) + '.json'
+    attrib = "w"
+    content = r.text
+    print("...Writing Alert content to " + filename)
+    try:
+        write2file(filename,attrib,content)
+        #openfile(filename)
+    except Exception as e:
+        print(e)
+
+    # quit()
+
+# test above
+"""
+# state = "tx" #use state per def return above - TBD add exception and null string handling
+# r = alerts(state)  #get NOAA weather alerts by state
+# print (r) # print json text
+# print(type(r)) # print var type
+
+# print('********************* Get NOAA extreme weather alerts for state' + state)
+# r = alerts(state)  # get NOAA extreme weather alerts by state
+"""
+
 # --------------  END METHOD MOVE SECTION --------------------------
 
 # Start main code block ....
 auto_locate = False
-loclist = []
+loclist = [] # create empty list
 location = input ('Enter {City,State}, {lat,lon} or press just press Enter to Autolocate your position (not always accurate)')
 
 print('...analyzing input and returning necessary values')
@@ -261,14 +363,14 @@ else: # Identify input as city,state or lat,lon via generating error below
     try:
         int(loclist[0]) # True if element can be cast as int-> means that first value is latitude
         print('lat,lon input detected')
-        lat = loclist[0].strip()
-        lon = loclist[1].strip()
+        lat = loclist[0]
+        lon = loclist[1]
         latlon = lat + ',' + lon
         street, city, state = georeverse(location)
     except:
         print('city,state input detected')
-        city = loclist[0].strip()
-        state = loclist[1].strip()
+        city = (loclist[0].strip()).upper()
+        state = (loclist[1].strip()).upper()
         city_state = city + ',' + state
         lat,lon,latlon = geoforward(city_state)
 
@@ -276,114 +378,10 @@ print('...retrieved data for selected location')
 print('...data for location: ',city,state,lat,lon,' latlon:',latlon)
 
 # now get extreme weather alerts -> TBD
+print('...Geting NOAA extreme weather alerts for state' + state)
+alerts(state)
 
 quit()
-    
-
-    
-
-
-
-
-    
-# quit()
-
-# Alerts:  https://api.weather.gov/alerts/active?area=TX  an alert for TX Extreme Weather
-print('...executing alerts method and returning JSON text')
-def alerts(state): # method to get extreme weather alerts by state. Uses state abbreviation as input
-    if len(state) != 2: # check to see if state abbrev else get state abbrev
-        state = get_us_state_abbrev(state)
-    try:
-        r = ""
-        #url = 'https://api.weather.gov/alerts/active?area=' + str(state)
-        url = NOAA_ALERTS_BY_STATE_PRE + str(state)
-
-        print (url)
-        r = requests.get(url)
-        print("requests status code=" + str(r.status_code))
-        if r.status_code == 200:
-            time.sleep(2)
-            #print ("response=" + r.text)
-            print("NOAA Alerts api success...")
-            jsonobj = r.json()
-            return r.text
-        else:
-            print("status=" + str(r.status_code))
-            print("trying again..." + url)
-            time.sleep(5)
-            alerts(state)
-    except Exception as e:
-        print (e)
-        return e
-
-# test above
-# state = "tx" #use state per def return above - TBD add exception and null string handling
-# r = alerts(state)  #get NOAA weather alerts by state
-# print (r) # print json text
-# print(type(r)) # print var type
-
-print('********************* Get NOAA extreme weather alerts for state' + state)
-r = alerts(state)  # get NOAA extreme weather alerts by state
-
-filepath = './data/' + str(state) + '_alerts_' + str(date.today()) + '.json'
-print('...writing JSON text to file in data directory: ' + filepath)
-write2file(filepath, 'w', r)
-
-time.sleep(1)
-
-print('...converting JSON text to JSON Object')
-try:
-    r_obj = txt2jsonobj(r) #returns JSON object from JSON text
-except Exception as e:
-    print (e)
-
-print('...getting title, updated, areaDesc, headline, description, affected zones from JSON obj')
-try: # Get specific information from JSON object
-    title = r_obj['title']
-    updated = r_obj['updated']
-    areaDesc = r_obj['features'][0]['properties']['areaDesc']
-    headline = r_obj['features'][0]['properties']['headline']
-    description = r_obj['features'][0]['properties']['description']
-    affectedZones = r_obj['features'][0]['properties']['affectedZones']
-
-    print(title + " " + str(updated))
-    print (areaDesc)
-    print (headline)
-    print (description)
-    print ("affectedZones:")
-    print (affectedZones)
-except Exception as e:
-    print(e)
-
-print('... iterating throug JSON alerts data object. Getting data for each ID found')
-for n in range(100): 
-    try:
-        print("...ID=" + str(n))
-        areaDesc = r_obj['features'][n]['properties']['areaDesc']
-        headline = r_obj['features'][n]['properties']['headline']
-        description = r_obj['features'][n]['properties']['description']
-        affectedZones = r_obj['features'][n]['properties']['affectedZones']
-        print(title + " " + str(updated))
-        print (areaDesc)
-        print (headline)
-        print (description)
-        print ("affectedZones:" + str(affectedZones) + "\n")
-    except Exception as e:
-        # print (e)
-        print('...all extreme items processed')
-        break
-
-    quit()
-
-filename = "noaa_weather_alerts_" + state + ".json"
-attrib = "w"
-content = r
-print(".....Writing Alert content to " + filename)
-try:
-    write2file(filename,attrib,content)
-    #openfile(filename)
-except Exception as e: 
-    print(e)
 
 
 print('-------------------Getting TIDES AND CURRRENTS for location --------------------------------')
@@ -417,7 +415,7 @@ for n in range(0,100):
         #print (e)
         break
 
-filename = "noaa_weather__tides_forecast_" + str(lat) + ".json"
+filename = './data/' + state + "_noaa_weather_tides_forecast_" + str(date.today()) + ".json"
 attrib = "w"
 content = r
 print(".....Writing Alert content to " + filename)
@@ -448,27 +446,29 @@ For example: https://api.weather.gov/gridpoints/TOP/31,80/forecast
 If you do not know the grid that correlates to your location, you can use the /points endpoint to retrieve the exact grid endpoint by coordinates:
 https://api.weather.gov/points/{latitude},{longitude}
 For example: https://api.weather.gov/points/39.7456,-97.0892
-This will return the grid endpoint in the "forecast" property. Applications may cache the grid for a location to improve latency and reduce the additional lookup request. This endpoint also tells the application where to find information for issuing office, observation stations, and zones.
+This will return the grid endpoint in the "forecast" property. 
+Applications may cache the grid for a location to improve latency and reduce the additional lookup request. 
+This endpoint also tells the application where to find information for issuing office, observation stations, and zones.
 """
 
 #Grid Coordinates - For example: https://api.weather.gov/points/39.7456,-97.0892
-# Note:  Required to for forecast method
+# Note:  Required to execute forecast method
 def grid(lat,lon):
     try:
         url = "https://api.weather.gov/points/" + str(lat) + "," + str(lon)
-        #print (url)
+        print ('...getting grid data (points) from ', url)
         r = requests.get(url)
         print (r.text)
-        #jsonobj = r.json()
+        # jsonobj = r.json()
         return r.text
     except Exception as e:
         print (e)
 
-#test above
-#lat = '39.7456'
-#lon = '-97.0892'
+# test above
+# lat = '39.7456'
+# lon = '-97.0892'
 r = grid(lat,lon) #variables now defined via functions above
-#print (r)
+# print (r)
 r_obj = txt2jsonobj(r) #returns JSON obj from text
 
 print("********************************* GRID INFORMATION " + str(lat) + " " + str(lon) + " *******************************")
@@ -497,9 +497,9 @@ print("forecastHourly:" + forecastHourly)
 print("forecastGridData:" + forecastGridData)
 print("observationStations:" + observationStations)
 
-filename = "noaa_weather__grid_" + str(lat) + " " + str(lon) + ".json"
+filename = './data/' + state + '_noaa_weather_grid_' + str(lat) + "_" + str(lon) + ".json"
 attrib = "w"
-content = r
+content = r.txt
 print(".....Writing Alert content to " + filename)
 write2file(filename,attrib,content)
 #openfile(filename)
@@ -507,7 +507,7 @@ write2file(filename,attrib,content)
 def get_observation_stations(url):
     try:
         #url = "https://api.weather.gov/gridpoints/TOP/31,80/forecast"
-        print (url)
+        print('getting observations stations data from ', url)
         r = requests.get(url)
         print("requests status code=" + str(r.status_code))
         if r.status_code == 200:
@@ -525,12 +525,11 @@ def get_observation_stations(url):
         #print (e)
         get_observation_stations(url)
 
-
 # Observation Stations Data
 url = observationStations
 r = get_observation_stations(url)
-content = r
-filename = "noaa_weather__stations_" + str(lat) + " " + str(lon) + ".json"
+content = r.txt
+filename = './data/' + "noaa_weather__stations_" + str(lat) + " " + str(lon) + ".json"
 print(".....Writing Weather Station content to " + filename)
 write2file(filename,attrib,content)
 
@@ -548,21 +547,28 @@ print("-------------------POINTS INFORMATION--------------------------------")
 
 def getpoints(lat,lon):
     url = "https://api.weather.gov/points/" + str(lat) + "," + str(lon)
-    #print (url)
+    print ('...getting points information from', url)
     r = requests.get(url)
-    #print (r.text)
-    #jsonobj = r.json()
+    # print (r.text)
+    # jsonobj = r.json()
+    r = getpoints(lat, lon)  # lat lon defined earlier in code
+    filename = './data/' + state + '_noaa_weather_points_' + str(lat) + '_' + str(lon) + str(date.today()) + '.json'
+    attrib = "w"
+    content = r.txt
+    print(".....Writing Points content to " + filename)
+    write2file(filename, attrib, content)
     return r.text
     
 #test
+"""
 r = getpoints(lat,lon) #lat lon defined earlier in code
-filename = "noaa_weather_points_" + str(lat) + " " + str(lon) + ".json"
+filename = './data/' + state + '_noaa_weather_points_" + str(lat) + " " + str(lon) + str(date.today()) + '.json'
 attrib = "w"
-content = r
+content = r.txt
 print(".....Writing Points content to " + filename)
 write2file(filename,attrib,content)
 #openfile(filename)
-
+"""
 
 #quit()
 
@@ -580,14 +586,15 @@ https://api.weather.gov/points/{latitude},{longitude}
 For example: https://api.weather.gov/points/39.7456,-97.0892
 """
 
-#https://api.weather.gov/gridpoints/{office}/{grid X},{grid Y}/forecast
-#example: https://api.weather.gov/gridpoints/TOP/31,80/forecast
-#Dependencies:  #Forecasts - Use Grid and Points Information to populate values: office, gridx, gridy"
+# https://api.weather.gov/gridpoints/{office}/{grid X},{grid Y}/forecast
+# example: https://api.weather.gov/gridpoints/TOP/31,80/forecast
+# Dependencies:  #Forecasts - Use Grid and Points Information to populate values: office, gridx, gridy"
 def forecast(office,gridX,gridY):
+    url = "https://api.weather.gov/gridpoints/" + office + "/" + str(gridX) + "," + str(gridY) + "/forecast"  # TBD get
+    # url = "https://api.weather.gov/gridpoints/TOP/31,80/forecast"
+    # print (url)
+    print ('...getting forecast information forecast method: url = ' + url)
     try:
-        url = "https://api.weather.gov/gridpoints/" + office + "/" + str(gridX)  + "," + str(gridY) + "/forecast"  # TBD get 
-        #url = "https://api.weather.gov/gridpoints/TOP/31,80/forecast"
-        #print (url)
         r = requests.get(url)
         print("requests status code=" + str(r.status_code))
         if r.status_code == 200:
@@ -616,7 +623,6 @@ r = forecast(office,gridX,gridY)
 r_obj = txt2jsonobj(r) #returns JSON obj from text
 #print(r_obj)
 
-
 """
 "name": "This Afternoon",
 "startTime": "2020-08-04T17:00:00-05:00",
@@ -632,7 +638,6 @@ r_obj = txt2jsonobj(r) #returns JSON obj from text
 "detailedForecast": "A slight chance of showers and thunderstorms. Mostly sunny, with a high near 98. Heat index values as high as 100. South wind around 5 mph."
 """
 
-"""
 name = r_obj['properties']['periods'][0]['name']
 temperature = r_obj['properties']['periods'][0]['temperature']
 temperatureUnit = r_obj['properties']['periods'][0]['temperatureUnit']
@@ -648,7 +653,6 @@ print(temp)
 print(wind)
 print(shortForecast)
 print(detailedForecast)
-"""
 
 #quit()
 
@@ -680,7 +684,7 @@ for n in range(0,100):
         #print (e)
         break
 
-filename = "noaa_weather_forecast_" + str(lat) + " " + str(lon) + ".json"
+filename = './data/' + "noaa_weather_forecast_" + str(lat) + " " + str(lon) + ".json"
 attrib = "w"
 content = r
 print(".....Writing Forecast content to " + filename)
@@ -697,7 +701,7 @@ mage to roofing and siding materials, along with\ndamage to porches, awnings, ca
                     "NWSheadline": [
                         "TROPICAL STORM WARNING REMAINS IN EFFECT"
                     ],
-                    "VTEC": [
+  +                  "VTEC": [
                         "/O.CON.KCRP.TR.W.1008.000000T0000Z-000000T0000Z/"
                     ],
                     "EAS-ORG": [
