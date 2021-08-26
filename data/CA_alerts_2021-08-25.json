@@ -1,0 +1,733 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.003.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.003.1",
+                "areaDesc": "San Bernardino and Riverside County Valleys-The Inland Empire",
+                "geocode": {
+                    "SAME": [
+                        "006065",
+                        "006071"
+                    ],
+                    "UGC": [
+                        "CAZ048"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ048"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ac9b5f6a586c9460ab3270f969f60b281511c83c.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.ac9b5f6a586c9460ab3270f969f60b281511c83c.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T21:23:00-07:00"
+                    }
+                ],
+                "sent": "2021-08-25T02:04:00-07:00",
+                "effective": "2021-08-25T02:04:00-07:00",
+                "onset": "2021-08-26T10:00:00-07:00",
+                "expires": "2021-08-25T16:00:00-07:00",
+                "ends": "2021-08-27T21:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Heat Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Diego CA",
+                "headline": "Heat Advisory issued August 25 at 2:04AM PDT until August 27 at 9:00PM PDT by NWS San Diego CA",
+                "description": "* WHAT...Temperatures up to 104 expected.\n\n* WHERE...San Bernardino and Riverside County Valleys-The Inland\nEmpire.\n\n* WHEN...From 10 AM Thursday to 9 PM PDT Friday.\n\n* IMPACTS...Hot temperatures may cause heat illnesses to occur.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SGXNPWSGX"
+                    ],
+                    "NWSheadline": [
+                        "HEAT ADVISORY REMAINS IN EFFECT FROM 10 AM THURSDAY TO 9 PM PDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSGX.HT.Y.0005.210826T1700Z-210828T0400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-28T04:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ce2ddab7fda0ea1be7e7c7545debd624c5bc066a.002.1,2021-08-24T13:30:00-07:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.002.1",
+                "areaDesc": "San Gorgonio Pass Near Banning",
+                "geocode": {
+                    "SAME": [
+                        "006065"
+                    ],
+                    "UGC": [
+                        "CAZ065"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ065"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ac9b5f6a586c9460ab3270f969f60b281511c83c.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.ac9b5f6a586c9460ab3270f969f60b281511c83c.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T21:23:00-07:00"
+                    }
+                ],
+                "sent": "2021-08-25T02:04:00-07:00",
+                "effective": "2021-08-25T02:04:00-07:00",
+                "onset": "2021-08-25T10:00:00-07:00",
+                "expires": "2021-08-25T16:00:00-07:00",
+                "ends": "2021-08-27T21:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Excessive Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Diego CA",
+                "headline": "Excessive Heat Warning issued August 25 at 2:04AM PDT until August 27 at 9:00PM PDT by NWS San Diego CA",
+                "description": "* WHAT...Dangerously hot conditions with temperatures up to 111\nexpected.\n\n* WHERE...San Gorgonio Pass Near Banning.\n\n* WHEN...From 10 AM this morning to 9 PM PDT Friday.\n\n* IMPACTS...Extreme heat will significantly increase the\npotential for heat related illnesses, particularly for those\nworking or participating in outdoor activities.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SGXNPWSGX"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WARNING REMAINS IN EFFECT FROM 10 AM THIS MORNING TO 9 PM PDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSGX.EH.W.0007.210825T1700Z-210828T0400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-28T04:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ce2ddab7fda0ea1be7e7c7545debd624c5bc066a.001.2,2021-08-24T13:30:00-07:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a70fd068bd5419ad6e490512bc0c04c242b6dacc.001.1",
+                "areaDesc": "Coachella Valley; San Diego County Deserts",
+                "geocode": {
+                    "SAME": [
+                        "006065",
+                        "006073"
+                    ],
+                    "UGC": [
+                        "CAZ061",
+                        "CAZ062"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ061",
+                    "https://api.weather.gov/zones/forecast/CAZ062"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ac9b5f6a586c9460ab3270f969f60b281511c83c.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.ac9b5f6a586c9460ab3270f969f60b281511c83c.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T21:23:00-07:00"
+                    }
+                ],
+                "sent": "2021-08-25T02:04:00-07:00",
+                "effective": "2021-08-25T02:04:00-07:00",
+                "onset": "2021-08-25T10:00:00-07:00",
+                "expires": "2021-08-25T16:00:00-07:00",
+                "ends": "2021-08-27T21:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Excessive Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Diego CA",
+                "headline": "Excessive Heat Warning issued August 25 at 2:04AM PDT until August 27 at 9:00PM PDT by NWS San Diego CA",
+                "description": "* WHAT...Dangerously hot conditions with temperatures up to 114\nexpected.\n\n* WHERE...San Diego County Deserts and Coachella Valley.\n\n* WHEN...From 10 AM this morning to 9 PM PDT Friday.\n\n* IMPACTS...Extreme heat will significantly increase the\npotential for heat related illnesses, particularly for those\nworking or participating in outdoor activities.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SGXNPWSGX"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WARNING REMAINS IN EFFECT FROM 10 AM THIS MORNING TO 9 PM PDT FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSGX.EH.W.0007.210825T1700Z-210828T0400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-28T04:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ce2ddab7fda0ea1be7e7c7545debd624c5bc066a.001.2,2021-08-24T13:30:00-07:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7084678d7740ed809b019e4b69f7e908fdb82003.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7084678d7740ed809b019e4b69f7e908fdb82003.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.7084678d7740ed809b019e4b69f7e908fdb82003.001.2",
+                "areaDesc": "Lake Havasu and Fort Mohave; Northwest Deserts; Lake Mead National Recreation Area; Morongo Basin; Cadiz Basin; San Bernardino County-Upper Colorado River Valley; Lake Mead National Recreation Area",
+                "geocode": {
+                    "SAME": [
+                        "004015",
+                        "006071",
+                        "032003"
+                    ],
+                    "UGC": [
+                        "AZZ002",
+                        "AZZ003",
+                        "AZZ036",
+                        "CAZ525",
+                        "CAZ526",
+                        "CAZ527",
+                        "NVZ021"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AZZ002",
+                    "https://api.weather.gov/zones/forecast/AZZ003",
+                    "https://api.weather.gov/zones/forecast/AZZ036",
+                    "https://api.weather.gov/zones/forecast/CAZ525",
+                    "https://api.weather.gov/zones/forecast/CAZ526",
+                    "https://api.weather.gov/zones/forecast/CAZ527",
+                    "https://api.weather.gov/zones/forecast/NVZ021"
+                ],
+                "references": [],
+                "sent": "2021-08-25T00:50:00-07:00",
+                "effective": "2021-08-25T00:50:00-07:00",
+                "onset": "2021-08-26T10:00:00-07:00",
+                "expires": "2021-08-25T21:00:00-07:00",
+                "ends": "2021-08-27T20:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Excessive Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Las Vegas NV",
+                "headline": "Excessive Heat Warning issued August 25 at 12:50AM PDT until August 27 at 8:00PM PDT by NWS Las Vegas NV",
+                "description": "* WHAT...Dangerously hot conditions with temperatures of 100 to\n105 in Kingman...105 to 110 in the Morongo Basin...and 110 to\n115 in the Colorado River Valley including Laughlin, Needles,\nand Lake Havasu.\n\n* WHERE...Portions of northwest Arizona, southeast California\nand southern Nevada.\n\n* WHEN...From 10 AM PDT /10 AM MST/ Thursday to 8 PM PDT /8 PM\nMST/ Friday.\n\n* IMPACTS...Extreme heat will significantly increase the\npotential for heat related illnesses, particularly for those\nworking or participating in outdoor activities.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out\nof the sun, and check up on relatives and neighbors. Young\nchildren and pets should never be left unattended in vehicles\nunder any circumstances.\n\nTake extra precautions if you work or spend time outside. When\npossible reschedule strenuous activities to early morning or\nevening. Know the signs and symptoms of heat exhaustion and heat\nstroke. Wear lightweight and loose fitting clothing when\npossible. To reduce risk during outdoor work, the Occupational\nSafety and Health Administration recommends scheduling frequent\nrest breaks in shaded or air conditioned environments. Anyone\novercome by heat should be moved to a cool and shaded location.\nHeat stroke is an emergency! Call 9 1 1.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "VEFNPWVEF"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WARNING IN EFFECT FROM 10 AM PDT /10 AM MST/ THURSDAY TO 8 PM PDT /8 PM MST/ FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KVEF.EH.W.0007.210826T1700Z-210828T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-28T03:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4dbe727d540c41b779c8852552723f23186f4e68.003.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4dbe727d540c41b779c8852552723f23186f4e68.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.4dbe727d540c41b779c8852552723f23186f4e68.003.1",
+                "areaDesc": "Parker Valley; Yuma; Joshua Tree NP West; Joshua Tree NP East; Imperial County Southwest; Salton Sea; Chuckwalla Mountains; Imperial County Southeast; Imperial County West; Imperial Valley; Chiriaco Summit; Palo Verde Valley; Chuckwalla Valley",
+                "geocode": {
+                    "SAME": [
+                        "004012",
+                        "004027",
+                        "006071",
+                        "006025",
+                        "006065"
+                    ],
+                    "UGC": [
+                        "AZZ530",
+                        "AZZ532",
+                        "CAZ560",
+                        "CAZ561",
+                        "CAZ562",
+                        "CAZ563",
+                        "CAZ564",
+                        "CAZ565",
+                        "CAZ566",
+                        "CAZ567",
+                        "CAZ568",
+                        "CAZ569",
+                        "CAZ570"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AZZ530",
+                    "https://api.weather.gov/zones/forecast/AZZ532",
+                    "https://api.weather.gov/zones/forecast/CAZ560",
+                    "https://api.weather.gov/zones/forecast/CAZ561",
+                    "https://api.weather.gov/zones/forecast/CAZ562",
+                    "https://api.weather.gov/zones/forecast/CAZ563",
+                    "https://api.weather.gov/zones/forecast/CAZ564",
+                    "https://api.weather.gov/zones/forecast/CAZ565",
+                    "https://api.weather.gov/zones/forecast/CAZ566",
+                    "https://api.weather.gov/zones/forecast/CAZ567",
+                    "https://api.weather.gov/zones/forecast/CAZ568",
+                    "https://api.weather.gov/zones/forecast/CAZ569",
+                    "https://api.weather.gov/zones/forecast/CAZ570"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21a6c7ae131e3c672082e1e5e1575d4077f46ab1.003.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.21a6c7ae131e3c672082e1e5e1575d4077f46ab1.003.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T16:51:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a467b98d456c9b70b08c257e0ccb09c8d5174608.005.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a467b98d456c9b70b08c257e0ccb09c8d5174608.005.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T13:20:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a467b98d456c9b70b08c257e0ccb09c8d5174608.003.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a467b98d456c9b70b08c257e0ccb09c8d5174608.003.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T13:20:00-07:00"
+                    }
+                ],
+                "sent": "2021-08-25T00:45:00-07:00",
+                "effective": "2021-08-25T00:45:00-07:00",
+                "onset": "2021-08-25T10:00:00-07:00",
+                "expires": "2021-08-25T16:00:00-07:00",
+                "ends": "2021-08-27T20:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Excessive Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Phoenix AZ",
+                "headline": "Excessive Heat Warning issued August 25 at 12:45AM MST until August 27 at 8:00PM MST by NWS Phoenix AZ",
+                "description": "* WHAT...Dangerously hot conditions. Afternoon temperatures 105\nto 116 expected.\n\n* WHERE...Portions of southwest Arizona and southeast and\nsouthern California.\n\n* WHEN...From 10 AM MST /10 AM PDT/ this morning to 8 PM MST /8\nPM PDT/ Friday.\n\n* IMPACTS...High Heat Risk. Overexposure can cause heat cramps\nand heat exhaustion to develop and, without intervention, can\nlead to heat stroke.",
+                "instruction": "An Excessive Heat Warning means that a period of very hot\ntemperatures, even by local standards, will occur. Actions should\nbe taken to lessen the impact of the extreme heat.\n\nStay indoors and seek air-conditioned buildings. Drink water,\nmore than usual, and avoid dehydrating alcoholic, sugary, or\ncaffeinated drinks. Dress for the heat - lightweight and light-\ncolored clothing. Eat small meals and eat more often. Monitor\nthose with a higher vulnerability to heat, including small\nchildren. Check in on family, friends, and neighbors, especially\nthe elderly. If engaging in outdoor activity, take longer and\nmore frequent breaks and avoid the hottest parts of the day.\nNever leave kids or pets unattended in cars.\n\nPublic cooling shelters are available in some areas. Consult\ncounty officials for more details, which may include guidance for\nproper social distancing measures.\n\nRecognize the signs and symptoms of heat-related illness. Early\nsigns include thirst and muscle cramps. Heat exhaustion may\ninclude: cool, moist, pale skin; headache; dizziness; weakness or\nexhaustion; nausea. The most serious illness is heat stroke,\nwhich may include: vomiting; confusion; throbbing headache;\ndecreased alertness or loss of consciousness; high body\ntemperature (above 105F); hot, dry skin; rapid, weak pulse;\nrapid, shallow breathing; seizures.\n\nHeat stroke can be DEADLY. Treat as an emergency and call 9 1 1.\n\nContinue to monitor NWS forecasts, broadcast outlets, and local\ngovernment for updates.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "PSRNPWPSR"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WARNING REMAINS IN EFFECT FROM 10 AM MST /10 AM PDT/ THIS MORNING TO 8 PM MST /8 PM PDT/ FRIDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KPSR.EH.W.0006.210825T1700Z-210828T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-28T03:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f541fcac0b97b7967a8fb639ed45ed5220d1e9e3.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f541fcac0b97b7967a8fb639ed45ed5220d1e9e3.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f541fcac0b97b7967a8fb639ed45ed5220d1e9e3.001.1",
+                "areaDesc": "Surprise Valley California; Lassen-Eastern Plumas-Eastern Sierra Counties; Greater Lake Tahoe Area; Mono; Mineral and Southern Lyon Counties; Greater Lake Tahoe Area; Greater Reno-Carson City-Minden Area; Western Nevada Basin and Range including Pyramid Lake; Northern Washoe County",
+                "geocode": {
+                    "SAME": [
+                        "006049",
+                        "006035",
+                        "006063",
+                        "006091",
+                        "006003",
+                        "006017",
+                        "006057",
+                        "006061",
+                        "006051",
+                        "032019",
+                        "032021",
+                        "032005",
+                        "032031",
+                        "032510",
+                        "032029",
+                        "032001",
+                        "032027"
+                    ],
+                    "UGC": [
+                        "CAZ070",
+                        "CAZ071",
+                        "CAZ072",
+                        "CAZ073",
+                        "NVZ001",
+                        "NVZ002",
+                        "NVZ003",
+                        "NVZ004",
+                        "NVZ005"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ070",
+                    "https://api.weather.gov/zones/forecast/CAZ071",
+                    "https://api.weather.gov/zones/forecast/CAZ072",
+                    "https://api.weather.gov/zones/forecast/CAZ073",
+                    "https://api.weather.gov/zones/forecast/NVZ001",
+                    "https://api.weather.gov/zones/forecast/NVZ002",
+                    "https://api.weather.gov/zones/forecast/NVZ003",
+                    "https://api.weather.gov/zones/forecast/NVZ004",
+                    "https://api.weather.gov/zones/forecast/NVZ005"
+                ],
+                "references": [],
+                "sent": "2021-08-24T11:45:00-07:00",
+                "effective": "2021-08-24T11:45:00-07:00",
+                "onset": "2021-08-24T11:45:00-07:00",
+                "expires": "2021-08-25T16:00:00-07:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Observed",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Reno NV",
+                "headline": "Special Weather Statement issued August 24 at 11:45AM PDT by NWS Reno NV",
+                "description": "* With prevailing west to southwest winds through Wednesday,\nsignificant smoke and air quality impacts will continue across\nthe Sierra into western Nevada, due to activity on the Caldor\nand Dixie fires.\n\n* Anyone in or near these communities could see periods of heavy\nsmoke, with potential for air quality in the hazardous category\nat times through Wednesday: Susanville, Lake Tahoe, Truckee,\nReno, Carson City, Minden, Fernley, Fallon, Yerington and\nHawthorne. However, most of the region will experience prolonged\nperiods with smoke and haze.\n\n* There may be some temporary improvements in air quality from\nmid afternoon through early evening for some areas. However,\nexactly where and for how long these improvements last can vary\ndue to small changes in wind direction and speed. Simulations\nare showing a shift in winds to a more northeast direction\nThursday through early Friday. This could lead to air quality\nimprovements, but confidence is lower this far out.\n\n* You can find local air quality measurements at fire.airnow.gov\nalong with safety recommendations. Suffice it to say,\ndramatically limiting outdoor activities is highly recommended.",
+                "instruction": null,
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "REVSPSREV"
+                    ],
+                    "NWSheadline": [
+                        "Smoke Expected to Continue Much of This Week"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6bbcc0b1787e9c3ec6b2a940119ee01ca0e6f7de.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6bbcc0b1787e9c3ec6b2a940119ee01ca0e6f7de.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6bbcc0b1787e9c3ec6b2a940119ee01ca0e6f7de.001.1",
+                "areaDesc": "Northern Trinity",
+                "geocode": {
+                    "SAME": [
+                        "006105"
+                    ],
+                    "UGC": [
+                        "CAZ107"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ107"
+                ],
+                "references": [],
+                "sent": "2021-08-24T10:48:00-07:00",
+                "effective": "2021-08-24T10:48:00-07:00",
+                "onset": "2021-08-24T10:48:00-07:00",
+                "expires": "2021-08-25T11:00:00-07:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Unknown",
+                "certainty": "Unknown",
+                "urgency": "Unknown",
+                "event": "Air Quality Alert",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Eureka CA",
+                "headline": "Air Quality Alert issued August 24 at 10:48AM PDT by NWS Eureka CA",
+                "description": "The North Coast Unified Air Quality Management District has issued\nan Air Quality Alert in effect until 11 AM PDT Wednesday for areas\naround Trinity Center and Coffee Creek.\n\nHazardous air quality conditions will continue in Trinity Center and\nCoffee Creek into Wednesday. At these smoke levels, everyone should\navoid any outdoor activity.\n\nFOR PERSONS IN DEL NORTE...HUMBOLDT AND TRINITY COUNTIES...Please\nvisit the North Coast Unified Air Quality Management District\nwebsite at www.ncuaqd.org to access the current air quality alert.",
+                "instruction": null,
+                "response": "Monitor",
+                "parameters": {
+                    "PIL": [
+                        "EKAAQAEKA"
+                    ],
+                    "NWSheadline": [
+                        "AIR QUALITY ALERT IN EFFECT UNTIL 11 AM PDT WEDNESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e9b8b86c6b3b2c5dee007c61378ee817676f17b.003.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e9b8b86c6b3b2c5dee007c61378ee817676f17b.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9e9b8b86c6b3b2c5dee007c61378ee817676f17b.003.1",
+                "areaDesc": "Parker Valley; Yuma; Imperial County Southwest; Salton Sea; Chuckwalla Mountains; Imperial County Southeast; Imperial County West; Imperial Valley; Chiriaco Summit; Palo Verde Valley; Chuckwalla Valley",
+                "geocode": {
+                    "SAME": [
+                        "004012",
+                        "004027",
+                        "006025",
+                        "006065"
+                    ],
+                    "UGC": [
+                        "AZZ530",
+                        "AZZ532",
+                        "CAZ562",
+                        "CAZ563",
+                        "CAZ564",
+                        "CAZ565",
+                        "CAZ566",
+                        "CAZ567",
+                        "CAZ568",
+                        "CAZ569",
+                        "CAZ570"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AZZ530",
+                    "https://api.weather.gov/zones/forecast/AZZ532",
+                    "https://api.weather.gov/zones/forecast/CAZ562",
+                    "https://api.weather.gov/zones/forecast/CAZ563",
+                    "https://api.weather.gov/zones/forecast/CAZ564",
+                    "https://api.weather.gov/zones/forecast/CAZ565",
+                    "https://api.weather.gov/zones/forecast/CAZ566",
+                    "https://api.weather.gov/zones/forecast/CAZ567",
+                    "https://api.weather.gov/zones/forecast/CAZ568",
+                    "https://api.weather.gov/zones/forecast/CAZ569",
+                    "https://api.weather.gov/zones/forecast/CAZ570"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab32f1df4b0d79dfd70b7d99c48a2cf576777da5.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.ab32f1df4b0d79dfd70b7d99c48a2cf576777da5.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-23T13:51:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd0396556fd55e7f3235faa0b95f24c80bc111fe.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.bd0396556fd55e7f3235faa0b95f24c80bc111fe.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-23T13:37:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a098ee6f050fdc61429a6b4d7dd904b71f5bcb4d.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a098ee6f050fdc61429a6b4d7dd904b71f5bcb4d.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-23T15:21:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c234f45c15e38f53cf38fea4a245c65e650ac4aa.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.c234f45c15e38f53cf38fea4a245c65e650ac4aa.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-23T22:08:00-07:00"
+                    }
+                ],
+                "sent": "2021-08-24T01:06:00-07:00",
+                "effective": "2021-08-24T01:06:00-07:00",
+                "onset": "2021-08-25T10:00:00-07:00",
+                "expires": "2021-08-24T16:30:00-07:00",
+                "ends": "2021-08-27T20:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Future",
+                "event": "Excessive Heat Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Phoenix AZ",
+                "headline": "Excessive Heat Watch issued August 24 at 1:06AM MST until August 27 at 8:00PM MST by NWS Phoenix AZ",
+                "description": "* WHAT...Dangerously hot conditions possible. Afternoon\ntemperatures 106 to 116.\n\n* WHERE...Portions of southwest Arizona and southeast and\nsouthern California.\n\n* WHEN...From Wednesday morning through Friday evening.\n\n* IMPACTS...High Heat Risk. Overexposure can cause heat cramps\nand heat exhaustion to develop and, without intervention, can\nlead to heat stroke.",
+                "instruction": "An Excessive Heat Watch means that a period of very hot\ntemperatures, even by local standards, will occur. Actions should\nbe taken to lessen the impact of the extreme heat.\n\nStay indoors and seek air-conditioned buildings. Drink water,\nmore than usual, and avoid dehydrating alcoholic, sugary, or\ncaffeinated drinks. Dress for the heat - lightweight and light-\ncolored clothing. Eat small meals and eat more often. Monitor\nthose with a higher vulnerability to heat, including small\nchildren. Check in on family, friends, and neighbors, especially\nthe elderly. If engaging in outdoor activity, take longer and\nmore frequent breaks and avoid the hottest parts of the day.\nNever leave kids or pets unattended in cars.\n\nPublic cooling shelters are available in some areas. Consult\ncounty officials for more details, which may include guidance for\nproper social distancing measures.\n\nRecognize the signs and symptoms of heat-related illness. Early\nsigns include thirst and muscle cramps. Heat exhaustion may\ninclude: cool, moist, pale skin; headache; dizziness; weakness or\nexhaustion; nausea. The most serious illness is heat stroke,\nwhich may include: vomiting; confusion; throbbing headache;\ndecreased alertness or loss of consciousness; high body\ntemperature (above 105F); hot, dry skin; rapid, weak pulse;\nrapid, shallow breathing; seizures.\n\nHeat stroke can be DEADLY. Treat as an emergency and call 9 1 1.\n\nContinue to monitor NWS forecasts, broadcast outlets, and local\ngovernment for updates.",
+                "response": "Monitor",
+                "parameters": {
+                    "PIL": [
+                        "PSRNPWPSR"
+                    ],
+                    "NWSheadline": [
+                        "EXCESSIVE HEAT WATCH REMAINS IN EFFECT FROM WEDNESDAY MORNING THROUGH FRIDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KPSR.EH.A.0005.210825T1700Z-210828T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-28T03:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b4a9f3fe1495267412f0bb6a87ba032bc64eeba7.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b4a9f3fe1495267412f0bb6a87ba032bc64eeba7.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.b4a9f3fe1495267412f0bb6a87ba032bc64eeba7.001.1",
+                "areaDesc": "Fresno, CA; Kern, CA; Kings, CA; Madera, CA; Merced, CA; San Joaquin, CA; Stanislaus, CA; Tulare, CA",
+                "geocode": {
+                    "SAME": [
+                        "006019",
+                        "006029",
+                        "006031",
+                        "006039",
+                        "006047",
+                        "006077",
+                        "006099",
+                        "006107"
+                    ],
+                    "UGC": [
+                        "CAC019",
+                        "CAC029",
+                        "CAC031",
+                        "CAC039",
+                        "CAC047",
+                        "CAC077",
+                        "CAC099",
+                        "CAC107"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/CAC019",
+                    "https://api.weather.gov/zones/county/CAC029",
+                    "https://api.weather.gov/zones/county/CAC031",
+                    "https://api.weather.gov/zones/county/CAC039",
+                    "https://api.weather.gov/zones/county/CAC047",
+                    "https://api.weather.gov/zones/county/CAC077",
+                    "https://api.weather.gov/zones/county/CAC099",
+                    "https://api.weather.gov/zones/county/CAC107"
+                ],
+                "references": [],
+                "sent": "2021-08-20T09:55:00-07:00",
+                "effective": "2021-08-20T09:55:00-07:00",
+                "onset": "2021-08-20T09:55:00-07:00",
+                "expires": "2021-08-27T10:00:00-07:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Unknown",
+                "certainty": "Unknown",
+                "urgency": "Unknown",
+                "event": "Air Quality Alert",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Hanford CA",
+                "headline": "Air Quality Alert issued August 20 at 9:55AM PDT by NWS Hanford CA",
+                "description": "The San Joaquin Valley Air Pollution Control District is\nextending an Air Quality Alert on August 20, 2021, due to smoke\nimpacts from wildfires in northern California and other fires in\nTuolumne, Mariposa, and Tulare Counties for San Joaquin,\nStanislaus, Merced, Madera, Fresno, Tulare, Kings, and Valley\nportion of Kern Counties.\n\nThis Air Quality Alert is in effect until the fires are\nextinguished.\n\nExposure to particle pollution can cause serious health problems,\naggravate lung disease, cause asthma attacks and acute\nbronchitis, and increase risk of respiratory infections.\n\nResidents are advised to use caution as conditions warrant.\nPeople with heart or lung diseases should follow their doctor's\nadvice for dealing with episodes of unhealthy air quality.\n\nAdditionally, older adults and children should avoid prolonged\nexposure, strenuous activities or heavy exertion, as conditions\ndictate.\n\nFor additional information, call your local San Joaquin Valley\nAir District office. Modesto 209-557-6400, Fresno 559-230-6000,\nBakersfield 661-392-5500\n\nResidents can also follow air quality conditions by downloading\nthe free Valley Air app, available in the Apple store or Google\nPlay.",
+                "instruction": null,
+                "response": "Monitor",
+                "parameters": {
+                    "PIL": [
+                        "HNXAQAHNX"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "current watches, warnings, and advisories for California",
+    "updated": "2021-08-25T09:04:22+00:00"
+}

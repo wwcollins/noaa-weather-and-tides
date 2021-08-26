@@ -1,0 +1,94 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/27.8003,-97.3956",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -97.395600000000002,
+            27.8003
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/27.8003,-97.3956",
+        "@type": "wx:Point",
+        "cwa": "CRP",
+        "forecastOffice": "https://api.weather.gov/offices/CRP",
+        "gridId": "CRP",
+        "gridX": 111,
+        "gridY": 33,
+        "forecast": "https://api.weather.gov/gridpoints/CRP/111,33/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/CRP/111,33/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/CRP/111,33",
+        "observationStations": "https://api.weather.gov/gridpoints/CRP/111,33/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.352928000000006,
+                    27.885676
+                ]
+            },
+            "properties": {
+                "city": "Doyle",
+                "state": "TX",
+                "distance": {
+                    "value": 10379.188157241,
+                    "unitCode": "unit:m"
+                },
+                "bearing": {
+                    "value": 203,
+                    "unitCode": "unit:degrees_true"
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/TXZ343",
+        "county": "https://api.weather.gov/zones/county/TXC355",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/TXZ343",
+        "timeZone": "America/Chicago",
+        "radarStation": "KCRP"
+    }
+}
