@@ -9,6 +9,9 @@ from pyld import jsonld
 import socket
 import os
 from urllib.request import urlopen
+import math
+import pandas as pd
+import json
 
 # ------------------------------ CONSTANTS ---------------------------------------
 WELCOME_MSG = 'Welcome to NOAA Weather API Collection.'
@@ -16,7 +19,7 @@ COMPANY_INFO = 'Alkemie Technologies LLC, William Collins'
 COPYRIGHT = ' CR 2021, All Rights Reserved'
 NOAA_ALERTS_BY_STATE_PRE = "https://api.weather.gov/alerts/active?area=" # NOAA API
 
-#------------- API KEYS ------------------
+#-------------------------------- API KEYS ----------------------------------------
 KEY_DARKSKY = 'f03351387f6ea21ce5e4bfc5b503a508' # Darksky Weather REST API
 KEY_GOOGLE_GEO = 'AIzaSyDphYfny8p8asmBlgFxz2htAMnB6m-4yoA' # Google Geocoding REST API
 KEY_OPENWEATHERMAP = '212e677c073ca9cf225496aa0fe55e04'
@@ -28,6 +31,130 @@ print('Todays date is ' + str(date.today()))
 time.sleep(1)
 
 # ------------------------------- METHODS ------------------------------------------
+"""
+How to find the distance between two lat-long coordinates in Python
+Finding the distance between two latitude-longitude coordinates involves using the Haversine Formula. This formula takes the curvature of the Earth into consideration, which is why it is significantly more accurate than the traditional distance formula.
+
+USE THE HAVERSINE FORMULA
+The Haversine formula calculates the great-circle distance between two points. Start by calculating the change in latitude and longitude, in radians, and input the result into the Haversine formula (implemented below). Use the functions in the math library for trigonometry related calculations.
+
+Reference:  https://www.kite.com/python/answers/how-to-find-the-distance-between-two-lat-long-coordinates-in-python
+
+
+"""
+
+def calc_distance_between_station_locations(lat,lon,lat2,lon2):
+    lat = float(lat)
+    lon = float(lon)
+    lat2 = float(lat2)
+    lon2 = float(lon2)
+
+    #radius of the Earth
+    Rk = 6373.0     # kilometers
+    Rm = 3,958.8    # miles
+
+    #coordinates
+    lat1r = math.radians(lat)
+    lon1r = math.radians(lon)
+
+    # These values will also need to be pulled from a dict to be created to find closest weather station
+    lat2r = math.radians(lat2)
+    lon2r = math.radians(lon2)
+
+    #change in coordinates
+    dlon = lon2r - lon1r
+    dlat = lat2r - lat1r
+
+    #Haversine formula
+    a = math.sin(dlat / 2)**2 + math.cos(lat1r) * math.cos(lat2r) * math.sin(dlon / 2)**2
+
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    distance = Rk * c
+    distance_miles = 0.621371 * distance
+
+    print(f'{distance} km or {distance_miles} miles')
+    return distance, distance_miles
+
+#Test: initial lat lon vals for 2 points
+"""
+lat = 52.2296756
+lon = 21.0122287
+lat2 = 52.406374
+lon2 = 16.9251681
+latlon = str(lat) + ',' + str(lon)
+latlon2 = str(lat2) + ',' + str(lon2)
+
+distance, distance_miles = calc_distance_between_station_locations(lat,lon,lat2,lon2)
+print(f'The distance between latlon {latlon} and latlon {latlon2} is {distance} km or {distance_miles} miles')
+"""
+
+def get_closets_station(lat, lon):
+    filepath = 'StationsDataTest.xlsx'
+
+    # Create the DataFrame - this can be moved to another method since this really needs to be read from excel only once then
+    # accessed via the exported json file into a df.  Could also use a boolean here to perform an excel source refresh
+
+    df = pd.read_excel(filepath)
+    print(df)
+
+    dfd = df.to_dict()
+    dfj = df.to_json(orient='split')
+
+    print(dfj)
+
+    # create JSON object from JSON text
+    json_string = dfj
+    jobj = json.loads(json_string)
+
+    least_distance = "1000000000"
+    least_distance_loc = []
+
+    for L in range(100000):
+        # print(jobj['data'][L])
+        try:
+            closest_list = jobj['data'][L]
+        except Exception as e:
+            print('...end of entries to evaluate')
+            break
+
+        # print(jobj['data'][L][0])
+        # print(jobj['data'][L][1])
+        # print(jobj['data'][L][2]) # station ID
+        # print(jobj['data'][L][3])
+        # print(jobj['data'][L][4])
+
+        station_id = jobj['data'][L][2]
+
+        lat2 = jobj['data'][L][3]
+        lon2 = jobj['data'][L][4]
+        latlon = str(lat) + ',' + str(lon)
+        latlon2 = str(lat2) + ',' + str(lon2)
+
+        # calculate distance between this lat lon above and target lat lon
+        distance, distance_miles = calc_distance_between_station_locations(lat, lon, lat2, lon2)
+        # print(f'The distance between latlon {latlon} and latlon {latlon2} is {distance} km or {distance_miles} miles')
+
+        distance = float(distance)
+        least_distance = float(least_distance)
+
+        if distance < least_distance:
+            print(f'...found closer station {station_id} ')
+            print(f'...current station distance is {float(distance)} vs previous at {float(least_distance)}')
+            least_distance = float(distance)  # set least to new lower val
+            least_distance_loc = jobj['data'][L]
+            least_distance_loc.append(distance)
+        else:
+            print(f'... station {station_id} is not closer ')
+
+    print()
+    print(f'Closest station information {least_distance_loc} and closest station is {least_distance_loc[2]}')
+    print(f'Target location and station {least_distance_loc[2]} are ~{round(least_distance_loc[-1], 1)}km apart')
+
+    # Export Pandas DataFrame to JSON File
+    df.to_json(r'StationsDataTest.json', orient='split')
+
+    return station_id, least_distance_loc  # station ID and return list for closest location data
+
 def txt2jsonobj(json_string):
     json_obj = json.loads(json_string)
     return json_obj
@@ -135,27 +262,32 @@ def tide_forecast(stationID='8775241', days_out=30):
     print("begin and end date",begin_date,end_date)
 
     url = "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=" + \
-          begin_date + "&end_date=" + end_date + "&datum=MLLW&station=" + stationID + \
+          begin_date + "&end_date=" + end_date + "&datum=MLLW&station=" + str(stationID) + \
           "&time_zone=lst_ldt&units=english&interval=hilo&format=json"
     print('...getting tide and currents from', url)
-    try:
-        r = ''
-        print(url)
-        r = requests.get(url)
-        print("requests status code=" + str(r.status_code))
-        if r.status_code == 200:
-            time.sleep(2)
-            # print ("response=" + r.text)
-            print("NOAA Tide Data api success...")
-            jsonobj = r.json()
-            return r.text
-        else:
-            print("status=" + str(r.status_code))
-            print("trying again..." + url)
-            time.sleep(3)
-    except Exception as e:
-        print(e)
-        return e
+    attempts = 1
+    while attempts <= 3:
+        print(f'...requested attempts {attempts}.  Max is 3.')
+        attempts += 1
+        try:
+            r = ''
+            print(url)
+            r = requests.get(url)
+            print("requests status code=" + str(r.status_code))
+            if r.status_code == 200:
+                time.sleep(2)
+                # print ("response=" + r.text)
+                print("NOAA Tide Data api success...")
+                jsonobj = r.json()
+                return r.text
+            else:
+                print("status=" + str(r.status_code))
+                print("trying again..." + url)
+                time.sleep(2)
+                # r = requests.get(url)
+        except Exception as e:
+            print(e)
+            tide_forecast(stationID, days_out)  # if failure then recursive to method
 
 # test
 """
@@ -180,6 +312,7 @@ def openfile(filename):
     # open and read the file
     f = open(filename, "r")
     print(f.read())
+    return f.read()
 
 def get_us_state_abbrev(state):  # method to convert state to state abbrev via dictionary us_state_abbrev
     print(state)
@@ -346,6 +479,62 @@ def alerts(state): # method to get extreme weather alerts by state. Uses state a
 # r = alerts(state)  # get NOAA extreme weather alerts by state
 """
 
+# Get /points information
+# e.g. https://api.weather.gov/points/39.7456,-97.0892
+def getpoints(lat, lon):
+    url = "https://api.weather.gov/points/" + str(lat) + "," + str(lon)
+    print('...getting points information from', url)
+    r = requests.get(url)
+    r_obj = txt2jsonobj(r.text)
+    """ Example selected JSON data returned
+    forecastZone: "https://api.weather.gov/zones/forecast/KSZ009",
+    county: "https://api.weather.gov/zones/county/KSC201",
+    fireWeatherZone: "https://api.weather.gov/zones/fire/KSZ009",
+    timeZone: "America/Chicago",
+    radarStation: "KTWX"
+    
+    "cwa": "EWX",
+    "forecastOffice": "https://api.weather.gov/offices/EWX",
+    "gridId": "EWX",
+    "gridX": 151,
+    "gridY": 103,
+    "forecast": "https://api.weather.gov/gridpoints/EWX/151,103/forecast",
+    "forecastHourly": "https://api.weather.gov/gridpoints/EWX/151,103/forecast/hourly",
+    "forecastGridData": "https://api.weather.gov/gridpoints/EWX/151,103",
+    "observationStations": "https://api.weather.gov/gridpoints/EWX/151,103/stations",
+    """
+    radarStation = r_obj['properties']['radarStation']
+    forecastZone = r_obj['properties']['forecastZone']
+    county = r_obj['properties']['county']
+    fireWeatherZone = r_obj['properties']['fireWeatherZone']
+    timeZone = r_obj['properties']['timeZone']
+    timeZone = r_obj['properties']['timeZone']
+
+    forecast = "https://api.weather.gov/gridpoints/EWX/151,103/forecast"
+    forecastHourly = "https://api.weather.gov/gridpoints/EWX/151,103/forecast/hourly"
+
+    print('radarStation', radarStation)
+
+    filename = './data/' + state + '_noaa_weather_points_' + str(lat) + '_' + str(lon) + str(date.today()) + '.json'
+    print('...writing points JSON text data to file' + filename)
+    attrib = "w"
+    content = r.text
+    print(".....Writing Points content JSON data(text) for location to " + filename)
+    write2file(filename, attrib, content)
+    return radarStation, forecastZone, county, fireWeatherZone, timeZone, forecast, forecastHourly
+
+# test
+"""
+r = getpoints(lat,lon) #lat lon defined earlier in code
+filename = './data/' + state + '_noaa_weather_points_" + str(lat) + " " + str(lon) + str(date.today()) + '.json'
+attrib = "w"
+content = r.txt
+print(".....Writing Points content to " + filename)
+write2file(filename,attrib,content)
+#openfile(filename)
+"""
+
+# quit()
 # --------------  END METHOD MOVE SECTION --------------------------
 
 # Start main code block ....
@@ -380,9 +569,22 @@ else: # Identify input as city,state or lat,lon via generating error below
 print('...retrieved data for selected location')
 print('...data for location: ',city,state,lat,lon,' latlon:',latlon)
 
-# now get extreme weather alerts -> TBD
+# now get extreme weather alerts -> TBD Done
 print('...Geting NOAA extreme weather alerts for state' + state)
 alerts(state)
+
+# now get points -> TBD in progress -> Done
+print('...Geting NOAA points for lat lon' + latlon)
+radarStation, forecastZone, county, fireWeatherZone, timeZone, forecast, forecastHourly = getpoints(lat,lon)
+print(radarStation,forecastZone,county,fireWeatherZone,timeZone, forecast, forecastHourly)
+
+# now get Tide Forecast -> TBD in progress ->
+station_id, least_distance_loc = get_closets_station(lat,lon)
+print(f'returned values from get_closets_station are closest station id {station_id} and data list {least_distance_loc}')
+print(f"...Geting NOAA Tide Forecast for radarStation {station_id} in {city} {state}")
+tide_forecast_info = tide_forecast(station_id,30)
+print(tide_forecast_info)
+
 
 quit()
 
@@ -400,7 +602,6 @@ print('-------------------Getting TIDES AND CURRRENTS for location -------------
 
 #This is the format to use! Finally!!!
 #https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
-
 
 print('*********************TIDE INFORMATION - FORECAST****************')
 print()
@@ -540,38 +741,6 @@ write2file(filename,attrib,content)
 https://api.weather.gov/points/{latitude},{longitude}
 For example: https://api.weather.gov/points/39.7456,-97.0892
 """
-
-print("-------------------POINTS INFORMATION--------------------------------")
-
-# Get /points information
-# e.g. https://api.weather.gov/points/39.7456,-97.0892
-
-def getpoints(lat,lon):
-    url = "https://api.weather.gov/points/" + str(lat) + "," + str(lon)
-    print ('...getting points information from', url)
-    r = requests.get(url)
-    # print (r.text)
-    # jsonobj = r.json()
-    r = getpoints(lat, lon)  # lat lon defined earlier in code
-    filename = './data/' + state + '_noaa_weather_points_' + str(lat) + '_' + str(lon) + str(date.today()) + '.json'
-    attrib = "w"
-    content = r.txt
-    print(".....Writing Points content to " + filename)
-    write2file(filename, attrib, content)
-    return r.text
-    
-#test
-"""
-r = getpoints(lat,lon) #lat lon defined earlier in code
-filename = './data/' + state + '_noaa_weather_points_" + str(lat) + " " + str(lon) + str(date.today()) + '.json'
-attrib = "w"
-content = r.txt
-print(".....Writing Points content to " + filename)
-write2file(filename,attrib,content)
-#openfile(filename)
-"""
-
-#quit()
 
 #Forecasts - Use Grid and Points Information to populate values: office, gridx, gridy"
 print("-------------------FORECASTS--------------------------------")
