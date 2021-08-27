@@ -1,0 +1,769 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a311322df42e114b7fa4e3354043ec55b3673908.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a311322df42e114b7fa4e3354043ec55b3673908.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a311322df42e114b7fa4e3354043ec55b3673908.001.1",
+                "areaDesc": "South Walton; Coastal Gulf",
+                "geocode": {
+                    "SAME": [
+                        "012131",
+                        "012045"
+                    ],
+                    "UGC": [
+                        "FLZ108",
+                        "FLZ114"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/FLZ108",
+                    "https://api.weather.gov/zones/forecast/FLZ114"
+                ],
+                "references": [],
+                "sent": "2021-08-26T12:03:00-04:00",
+                "effective": "2021-08-26T12:03:00-04:00",
+                "onset": "2021-08-26T12:03:00-04:00",
+                "expires": "2021-08-26T20:15:00-04:00",
+                "ends": "2021-08-26T22:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Rip Current Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Rip Current Statement issued August 26 at 12:03PM EDT until August 26 at 10:00PM EDT by NWS Tallahassee FL",
+                "description": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Walton and south facing Gulf County Beaches.\n\n* WHEN...From 8 AM EDT this morning through this evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+                "instruction": "Swim near a lifeguard. If caught in a rip current, relax and\nfloat. Don't swim against the current. If able, swim in a\ndirection following the shoreline. If unable to escape, face the\nshore and call or wave for help.",
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "TAECFWTAE"
+                    ],
+                    "NWSheadline": [
+                        "HIGH RIP CURRENT RISK IN EFFECT UNTIL 10 PM EDT /9 PM CDT/ THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.EXA.KTAE.RP.S.0079.000000T0000Z-210827T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-27T02:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a311322df42e114b7fa4e3354043ec55b3673908.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a311322df42e114b7fa4e3354043ec55b3673908.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a311322df42e114b7fa4e3354043ec55b3673908.002.1",
+                "areaDesc": "Coastal Franklin",
+                "geocode": {
+                    "SAME": [
+                        "012037"
+                    ],
+                    "UGC": [
+                        "FLZ115"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/FLZ115"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1de935d23a8ee41fcfe1ab1e49d9b4e09e125e30.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1de935d23a8ee41fcfe1ab1e49d9b4e09e125e30.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-26T03:39:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-26T12:03:00-04:00",
+                "effective": "2021-08-26T12:03:00-04:00",
+                "onset": "2021-08-26T12:03:00-04:00",
+                "expires": "2021-08-26T20:15:00-04:00",
+                "ends": "2021-08-26T22:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Rip Current Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Rip Current Statement issued August 26 at 12:03PM EDT until August 26 at 10:00PM EDT by NWS Tallahassee FL",
+                "description": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Franklin County Beaches.\n\n* WHEN...From 8 AM EDT this morning through this evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+                "instruction": "Swim near a lifeguard. If caught in a rip current, relax and\nfloat. Don't swim against the current. If able, swim in a\ndirection following the shoreline. If unable to escape, face the\nshore and call or wave for help.",
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "TAECFWTAE"
+                    ],
+                    "NWSheadline": [
+                        "HIGH RIP CURRENT RISK REMAINS IN EFFECT UNTIL 10 PM EDT THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTAE.RP.S.0079.000000T0000Z-210827T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-27T02:00:00+00:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f267dbb348e367fb5667fc75f93d12848c6baf66.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.939999999999998,
+                            29.870000000000001
+                        ],
+                        [
+                            -82.870000000000005,
+                            29.870000000000001
+                        ],
+                        [
+                            -82.870000000000005,
+                            29.800000000000001
+                        ],
+                        [
+                            -82.910000000000011,
+                            29.690000000000001
+                        ],
+                        [
+                            -82.990000000000009,
+                            29.68
+                        ],
+                        [
+                            -82.970000000000013,
+                            29.809999999999999
+                        ],
+                        [
+                            -82.939999999999998,
+                            29.870000000000001
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f267dbb348e367fb5667fc75f93d12848c6baf66.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f267dbb348e367fb5667fc75f93d12848c6baf66.001.1",
+                "areaDesc": "Dixie, FL; Gilchrist, FL; Lafayette, FL",
+                "geocode": {
+                    "SAME": [
+                        "012029",
+                        "012041",
+                        "012067"
+                    ],
+                    "UGC": [
+                        "FLC029",
+                        "FLC041",
+                        "FLC067"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC029",
+                    "https://api.weather.gov/zones/county/FLC041",
+                    "https://api.weather.gov/zones/county/FLC067"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0d1a9a2edb01766b6d9aa2f9d13bf64f7fb00972.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.0d1a9a2edb01766b6d9aa2f9d13bf64f7fb00972.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-25T21:53:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-26T09:34:00-04:00",
+                "effective": "2021-08-26T09:34:00-04:00",
+                "onset": "2021-08-26T09:34:00-04:00",
+                "expires": "2021-08-27T03:45:00-04:00",
+                "ends": "2021-08-31T08:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Flood Warning issued August 26 at 9:34AM EDT until August 31 at 8:00AM EDT by NWS Tallahassee FL",
+                "description": "The Flood Warning continues for\nthe Suwannee River at Rock Bluff near Bell (CR 340).\n* Until Tuesday morning.\n* At 9:00 AM EDT Thursday the stage was 17.4 feet.\n* Flood stage is 17.0 feet.\n* Minor flooding is occurring and minor flooding is forecast.\n* Recent Activity...The maximum river stage in the 24 hours ending\nat 9:00 AM EDT Thursday was 17.4 feet.\n* Forecast...The river is expected to rise to a crest of 17.4 feet\nthis afternoon. It will then fall below flood stage early Tuesday\nmorning.\n* Impact...At 17.0 feet, Water begins to flood several roads in\nGilchrist County downstream of the Rock Bluff gauge.  Roads\naffected include NW 73rd Way, NW 82nd Terrace, SW 25th Place, and\nSW 86th Way.",
+                "instruction": null,
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "TAEFLSTAE"
+                    ],
+                    "NWSheadline": [
+                        "The Flood Warning is now in effect until Tuesday morning"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KTAE.FL.W.0044.000000T0000Z-210831T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-31T12:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6ef2b0b3b73c3e74eda8b38a720d0bbc70b47977.001.1,2021-08-25T09:24:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1e76f5db6ba02a933b92005227a232f9a882b9ea.001.1,2021-08-24T21:57:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b1ee572dcf82c2cd62e755cf9d609fb4a4fa97e4.001.1,2021-08-24T11:29:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.424965f1541042840f9c86e3af38c426f73a2109.001.1,2021-08-23T21:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f2693bf54d1d7fe5a48f97925f9f0fbda41e079c.001.1,2021-08-23T10:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.853b9f44efef2c9425b2a198b0c2ebb6f18c4243.001.1,2021-08-22T21:33:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7d146f9950e2fa5d6ed2e0db1cc9cbac9a2dd461.001.1,2021-08-22T09:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5704821a159b5955554ab83d40b205d7aca1709c.001.1,2021-08-21T21:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f98c1891fa7c179d939cb4c6f33f21df4b15ccac.001.1,2021-08-21T09:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6f52949ea1b3cee9e96635f2f8ca349af9647018.001.1,2021-08-20T21:31:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8eafbd42cb0a3552a0f1e514ef15a026fa57f66b.001.1,2021-08-20T09:57:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0ba22c5ba2a91921da9773e98eae95858f361e63.002.1,2021-08-19T20:58:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8ce5871a15a006491cb0424472dff3e4b9dc285d.001.1,2021-08-19T09:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.92fe5fd73f844fda579c35d93a2acaf91d755486.001.1,2021-08-18T20:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ddf87428d45b3eb4c34e5f75dec4e70675b7158a.001.1,2021-08-18T09:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b95fa13395143c22984719e77edc78fd9026aca4.001.1,2021-08-17T21:02:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f144a911b9689472abacaf2c0106c62c25fdb7d9.001.1,2021-08-17T09:54:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ff98cadd09202e62c59a8896cde67987d08ba4ff.001.1,2021-08-16T21:18:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f716423b75d2ffb18eaf7dde13e1831e2e89b333.001.1,2021-08-16T09:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fcd8a9e707d9573e86b53c9c69e35d980d7bf067.001.1,2021-08-15T21:13:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7264ed1617ebd7163a06e440e7c4ba395dcca4eb.001.1,2021-08-15T08:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b0d1b06372f7531bf30bab25f63b993e086b1bc.001.1,2021-08-14T20:40:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b54f11132c0cd6c89ade23964d687da4087d3df6.001.1,2021-08-14T08:55:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a3f36e23b05f21b3c1ed3e4100bc156f0c35c75b.001.1,2021-08-13T21:33:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0a4beafb6960a705144b52e272785d59e70459cf.001.1,2021-08-13T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8988446a6cf255ee0feb97eaaf652a7af635a623.001.1,2021-08-12T21:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a6beccfbc3562015b53208b5db766cd22fda14bf.001.1,2021-08-12T10:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e45f26890077e23ed7afa9960ace2ba90e235f90.001.1,2021-08-11T21:05:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.09b73a4366c0da1d2440b9c3a2c362665077fbe8.001.1,2021-08-11T10:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ed891716daeb77c06bc5dff8f50ea43a770190db.001.1,2021-08-10T21:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0dffbe9f7e78b063cfcd8ad437472182aba07ed1.001.1,2021-08-10T09:36:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ca93b0de42d002ffbaa76f879a968508fbf0330b.001.1,2021-08-09T21:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1c6c46d5aacfaaa241e2e0c0a1dbb5bccb45d4cc.001.1,2021-08-09T10:17:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.51a1b553214488428c0461618682fc1f3566c99c.001.1,2021-08-08T20:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1f913560801d356019d5674ff5fb1d8e76fa352a.001.1,2021-08-08T09:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eac63bc0e38d579a5b932b6243b5665bcf38ed2c.001.1,2021-08-07T21:12:00-04:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.002.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.760000000000005,
+                            29.93
+                        ],
+                        [
+                            -82.680000000000007,
+                            29.850000000000001
+                        ],
+                        [
+                            -82.660000000000011,
+                            29.84
+                        ],
+                        [
+                            -82.660000000000011,
+                            29.82
+                        ],
+                        [
+                            -82.709999900000014,
+                            29.82
+                        ],
+                        [
+                            -82.79000000000002,
+                            29.899999999999999
+                        ],
+                        [
+                            -82.760000000000005,
+                            29.93
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.002.1",
+                "areaDesc": "Columbia, FL; Gilchrist, FL",
+                "geocode": {
+                    "SAME": [
+                        "012023",
+                        "012041"
+                    ],
+                    "UGC": [
+                        "FLC023",
+                        "FLC041"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC023",
+                    "https://api.weather.gov/zones/county/FLC041"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ed3ef586e06115dce2ed02f167224dbc9d3a583.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1ed3ef586e06115dce2ed02f167224dbc9d3a583.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-25T21:34:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-26T09:31:00-04:00",
+                "effective": "2021-08-26T09:31:00-04:00",
+                "onset": "2021-08-26T09:31:00-04:00",
+                "expires": "2021-08-27T09:45:00-04:00",
+                "ends": "2021-09-01T02:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Jacksonville FL",
+                "headline": "Flood Warning issued August 26 at 9:31AM EDT until September 1 at 2:00AM EDT by NWS Jacksonville FL",
+                "description": "The Flood Warning continues for\nthe Santa Fe River At Fort White.\n* Until early Wednesday morning.\n* At 8:45 AM EDT Thursday the stage was 23.5 feet.\n* Flood stage is 23.0 feet.\n* Minor flooding is occurring and minor flooding is forecast.\n* Forecast...The river is expected to fall below flood stage Tuesday\nevening and continue falling to 22.8 feet Thursday morning.\n* Impact...At 23.0 feet, Minor damage to dwellings is possible due\nto boat wash.\n* Impact...At 23.3 feet, Florida Fish and Wildlife Commission begins\nenforcement of a no wake zone on the Santa Fe River from the\ncenterline of the US 27 Bridge downstream to one-half mile\nupstream from the State Road 47 Bridge.\n* Impact...At 25.0 feet, Damage to homes at low elevation as well as\nbasement areas underneath homes on stilts is likely.",
+                "instruction": null,
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "JAXFLSJAX"
+                    ],
+                    "NWSheadline": [
+                        "The Flood Warning is now in effect until early Wednesday morning"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KJAX.FL.W.0030.000000T0000Z-210901T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-09-01T06:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3f815798a671ef90d16c209f2c3aecd29fed3410.002.1,2021-08-25T09:26:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1f9a14b5a68747da157429a03cfc4610f78bc3e2.001.1,2021-08-24T21:36:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9dc0c39e1c0061255ed9227a3f9b8fecd4ae4193.002.1,2021-08-24T10:09:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c36a0111dbebebe837e1c391527a5672b60652c5.003.1,2021-08-23T21:30:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.664d70e52fe0bf9d0bdda103e39dc3a629100ffb.003.1,2021-08-23T09:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd656f1263d82dc0baeb413daa8d0e593dadc9b1.002.1,2021-08-22T21:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d7cbc3dd55cba999c5c8bfba369c543e2d58be20.002.1,2021-08-22T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.421b7b7797303dee2201c785219b3e4818050de5.003.1,2021-08-21T21:37:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ab30f4fbf75c2342d4f9ea020eba1eacbcaecb2f.005.1,2021-08-21T09:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.98533d9e2c8f8868b21b9b5555b5001f14e08a77.001.1,2021-08-20T21:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ec45a61578a9597e71ba13724fc168b3dd3f4b4e.003.1,2021-08-20T09:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6cd004b851969746e1445a9f3c9905cae3e3f73a.001.1,2021-08-19T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0dfc1788bece258a974d891d31e080d21ed6cb2e.002.1,2021-08-19T09:02:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9c31ad8a8ae25ab3552921c9df39dd2d0bb04105.003.1,2021-08-18T20:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6091628cd32700917c83deeecc92c869500ddfa7.003.1,2021-08-18T10:28:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5caa8ce231fc092e32846e253ccf0cefe96958f3.003.1,2021-08-17T21:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.aedb7b31a584817b2c29d56a3b0a53c7118e5f50.003.1,2021-08-17T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c47e74139aa081c21ff698210be07b7c1f835a8c.003.1,2021-08-16T21:15:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.997672bca2bc3ede9e3318ca26a7be7cb9602331.001.1,2021-08-16T09:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb1e2f6be836f8d7a0e6a0e6f6c1aa9efee8f2fc.002.1,2021-08-15T21:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2d4cc3aa12170674f100743d49242c7769de9394.004.1,2021-08-15T09:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bbe129fb0f61bff85385a6199d288327df8e2115.004.1,2021-08-14T20:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f02288d02304e303247ea9f846a6709cdc30b905.002.1,2021-08-14T09:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.95e4575c8c3282ccd4ffb33dedac4f055d1b96c3.002.1,2021-08-13T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.02a3a4de0d483726174b516c1393992c37539e99.002.1,2021-08-13T10:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.70b7c6c01497ed148880a964f5876194e5f865e5.005.1,2021-08-12T20:57:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.25eef0dc7503d7f5ec00d392a73182dcbc930ef9.005.1,2021-08-12T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5d96eeaa0db72aafa89b2a4411b05dc7aca7d961.003.1,2021-08-11T21:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.adfc318d2560423438ad1db7d55ecc0815e07449.005.1,2021-08-11T10:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3413aaf151c6509e45deb0ef1dbe1c393e79e27a.003.1,2021-08-10T21:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6419c2a97e911d8002b2df132449a72a273f591c.006.1,2021-08-10T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1eea57724d00f815af57290c486f976b7f54f38f.002.1,2021-08-09T21:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e095f314398bc511a67408124893dd4776b2e3e9.001.1,2021-08-09T10:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3aa1ed36e25e109eda19834c6bc2759d40622cda.002.1,2021-08-08T20:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8c3f697bc9891a0a2f6796e3e80a74805ff45cd9.004.1,2021-08-08T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8ae1203f6ddd18a143ac31abb9653c40b3fdf4a5.001.1,2021-08-07T20:56:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b36f8d07bcf1c69b99091e067b74c43421dd1327.005.1,2021-08-07T09:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.72bf4b93e788808afcfe32c585f6081418c67000.004.1,2021-08-06T20:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c6276a8349cfdd7c68c4e55480b8753a19b203f2.001.1,2021-08-06T15:33:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2ee85a1420cc57090776b0095b38b1a8ad5f0578.003.1,2021-08-06T10:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1872860024731063dc6a5888aa6eee55a38df0b5.003.1,2021-08-05T21:43:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ffd46dd75f6b26595d0f791c1d51684d71312f46.003.1,2021-08-05T10:58:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2b12caf748152b7e36c8a1f03da3a3bc73b4b099.004.1,2021-08-04T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1e5bb7b2c65bd27ba5424011a2f3b93a1297c699.003.1,2021-08-04T10:24:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8405202a604e732a6ccc5ee98a9d4cff219ace5e.004.1,2021-08-03T21:55:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a997e564707af094d9170d1502d3acc75505b0d6.003.1,2021-08-03T10:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.25c015415571702a537decb079ce1a148422017e.002.1,2021-08-02T21:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c1ad777008c1a52947883e8471f609e05c3428c8.001.1,2021-08-02T10:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b7bedc98e363b944db1f448b3f897a59806f76d8.002.1,2021-08-01T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.881fa6acb66f785b5c57abededdd7bf2f565d480.001.1,2021-08-01T08:55:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4d45f3e341c33c036e13fa4b81bdeb2a14c78f74.003.1,2021-07-31T21:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f8f20ec67817b8a530156aced5033f8491e0033b.002.1,2021-07-31T09:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.50b93f5f0b86f70f5e2f4a8af245a947f3504db5.003.1,2021-07-30T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a65d543702f4d2eee6ef075b7be02a3dcbb48bdd.005.1,2021-07-30T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4dd57307f77a5b6fb06e94a76ffac65e9a446737.004.1,2021-07-29T21:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.27954b39f92c9dbfd388baf24c6eb3971d679b10.004.1,2021-07-29T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2a732614137203ce2f978b7d11c5def1d72020ce.003.1,2021-07-28T21:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.84a42a7ca2a6e4ebe55b4d65ccc2b5f929885a89.003.1,2021-07-28T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb52b5e7364278b2e5b515de302e7905e57358b2.002.1,2021-07-27T21:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.02b28c5978fe5ca4fb89ecc51bf15c51fac26e05.002.1,2021-07-27T09:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.74325363d0e0576f8b927da4ac2f78e43d5d205c.002.1,2021-07-26T21:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a3341c724665b1e744fec6b2a1367984ed0386e3.001.1,2021-07-26T08:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.76907d866edca5743884252100f18c4e1826dc94.002.1,2021-07-25T21:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.037f31e898117e1e45d53895b31f8296dc616ec6.001.1,2021-07-25T08:40:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd09f904d3b050dc69f5c487878d1f97e856a97d.002.1,2021-07-24T21:31:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f446a3d83ea3d422413e896f9480f3d0f4c3d88d.001.1,2021-07-24T09:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.16cee245289521ef153427d6cba6ff299e7c37d8.002.1,2021-07-23T21:02:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.72c3b212947784945de08ec3a5d4c72a9cd1af59.001.1,2021-07-23T09:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9deb00620ecf898f591d6c5ddfa2b19dc933f5a2.001.1,2021-07-22T21:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.40421c8786da611666160c37371d2dbfc8895607.002.1,2021-07-22T10:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.564542e5729f890955ce78b53245c6297cb32250.001.1,2021-07-21T21:17:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e2dcfab5df8c57d094fd2344190a98ca0161e1a3.001.1,2021-07-21T11:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.24ad37d1d05f545c57744b3fb228564e19b08f2e.001.1,2021-07-20T20:39:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f4f98d4a140f6f482123e86c2245b609ee6d7e83.002.1,2021-07-20T10:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.89bacd14f4ce3707d1ce922d71c42a4ea7816c3b.004.1,2021-07-19T21:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.017107b273db6f4c1229d3d91462bf1fb186ce97.002.1,2021-07-19T09:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ab56c8abd50c411afab7227924bf7fe4cfb28faf.002.1,2021-07-18T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.77d0e4818d178f99b75072a4f5fa9f5c08fe6ce7.002.1,2021-07-18T09:56:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.486f5591d045d361d094881e65cfefd32546d7ef.003.1,2021-07-17T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3e3fa3509461047e948a8bb65fab1cfd4973b27e.001.1,2021-07-17T09:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ed79e38897f37d21f5d650d28f960426af987150.003.1,2021-07-16T21:00:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e0a8f1875d4c3d3cb672a8e0f94f91daf5dee704.002.1,2021-07-16T09:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0c0bbc88b5425e63356b22de5ff400975cef623e.004.1,2021-07-15T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d10ea6a1481d4189c801c946cccf838be0cacc2e.002.1,2021-07-15T10:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bf39bae673d249d9657ac3208ac038f8ac6f20a6.001.1,2021-07-14T21:05:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8cf6406e91121ebf383e4268a7de2bc48fd4d565.004.1,2021-07-14T10:30:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.21c1f2f78ef3785353dd049bf39ec33522f67f5c.003.1,2021-07-13T21:13:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8502012b72094195ae0ff88eaad62d4b9dafca33.001.1,2021-07-13T10:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7f32a1187106c53035231a13a534f9f17f9967a5.004.1,2021-07-12T21:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.682eaf8b349d75d234b0403b55af74208e9682bb.004.1,2021-07-12T09:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62019986d0fafef60a31ef7db20f17b1eb5c4f83.004.1,2021-07-11T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.601217074b40283feb462b7b69a8c3e9a560e77b.003.1,2021-07-11T09:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8e65e58251dce5632ce4dea62f750e8cb20a7cb6.003.1,2021-07-10T21:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a0470a8c3a4dfc28247285fa3dea59c01b568472.003.1,2021-07-10T09:31:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9887db483aded6e318a8193fb274272f44bf714f.003.1,2021-07-09T21:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.475e420ada0c856bda944cd5b9f99d00f7a0d504.001.1,2021-07-09T09:40:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.80c138558132ed6e72a61519fe493176ed56538b.003.1,2021-07-08T21:52:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8bacc8fb9fab50a4b7dbeb7aeb3c2e9acd66b781.002.1,2021-07-08T21:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.aa2b27cb0a5b7b16b1abf336ac3b3d0e50c06163.002.1,2021-07-08T10:37:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d4b8d88295b5e3f950c90d76c53da3d0dcc84d62.003.1,2021-07-07T20:58:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.982b110e6fefd423a92525d1cd34608bf75bf19a.001.1,2021-07-07T15:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d2207859a57d766f11b65b5dd68be7a1d60f63a3.001.1,2021-07-07T10:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.109250e090a8a699a465e50e03fb06ee39cd39b8.001.1,2021-07-06T22:05:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5f6b696dc08baf50535357156739e108879712cd.001.1,2021-07-06T10:38:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7744583c1ad0e0327d45701d1f525e3cb70b81bf.001.1,2021-07-05T10:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.26efbd7e7e0232b8c829ba82789989f43e3c759c.001.1,2021-07-04T21:15:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3c9f2d80149d7cf2561eee880399d62adb62dd2a.002.1,2021-07-04T10:05:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1c46e7002ca514831a29611dc56885fd6e7fd112.002.1,2021-07-03T21:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8b66940357a41f6f6c0e22a74c20c57a9a93ad60.001.1,2021-07-03T09:39:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.209bbb473efff89a1175ef7c5d80a4c8f6ae3b83.001.1,2021-07-02T22:01:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.32d0aaf2fd861cf07b581ccfc4f25ea2c5583c4a.001.1,2021-07-02T10:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0aefe59ce8bf0d9ec5570d90c7a50eb028b50e85.002.1,2021-07-01T21:09:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.953483ea7965e4dc93c64b1d1edea33ed6dd3c75.001.1,2021-07-01T12:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2db26a0c074bbc553ddbf5185442c48cd4079455.002.1,2021-06-30T21:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ee8b258fd0986b4e4d8a37aff64cc1957625ab4a.001.1,2021-06-30T08:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7abc2168cb7d2ef4ec348ecdf58fb42aa4eef5a7.002.1,2021-06-29T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b89fc2949fcd94c16f7a7ae92cf75a909f467ce6.001.1,2021-06-29T09:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d20fa62c8ca0edf3f3de1125f47175ff0bc4130d.001.1,2021-06-28T21:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3880b0b4fa01e6d269fecd71f37f6924e4a55132.001.1,2021-06-28T10:26:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.526a9054a246a06b8617332961443be35f053412.003.1,2021-06-27T21:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.05e21e825930d57e6419a989dc4f171ebd0490b4.002.1,2021-06-27T10:01:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4efd813dec78240d3098b0941634c651848cac8c.003.1,2021-06-26T21:40:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0041426a86e87ef5fab59a1c180117f6cab879ea.003.1,2021-06-26T10:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0da9ed1808fce754253c6e2c055ae588475e824d.003.1,2021-06-25T21:43:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d6f084d69c08f8b7aa1fc9439e1abeaadb8c70fc.001.1,2021-06-25T09:44:00-04:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.829999999999998,
+                            29.899999999999999
+                        ],
+                        [
+                            -82.849999999999994,
+                            29.899999999999999
+                        ],
+                        [
+                            -82.86999999999999,
+                            29.889999999999997
+                        ],
+                        [
+                            -82.879999999999995,
+                            29.889999999999997
+                        ],
+                        [
+                            -82.879999999999995,
+                            29.919999999999998
+                        ],
+                        [
+                            -82.829999999999998,
+                            29.93
+                        ],
+                        [
+                            -82.829999999999998,
+                            29.899999999999999
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.001.1",
+                "areaDesc": "Gilchrist, FL; Suwannee, FL",
+                "geocode": {
+                    "SAME": [
+                        "012041",
+                        "012121"
+                    ],
+                    "UGC": [
+                        "FLC041",
+                        "FLC121"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC041",
+                    "https://api.weather.gov/zones/county/FLC121"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0b4adfe70ba95329c6d6478c031353f210241d68.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.0b4adfe70ba95329c6d6478c031353f210241d68.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-25T21:35:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-26T09:31:00-04:00",
+                "effective": "2021-08-26T09:31:00-04:00",
+                "onset": "2021-08-26T09:31:00-04:00",
+                "expires": "2021-08-27T09:45:00-04:00",
+                "ends": "2021-08-30T14:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Jacksonville FL",
+                "headline": "Flood Warning issued August 26 at 9:31AM EDT until August 30 at 2:00PM EDT by NWS Jacksonville FL",
+                "description": "The Flood Warning continues for\nthe Santa Fe River At Hildreth On U.s. 129 Bridge.\n* Until early Monday afternoon.\n* At 9:00 AM EDT Thursday the stage was 20.4 feet.\n* Flood stage is 20.0 feet.\n* Minor flooding is occurring and minor flooding is forecast.\n* Forecast...The river is expected to fall below flood stage Monday\nmorning and continue falling to 19.4 feet Thursday morning.\n* Impact...At 18.0 feet, Boat ramps begin to flood along the Santa\nFe River from the confluence with the Suwannee River upstream to\nRiver Run Road in Suwannee County.\n* Impact...At 20.0 feet, The campgrounds at Sandy Point in Suwannee\nCounty begin to flood. Water floods the parking area on the east\nside of Sandy Point.\n* Impact...At 22.0 feet, Water reaches the top of the bank and boat\nramp at Ellie Ray's Resort at the end of NW 110th Street in\nGilchrist County.",
+                "instruction": null,
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "JAXFLSJAX"
+                    ],
+                    "NWSheadline": [
+                        "The Flood Warning is now in effect until early Monday afternoon"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KJAX.FL.W.0052.000000T0000Z-210830T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-30T18:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3f815798a671ef90d16c209f2c3aecd29fed3410.001.1,2021-08-25T09:26:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1f9a14b5a68747da157429a03cfc4610f78bc3e2.002.1,2021-08-24T21:36:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9dc0c39e1c0061255ed9227a3f9b8fecd4ae4193.001.1,2021-08-24T10:09:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c36a0111dbebebe837e1c391527a5672b60652c5.001.1,2021-08-23T21:30:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.664d70e52fe0bf9d0bdda103e39dc3a629100ffb.001.1,2021-08-23T09:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd656f1263d82dc0baeb413daa8d0e593dadc9b1.001.1,2021-08-22T21:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d7cbc3dd55cba999c5c8bfba369c543e2d58be20.001.1,2021-08-22T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.421b7b7797303dee2201c785219b3e4818050de5.001.1,2021-08-21T21:37:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ab30f4fbf75c2342d4f9ea020eba1eacbcaecb2f.003.1,2021-08-21T09:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.98533d9e2c8f8868b21b9b5555b5001f14e08a77.002.1,2021-08-20T21:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ec45a61578a9597e71ba13724fc168b3dd3f4b4e.001.1,2021-08-20T09:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6cd004b851969746e1445a9f3c9905cae3e3f73a.002.1,2021-08-19T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.121c2c6d100a5770694ce40ba49f90cc25fd3111.001.1,2021-08-19T09:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9c31ad8a8ae25ab3552921c9df39dd2d0bb04105.001.1,2021-08-18T20:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6091628cd32700917c83deeecc92c869500ddfa7.001.1,2021-08-18T10:28:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5caa8ce231fc092e32846e253ccf0cefe96958f3.001.1,2021-08-17T21:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.aedb7b31a584817b2c29d56a3b0a53c7118e5f50.001.1,2021-08-17T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c47e74139aa081c21ff698210be07b7c1f835a8c.001.1,2021-08-16T21:15:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.997672bca2bc3ede9e3318ca26a7be7cb9602331.002.1,2021-08-16T09:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb1e2f6be836f8d7a0e6a0e6f6c1aa9efee8f2fc.003.1,2021-08-15T21:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2d4cc3aa12170674f100743d49242c7769de9394.001.1,2021-08-15T09:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bbe129fb0f61bff85385a6199d288327df8e2115.001.1,2021-08-14T20:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.712dcb2ae8bf4bf6afc59df42b74b3df5761e983.001.1,2021-08-14T09:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.95e4575c8c3282ccd4ffb33dedac4f055d1b96c3.003.1,2021-08-13T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.02a3a4de0d483726174b516c1393992c37539e99.003.1,2021-08-13T10:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.70b7c6c01497ed148880a964f5876194e5f865e5.002.1,2021-08-12T20:57:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.25eef0dc7503d7f5ec00d392a73182dcbc930ef9.003.1,2021-08-12T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5d96eeaa0db72aafa89b2a4411b05dc7aca7d961.001.1,2021-08-11T21:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.adfc318d2560423438ad1db7d55ecc0815e07449.002.1,2021-08-11T10:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3413aaf151c6509e45deb0ef1dbe1c393e79e27a.001.1,2021-08-10T21:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6419c2a97e911d8002b2df132449a72a273f591c.001.1,2021-08-10T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1eea57724d00f815af57290c486f976b7f54f38f.003.1,2021-08-09T21:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e3d5a51edf45c0b8973733db9a4663ef4d70c74c.001.1,2021-08-09T10:24:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.de43413c4a332dca70bc193f097d9a9ef6da17e1.001.1,2021-08-08T20:51:00-04:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.003.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.780000000000001,
+                            29.899999999999999
+                        ],
+                        [
+                            -82.799999999999997,
+                            29.919999999999998
+                        ],
+                        [
+                            -82.829999999999998,
+                            29.899999999999999
+                        ],
+                        [
+                            -82.829999999999998,
+                            29.93
+                        ],
+                        [
+                            -82.789999999999992,
+                            29.960000000000001
+                        ],
+                        [
+                            -82.759999999999991,
+                            29.93
+                        ],
+                        [
+                            -82.780000000000001,
+                            29.899999999999999
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9e4e76dde07c534c114d53d0ea48656663f276fc.003.1",
+                "areaDesc": "Columbia, FL; Gilchrist, FL; Suwannee, FL",
+                "geocode": {
+                    "SAME": [
+                        "012023",
+                        "012041",
+                        "012121"
+                    ],
+                    "UGC": [
+                        "FLC023",
+                        "FLC041",
+                        "FLC121"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC023",
+                    "https://api.weather.gov/zones/county/FLC041",
+                    "https://api.weather.gov/zones/county/FLC121"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ed3ef586e06115dce2ed02f167224dbc9d3a583.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1ed3ef586e06115dce2ed02f167224dbc9d3a583.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-25T21:34:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-26T09:31:00-04:00",
+                "effective": "2021-08-26T09:31:00-04:00",
+                "onset": "2021-08-26T09:31:00-04:00",
+                "expires": "2021-08-27T09:45:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Jacksonville FL",
+                "headline": "Flood Warning issued August 26 at 9:31AM EDT by NWS Jacksonville FL",
+                "description": "The Flood Warning continues for\nthe Santa Fe River At Three Rivers Estates.\n* Until further notice.\n* At 8:00 AM EDT Thursday the stage was 20.7 feet.\n* Flood stage is 17.0 feet.\n* Minor flooding is occurring and minor flooding is forecast.\n* Forecast...The river is expected to remain steady above flood\nstage at 20.7 feet.\n* Impact...At 16.0 feet, Lowland flooding begins on SW Santa Fe\nDrive south of Santa Fe Road in Columbia County.\n* Impact...At 16.3 feet, Florida Fish and Wildlife Commission begins\nenforcement of a no wake zone on the Santa Fe River from the\nunnamed island 1.5 miles downstream of the Wilson's Spring Boat\nRamp to the confluence with the Suwannee River and on the\nIchetucknee River upstream to the US 27 bridge.\n* Impact...At 17.0 feet, Water begins to enter backyards of\nresidences on Santa Fe Road in Columbia County and on River Run\nRoad in Suwannee County.\n* Impact...At 18.0 feet, Water begins to flood River Run Road in\nSuwannee County.\n* Impact...At 18.8 feet, Florida Fish and Wildlife Commission\nexpands the no wake zone restriction further upstream on the Santa\nFe River from the unnamed island 1.5 miles downstream on the\nWilson's Spring Boat Ramp to one-half mile upstream of the State\nRoad 47 bridge.\n* Impact...At 19.0 feet, Water begins to enter backyards of\nresidences along the Ichetucknee River.\n* Impact...At 19.8 feet, Waters begins to affect homes in the\nHollingsworth Bluff area at State Route 47.\n* Impact...At 20.0 feet, Access to homes on Santa Fe Road below SW\nRiverside Avenue becomes restricted in Columbia. Flooding begins\non Santa Fe and Wilson Springs Road.\n* Impact...At 21.0 feet, Homes are surrounded on River Run Road in\nSuwannee County. Structures flood along Santa Fe Road west of\nIdaho Parkway in Columbia County.\n* Impact...At 22.0 feet, River Run Road at 29th loop floods in\nSuwannee County. Santa Fe Road in Columbia County is inaccessible.",
+                "instruction": null,
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "JAXFLSJAX"
+                    ],
+                    "NWSheadline": [
+                        "The Flood Warning remains in effect"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KJAX.FL.W.0036.000000T0000Z-000000T0000Z/"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3f815798a671ef90d16c209f2c3aecd29fed3410.003.1,2021-08-25T09:26:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1f9a14b5a68747da157429a03cfc4610f78bc3e2.003.1,2021-08-24T21:36:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9dc0c39e1c0061255ed9227a3f9b8fecd4ae4193.003.1,2021-08-24T10:09:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c36a0111dbebebe837e1c391527a5672b60652c5.002.1,2021-08-23T21:30:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8042809e317daeab391ced19aeacf3ea9d591e94.001.1,2021-08-23T09:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.664d70e52fe0bf9d0bdda103e39dc3a629100ffb.002.1,2021-08-23T09:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd656f1263d82dc0baeb413daa8d0e593dadc9b1.003.1,2021-08-22T21:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d7cbc3dd55cba999c5c8bfba369c543e2d58be20.003.1,2021-08-22T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.421b7b7797303dee2201c785219b3e4818050de5.002.1,2021-08-21T21:37:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ab30f4fbf75c2342d4f9ea020eba1eacbcaecb2f.004.1,2021-08-21T09:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.98533d9e2c8f8868b21b9b5555b5001f14e08a77.003.1,2021-08-20T21:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ec45a61578a9597e71ba13724fc168b3dd3f4b4e.002.1,2021-08-20T09:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6cd004b851969746e1445a9f3c9905cae3e3f73a.003.1,2021-08-19T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0dfc1788bece258a974d891d31e080d21ed6cb2e.001.1,2021-08-19T09:02:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9c31ad8a8ae25ab3552921c9df39dd2d0bb04105.002.1,2021-08-18T20:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6091628cd32700917c83deeecc92c869500ddfa7.002.1,2021-08-18T10:28:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5caa8ce231fc092e32846e253ccf0cefe96958f3.002.1,2021-08-17T21:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.aedb7b31a584817b2c29d56a3b0a53c7118e5f50.002.1,2021-08-17T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c47e74139aa081c21ff698210be07b7c1f835a8c.002.1,2021-08-16T21:15:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.997672bca2bc3ede9e3318ca26a7be7cb9602331.003.1,2021-08-16T09:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb1e2f6be836f8d7a0e6a0e6f6c1aa9efee8f2fc.004.1,2021-08-15T21:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2d4cc3aa12170674f100743d49242c7769de9394.003.1,2021-08-15T09:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bbe129fb0f61bff85385a6199d288327df8e2115.003.1,2021-08-14T20:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f02288d02304e303247ea9f846a6709cdc30b905.003.1,2021-08-14T09:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.95e4575c8c3282ccd4ffb33dedac4f055d1b96c3.004.1,2021-08-13T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.02a3a4de0d483726174b516c1393992c37539e99.005.1,2021-08-13T10:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.70b7c6c01497ed148880a964f5876194e5f865e5.004.1,2021-08-12T20:57:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.25eef0dc7503d7f5ec00d392a73182dcbc930ef9.004.1,2021-08-12T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5d96eeaa0db72aafa89b2a4411b05dc7aca7d961.002.1,2021-08-11T21:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.adfc318d2560423438ad1db7d55ecc0815e07449.004.1,2021-08-11T10:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3413aaf151c6509e45deb0ef1dbe1c393e79e27a.002.1,2021-08-10T21:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6419c2a97e911d8002b2df132449a72a273f591c.005.1,2021-08-10T09:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1eea57724d00f815af57290c486f976b7f54f38f.001.1,2021-08-09T21:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1690d9055b60db5d29b9534bc0ed76b450617cdd.001.1,2021-08-09T10:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3aa1ed36e25e109eda19834c6bc2759d40622cda.001.1,2021-08-08T20:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9e56ee59d4681fee3bde9cf43a2ba501df5d84f9.001.1,2021-08-08T09:24:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b30f93eb3d8d3ea6acdd7dbf3fd68b569371ac2.003.1,2021-08-07T20:57:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b36f8d07bcf1c69b99091e067b74c43421dd1327.004.1,2021-08-07T09:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.72bf4b93e788808afcfe32c585f6081418c67000.003.1,2021-08-06T20:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2159b7a1630374aa32e15d3a6762917a0e55b660.003.1,2021-08-06T15:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2ee85a1420cc57090776b0095b38b1a8ad5f0578.002.1,2021-08-06T10:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1872860024731063dc6a5888aa6eee55a38df0b5.002.1,2021-08-05T21:43:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ffd46dd75f6b26595d0f791c1d51684d71312f46.002.1,2021-08-05T10:58:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2b12caf748152b7e36c8a1f03da3a3bc73b4b099.003.1,2021-08-04T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1e5bb7b2c65bd27ba5424011a2f3b93a1297c699.002.1,2021-08-04T10:24:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8405202a604e732a6ccc5ee98a9d4cff219ace5e.003.1,2021-08-03T21:55:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a997e564707af094d9170d1502d3acc75505b0d6.002.1,2021-08-03T10:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.25c015415571702a537decb079ce1a148422017e.001.1,2021-08-02T21:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c1ad777008c1a52947883e8471f609e05c3428c8.002.1,2021-08-02T10:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b7bedc98e363b944db1f448b3f897a59806f76d8.001.1,2021-08-01T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.881fa6acb66f785b5c57abededdd7bf2f565d480.002.1,2021-08-01T08:55:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4d45f3e341c33c036e13fa4b81bdeb2a14c78f74.002.1,2021-07-31T21:22:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f8f20ec67817b8a530156aced5033f8491e0033b.003.1,2021-07-31T09:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.50b93f5f0b86f70f5e2f4a8af245a947f3504db5.002.1,2021-07-30T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a65d543702f4d2eee6ef075b7be02a3dcbb48bdd.004.1,2021-07-30T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4dd57307f77a5b6fb06e94a76ffac65e9a446737.003.1,2021-07-29T21:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.27954b39f92c9dbfd388baf24c6eb3971d679b10.003.1,2021-07-29T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2a732614137203ce2f978b7d11c5def1d72020ce.002.1,2021-07-28T21:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.84a42a7ca2a6e4ebe55b4d65ccc2b5f929885a89.002.1,2021-07-28T09:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb52b5e7364278b2e5b515de302e7905e57358b2.001.1,2021-07-27T21:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.02b28c5978fe5ca4fb89ecc51bf15c51fac26e05.001.1,2021-07-27T09:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.74325363d0e0576f8b927da4ac2f78e43d5d205c.001.1,2021-07-26T21:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a3341c724665b1e744fec6b2a1367984ed0386e3.002.1,2021-07-26T08:50:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.76907d866edca5743884252100f18c4e1826dc94.001.1,2021-07-25T21:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.037f31e898117e1e45d53895b31f8296dc616ec6.002.1,2021-07-25T08:40:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd09f904d3b050dc69f5c487878d1f97e856a97d.001.1,2021-07-24T21:31:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f446a3d83ea3d422413e896f9480f3d0f4c3d88d.002.1,2021-07-24T09:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.16cee245289521ef153427d6cba6ff299e7c37d8.001.1,2021-07-23T21:02:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.72c3b212947784945de08ec3a5d4c72a9cd1af59.002.1,2021-07-23T09:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9deb00620ecf898f591d6c5ddfa2b19dc933f5a2.002.1,2021-07-22T21:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.40421c8786da611666160c37371d2dbfc8895607.001.1,2021-07-22T10:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.564542e5729f890955ce78b53245c6297cb32250.003.1,2021-07-21T21:17:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e2dcfab5df8c57d094fd2344190a98ca0161e1a3.003.1,2021-07-21T11:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.24ad37d1d05f545c57744b3fb228564e19b08f2e.003.1,2021-07-20T20:39:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f4f98d4a140f6f482123e86c2245b609ee6d7e83.001.1,2021-07-20T10:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.89bacd14f4ce3707d1ce922d71c42a4ea7816c3b.002.1,2021-07-19T21:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.017107b273db6f4c1229d3d91462bf1fb186ce97.004.1,2021-07-19T09:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ab56c8abd50c411afab7227924bf7fe4cfb28faf.004.1,2021-07-18T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.77d0e4818d178f99b75072a4f5fa9f5c08fe6ce7.004.1,2021-07-18T09:56:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.486f5591d045d361d094881e65cfefd32546d7ef.001.1,2021-07-17T21:06:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3e3fa3509461047e948a8bb65fab1cfd4973b27e.003.1,2021-07-17T09:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ed79e38897f37d21f5d650d28f960426af987150.001.1,2021-07-16T21:00:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e0a8f1875d4c3d3cb672a8e0f94f91daf5dee704.004.1,2021-07-16T09:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0c0bbc88b5425e63356b22de5ff400975cef623e.002.1,2021-07-15T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d10ea6a1481d4189c801c946cccf838be0cacc2e.004.1,2021-07-15T10:08:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bf39bae673d249d9657ac3208ac038f8ac6f20a6.003.1,2021-07-14T21:05:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8cf6406e91121ebf383e4268a7de2bc48fd4d565.002.1,2021-07-14T10:30:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.21c1f2f78ef3785353dd049bf39ec33522f67f5c.001.1,2021-07-13T21:13:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2054610972c5281ecee6714b6f97a22a1bba78d2.001.1,2021-07-13T10:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7f32a1187106c53035231a13a534f9f17f9967a5.003.1,2021-07-12T21:04:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.682eaf8b349d75d234b0403b55af74208e9682bb.002.1,2021-07-12T09:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62019986d0fafef60a31ef7db20f17b1eb5c4f83.002.1,2021-07-11T21:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.601217074b40283feb462b7b69a8c3e9a560e77b.001.1,2021-07-11T09:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8e65e58251dce5632ce4dea62f750e8cb20a7cb6.001.1,2021-07-10T21:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a0470a8c3a4dfc28247285fa3dea59c01b568472.001.1,2021-07-10T09:31:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9887db483aded6e318a8193fb274272f44bf714f.001.1,2021-07-09T21:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2ce70808ed8797b55cac55f2f1080a132da15571.004.1,2021-07-09T09:59:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.80c138558132ed6e72a61519fe493176ed56538b.001.1,2021-07-08T21:52:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8bacc8fb9fab50a4b7dbeb7aeb3c2e9acd66b781.005.1,2021-07-08T21:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.66e4f61229fe5f9f8801e0dc453ec8457cd8661c.001.1,2021-07-08T10:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d4b8d88295b5e3f950c90d76c53da3d0dcc84d62.002.1,2021-07-07T20:58:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6e82da668ad4673bfabef01578b4e7bb3f913205.001.1,2021-07-07T15:24:00-04:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.51f9bd7490c93106e5a460b4318059a7c1604f30.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.51f9bd7490c93106e5a460b4318059a7c1604f30.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.51f9bd7490c93106e5a460b4318059a7c1604f30.001.1",
+                "areaDesc": "Coastal Palm Beach County; Coastal Broward County; Coastal Miami Dade County",
+                "geocode": {
+                    "SAME": [
+                        "012099",
+                        "012011",
+                        "012086"
+                    ],
+                    "UGC": [
+                        "FLZ168",
+                        "FLZ172",
+                        "FLZ173"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/FLZ168",
+                    "https://api.weather.gov/zones/forecast/FLZ172",
+                    "https://api.weather.gov/zones/forecast/FLZ173"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.93d1db464d09e5d292c688bb9d134ccfc43f0d62.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.93d1db464d09e5d292c688bb9d134ccfc43f0d62.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-25T03:53:00-04:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0ff03c6b7cda68f440c0d39f5e5befdab7cb25e2.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.0ff03c6b7cda68f440c0d39f5e5befdab7cb25e2.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-25T16:45:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-26T07:18:00-04:00",
+                "effective": "2021-08-26T07:18:00-04:00",
+                "onset": "2021-08-26T07:18:00-04:00",
+                "expires": "2021-08-26T20:00:00-04:00",
+                "ends": "2021-08-26T20:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Rip Current Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Miami FL",
+                "headline": "Rip Current Statement issued August 26 at 7:18AM EDT until August 26 at 8:00PM EDT by NWS Miami FL",
+                "description": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Broward, Coastal Palm Beach and Coastal Miami-\nDade Counties.\n\n* WHEN...Through this evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+                "instruction": "Swim near a lifeguard. If caught in a rip current, relax and\nfloat. Don't swim against the current. If able, swim in a\ndirection following the shoreline. If unable to escape, face the\nshore and call or wave for help.",
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "MFLCFWMFL"
+                    ],
+                    "NWSheadline": [
+                        "HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMFL.RP.S.0030.000000T0000Z-210827T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-27T00:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2340c92e0e040dc08b7da9eb6a26567729e3b397.001.1,2021-08-24T14:06:00-04:00"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.855cfd587b68ea8cc3d8c262a1cdf26c8e7a3da5.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.260000000000005,
+                            27.260000000000002
+                        ],
+                        [
+                            -82.340000000000003,
+                            27.150000000000002
+                        ],
+                        [
+                            -82.38000000000001,
+                            27.150000000000002
+                        ],
+                        [
+                            -82.260000000000005,
+                            27.310000000000002
+                        ],
+                        [
+                            -82.260000000000005,
+                            27.260000000000002
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.855cfd587b68ea8cc3d8c262a1cdf26c8e7a3da5.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.855cfd587b68ea8cc3d8c262a1cdf26c8e7a3da5.001.1",
+                "areaDesc": "Sarasota, FL",
+                "geocode": {
+                    "SAME": [
+                        "012115"
+                    ],
+                    "UGC": [
+                        "FLC115"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC115"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ce108a962c0116c29f16938c8faa346e71e8a62.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.6ce108a962c0116c29f16938c8faa346e71e8a62.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2021-08-24T21:37:00-04:00"
+                    }
+                ],
+                "sent": "2021-08-25T09:27:00-04:00",
+                "effective": "2021-08-25T09:27:00-04:00",
+                "onset": "2021-08-25T09:27:00-04:00",
+                "expires": "2021-08-25T21:30:00-04:00",
+                "ends": "2021-08-26T20:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tampa Bay Ruskin FL",
+                "headline": "Flood Warning issued August 25 at 9:27AM EDT until August 26 at 8:00PM EDT by NWS Tampa Bay Ruskin FL",
+                "description": "The Flood Warning continues for\nthe Myakka River At Myakka River State Park.\n* Until Thursday evening.\n* At 9:00 AM EDT Wednesday the stage was 7.0 feet.\n* Flood stage is 7.0 feet.\n* Minor flooding is forecast.\n* Forecast...The river is expected to rise above flood stage this\nafternoon to a crest of 7.0 feet this afternoon. It will then fall\nbelow flood stage early tomorrow afternoon.\n* Impact...At 7.0 feet, Trails, picnic areas, and parking lots at\nMyakka State Park flood.\n* Flood History...This crest compares to a previous crest of 7.0\nfeet on 01/10/1998.",
+                "instruction": null,
+                "response": "Avoid",
+                "parameters": {
+                    "PIL": [
+                        "TBWFLSTBW"
+                    ],
+                    "NWSheadline": [
+                        "The Flood Warning is now in effect until tomorrow evening"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KTBW.FL.W.0025.000000T0000Z-210827T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2021-08-27T00:00:00+00:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8c68ab794d4ba0b63c1a6189b2c937fd0cd050af.001.1,2021-08-24T10:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.abf5c456ad3e68f4c9a42a2ab233c9303e3ab37c.001.1,2021-08-23T21:45:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fe7ca26b7a7f2ee238e48e8ab11d5a227a97fd69.001.1,2021-08-23T10:11:00-04:00"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "current watches, warnings, and advisories for Florida",
+    "updated": "2021-08-26T22:15:00+00:00"
+}

@@ -1,0 +1,94 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/26.405,-81.885",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -81.885000000000005,
+            26.405000000000001
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/26.405,-81.885",
+        "@type": "wx:Point",
+        "cwa": "TBW",
+        "forecastOffice": "https://api.weather.gov/offices/TBW",
+        "gridId": "TBW",
+        "gridX": 99,
+        "gridY": 31,
+        "forecast": "https://api.weather.gov/gridpoints/TBW/99,31/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/TBW/99,31/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/TBW/99,31",
+        "observationStations": "https://api.weather.gov/gridpoints/TBW/99,31/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.916746000000003,
+                    26.432535999999999
+                ]
+            },
+            "properties": {
+                "city": "Fort Myers Beach",
+                "state": "FL",
+                "distance": {
+                    "value": 4401.0398521388997,
+                    "unitCode": "unit:m"
+                },
+                "bearing": {
+                    "value": 134,
+                    "unitCode": "unit:degrees_true"
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/FLZ165",
+        "county": "https://api.weather.gov/zones/county/FLC071",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/FLZ165",
+        "timeZone": "America/New_York",
+        "radarStation": "KTBW"
+    }
+}

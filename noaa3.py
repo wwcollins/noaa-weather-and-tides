@@ -53,11 +53,11 @@ def calc_distance_between_station_locations(lat,lon,lat2,lon2):
     Rk = 6373.0     # kilometers
     Rm = 3,958.8    # miles
 
-    #coordinates
+    #coordinates, converted to radians
     lat1r = math.radians(lat)
     lon1r = math.radians(lon)
 
-    # These values will also need to be pulled from a dict to be created to find closest weather station
+    # These values are pulled from a dict created from online data to find closest weather station
     lat2r = math.radians(lat2)
     lon2r = math.radians(lon2)
 
@@ -88,19 +88,32 @@ distance, distance_miles = calc_distance_between_station_locations(lat,lon,lat2,
 print(f'The distance between latlon {latlon} and latlon {latlon2} is {distance} km or {distance_miles} miles')
 """
 
-def get_closets_station(lat, lon):
+def get_closest_station(lat, lon, t_state):
     filepath = 'StationsDataTest.xlsx'
+
+    print('...target state =',t_state)
+    if len(t_state) == 2:
+        # convert to full state name
+        t_state = get_us_state(t_state)
+        print(t_state)
 
     # Create the DataFrame - this can be moved to another method since this really needs to be read from excel only once then
     # accessed via the exported json file into a df.  Could also use a boolean here to perform an excel source refresh
-
     df = pd.read_excel(filepath)
     print(df)
 
+    # Example: print(df['Comedy_Score'].where(df['Rating_Score'] < 50))
+    # Ensure that target state is in list of tide states in Stations Info xls
+    #print(df['State'].where(df['State'] == t_state))
+    print (df[df.State == t_state].shape[0])
+
+    if df[df.State == t_state].shape[0] == 0:
+        print(f'Invalid State: Target State {t_state} was not found in the Stations list. Only coastal states with stations are supported')
+        return None
+
     dfd = df.to_dict()
     dfj = df.to_json(orient='split')
-
-    print(dfj)
+    # print(dfj)
 
     # create JSON object from JSON text
     json_string = dfj
@@ -117,34 +130,35 @@ def get_closets_station(lat, lon):
             print('...end of entries to evaluate')
             break
 
-        # print(jobj['data'][L][0])
-        # print(jobj['data'][L][1])
+        # print(jobj['data'][L][0]) # state
+        # print(jobj['data'][L][1]) # name
         # print(jobj['data'][L][2]) # station ID
-        # print(jobj['data'][L][3])
-        # print(jobj['data'][L][4])
+        # print(jobj['data'][L][3]) # lat
+        # print(jobj['data'][L][4]) # lon
+        # print(jobj['data'][L][5]) # predictions
 
-        station_id = jobj['data'][L][2]
+        station_id = jobj['data'][L][2] # station id from dict originates from xls originates from https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1749#listing
+        state = jobj['data'][L][0]
 
-        lat2 = jobj['data'][L][3]
-        lon2 = jobj['data'][L][4]
-        latlon = str(lat) + ',' + str(lon)
-        latlon2 = str(lat2) + ',' + str(lon2)
+        if t_state == state: # if target state (user input) equals state from dict obj<-pandas df<-xls<html(noaa tide pred site)
+            lat2 = jobj['data'][L][3]
+            lon2 = jobj['data'][L][4]
+            latlon = str(lat) + ',' + str(lon)
+            latlon2 = str(lat2) + ',' + str(lon2)
 
-        # calculate distance between this lat lon above and target lat lon
-        distance, distance_miles = calc_distance_between_station_locations(lat, lon, lat2, lon2)
-        # print(f'The distance between latlon {latlon} and latlon {latlon2} is {distance} km or {distance_miles} miles')
+            # calculate distance between this lat lon above and target lat lon
+            distance, distance_miles = calc_distance_between_station_locations(lat, lon, lat2, lon2)
+            # print(f'The distance between latlon {latlon} and latlon {latlon2} is {distance} km or {distance_miles} miles')
 
-        distance = float(distance)
-        least_distance = float(least_distance)
-
-        if distance < least_distance:
-            print(f'...found closer station {station_id} ')
-            print(f'...current station distance is {float(distance)} vs previous at {float(least_distance)}')
-            least_distance = float(distance)  # set least to new lower val
-            least_distance_loc = jobj['data'][L]
-            least_distance_loc.append(distance)
-        else:
-            print(f'... station {station_id} is not closer ')
+            distance = float(distance)
+            least_distance = float(least_distance)
+            if distance < least_distance:
+                print(f'...found closer station {station_id} at distance of {float(distance)} (previous was {float(least_distance)}km away')
+                least_distance = float(distance)  # set least to new lower val
+                least_distance_loc = jobj['data'][L] # set new location data to list
+                least_distance_loc.append(distance) # append distance to list
+            else:
+                print(f'... station {station_id} is not closer ')
 
     print()
     print(f'Closest station information {least_distance_loc} and closest station is {least_distance_loc[2]}')
@@ -157,6 +171,7 @@ def get_closets_station(lat, lon):
 
 def txt2jsonobj(json_string):
     json_obj = json.loads(json_string)
+    # print json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)
     return json_obj
 
 def geoforward(location): #e.g. Round Rock, TX
@@ -253,7 +268,7 @@ def getuser_location():  # pip install socket
 
     return hostname, localip, public_ip, state, state_abrev, geo_dict, lat, lon, latlon
 
-def tide_forecast(stationID='8775241', days_out=30):
+def tide_forecast(stationID, days_out=30):
     # https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
     # stationID = "8775241"
     begin_date = datetime.now().strftime('%Y%m%d')
@@ -279,14 +294,21 @@ def tide_forecast(stationID='8775241', days_out=30):
                 # print ("response=" + r.text)
                 print("NOAA Tide Data api success...")
                 jsonobj = r.json()
-                return r.text
+
+                filename = './data/' + state + '_tideforecast_' + str(stationID) + ".json"
+                attrib = "w"
+                content = r.text
+                print(f".....Writing Tide Prediction content for {stationID} to " + filename)
+                write2file(filename, attrib, content)
+
+                return r.text, jsonobj
             else:
                 print("status=" + str(r.status_code))
                 print("trying again..." + url)
-                time.sleep(2)
-                # r = requests.get(url)
+                # tide_forecast(stationID, days_out)# recursive callback to method
         except Exception as e:
             print(e)
+            time.sleep(2)
             tide_forecast(stationID, days_out)  # if failure then recursive to method
 
 # test
@@ -378,6 +400,73 @@ def get_us_state_abbrev(state):  # method to convert state to state abbrev via d
     }
     return us_state_abbrev[state]
 
+def get_us_state(state):  # method to convert state abbrev to state via dictionary us_state_abbrev
+    print(state)
+    print('getting get_us_state full name for', state)
+    us_state_abbrev = {
+        'Alabama': 'AL',
+        'Alaska': 'AK',
+        'American Samoa': 'AS',
+        'Arizona': 'AZ',
+        'Arkansas': 'AR',
+        'California': 'CA',
+        'Colorado': 'CO',
+        'Connecticut': 'CT',
+        'Delaware': 'DE',
+        'District of Columbia': 'DC',
+        'Florida': 'FL',
+        'Georgia': 'GA',
+        'Guam': 'GU',
+        'Hawaii': 'HI',
+        'Idaho': 'ID',
+        'Illinois': 'IL',
+        'Indiana': 'IN',
+        'Iowa': 'IA',
+        'Kansas': 'KS',
+        'Kentucky': 'KY',
+        'Louisiana': 'LA',
+        'Maine': 'ME',
+        'Maryland': 'MD',
+        'Massachusetts': 'MA',
+        'Michigan': 'MI',
+        'Minnesota': 'MN',
+        'Mississippi': 'MS',
+        'Missouri': 'MO',
+        'Montana': 'MT',
+        'Nebraska': 'NE',
+        'Nevada': 'NV',
+        'New Hampshire': 'NH',
+        'New Jersey': 'NJ',
+        'New Mexico': 'NM',
+        'New York': 'NY',
+        'North Carolina': 'NC',
+        'North Dakota': 'ND',
+        'Northern Mariana Islands': 'MP',
+        'Ohio': 'OH',
+        'Oklahoma': 'OK',
+        'Oregon': 'OR',
+        'Pennsylvania': 'PA',
+        'Puerto Rico': 'PR',
+        'Rhode Island': 'RI',
+        'South Carolina': 'SC',
+        'South Dakota': 'SD',
+        'Tennessee': 'TN',
+        'Texas': 'TX',
+        'Utah': 'UT',
+        'Vermont': 'VT',
+        'Virgin Islands': 'VI',
+        'Virginia': 'VA',
+        'Washington': 'WA',
+        'Washington DC': 'DC',
+        'West Virginia': 'WV',
+        'Wisconsin': 'WI',
+        'Wyoming': 'WY'
+    }
+
+    # swap values, keys in dict get_us_state and create us_state
+    us_state = dict([(value, key) for key, value in us_state_abbrev.items()])
+    return us_state[state]
+
 # Alerts:  https://api.weather.gov/alerts/active?area=TX (example alert for TX Extreme Weather)
 def alerts(state): # method to get extreme weather alerts by state. Uses state abbreviation as input
     print ('...getting Alerts information from https://api.weather.gov/alerts/active?area={state abbrev}')
@@ -411,14 +500,11 @@ def alerts(state): # method to get extreme weather alerts by state. Uses state a
     print('...writing JSON text to file in data directory: ' + filepath)
     write2file(filepath, 'w', r.text)
 
-    time.sleep(1)
     print('...converting JSON text to JSON Object')
     try:
         r_obj = txt2jsonobj(r.text) # returns JSON object from JSON text
     except Exception as e:
-        print ('...!Error occured',e,'quitting')
-        quit()
-
+        print (e)
 
     print('...getting title, updated, areaDesc, headline, description, affected zones from JSON obj')
     try: # Get specific information from JSON object
@@ -484,8 +570,30 @@ def alerts(state): # method to get extreme weather alerts by state. Uses state a
 def getpoints(lat, lon):
     url = "https://api.weather.gov/points/" + str(lat) + "," + str(lon)
     print('...getting points information from', url)
-    r = requests.get(url)
-    r_obj = txt2jsonobj(r.text)
+    try:
+        r = requests.get(url)
+    except Exception as e:
+        print (e)
+        print('...trying request again')
+        getpoints(lat,lon)
+    try:
+        time.sleep(2)
+        r_obj = txt2jsonobj(r.text)
+    except Exception as e:
+        print(f'Error {e}')
+        return None
+    try:
+        radarStation = r_obj['properties']['radarStation']
+        forecastZone = r_obj['properties']['forecastZone']
+        county = r_obj['properties']['county']
+        fireWeatherZone = r_obj['properties']['fireWeatherZone']
+        timeZone = r_obj['properties']['timeZone']
+        timeZone = r_obj['properties']['timeZone']
+        return None
+    except Exception as e:
+        print(f'Error {e}')
+        return None
+
     """ Example selected JSON data returned
     forecastZone: "https://api.weather.gov/zones/forecast/KSZ009",
     county: "https://api.weather.gov/zones/county/KSC201",
@@ -503,15 +611,10 @@ def getpoints(lat, lon):
     "forecastGridData": "https://api.weather.gov/gridpoints/EWX/151,103",
     "observationStations": "https://api.weather.gov/gridpoints/EWX/151,103/stations",
     """
-    radarStation = r_obj['properties']['radarStation']
-    forecastZone = r_obj['properties']['forecastZone']
-    county = r_obj['properties']['county']
-    fireWeatherZone = r_obj['properties']['fireWeatherZone']
-    timeZone = r_obj['properties']['timeZone']
-    timeZone = r_obj['properties']['timeZone']
 
-    forecast = "https://api.weather.gov/gridpoints/EWX/151,103/forecast"
-    forecastHourly = "https://api.weather.gov/gridpoints/EWX/151,103/forecast/hourly"
+
+    # forecast = "https://api.weather.gov/gridpoints/EWX/151,103/forecast"
+    # forecastHourly = "https://api.weather.gov/gridpoints/EWX/151,103/forecast/hourly"
 
     print('radarStation', radarStation)
 
@@ -575,16 +678,21 @@ alerts(state)
 
 # now get points -> TBD in progress -> Done
 print('...Geting NOAA points for lat lon' + latlon)
-radarStation, forecastZone, county, fireWeatherZone, timeZone, forecast, forecastHourly = getpoints(lat,lon)
-print(radarStation,forecastZone,county,fireWeatherZone,timeZone, forecast, forecastHourly)
+if getpoints(lat,lon) != None:
+    radarStation, forecastZone, county, fireWeatherZone, timeZone, forecast, forecastHourly = getpoints(lat,lon)
+    print(radarStation,forecastZone,county,fireWeatherZone,timeZone, forecast, forecastHourly)
 
 # now get Tide Forecast -> TBD in progress ->
-station_id, least_distance_loc = get_closets_station(lat,lon)
-print(f'returned values from get_closets_station are closest station id {station_id} and data list {least_distance_loc}')
-print(f"...Geting NOAA Tide Forecast for radarStation {station_id} in {city} {state}")
-tide_forecast_info = tide_forecast(station_id,30)
-print(tide_forecast_info)
-
+if get_closest_station(lat,lon,state) != None:
+    station_id, least_distance_loc = get_closest_station(lat,lon,state)
+    print(f'returned values from get_closest_station are closest station id {station_id} and data list {least_distance_loc}')
+    print(f"...Geting NOAA Tide Forecast for radarStation {station_id} in {city} {state}")
+    tide_forecast_info, jsonobj = tide_forecast(station_id,30)
+    print(tide_forecast_info) # json text
+    print()
+    print (len(jsonobj['predictions']))
+else:
+    print(f'Tide data not available for {state}.  No stations were found for this state.')
 
 quit()
 

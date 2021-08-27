@@ -10,292 +10,94 @@
     "type": "FeatureCollection",
     "features": [
         {
-            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.76e63da48f029e807b78779cb7d7f691d3370026.001.1",
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57c7d7c0b93ba29a79802690dee3ba49f617e5f2.001.1",
             "type": "Feature",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
                     [
                         [
-                            -95.439999999999998,
-                            32.039999999999999
+                            -94.930000000000007,
+                            30.940000000000001
                         ],
                         [
-                            -95.239999999999995,
-                            31.669999999999998
+                            -94.920000000000002,
+                            30.810000000000002
                         ],
                         [
-                            -95.36999999999999,
-                            31.659999999999997
+                            -95.420000000000002,
+                            30.680000000000003
                         ],
                         [
-                            -95.439999999999984,
-                            31.799999999999997
+                            -95.4599999,
+                            30.950000000000003
                         ],
                         [
-                            -95.47999999999999,
-                            31.879999999999995
-                        ],
-                        [
-                            -95.439999999999998,
-                            32.039999999999999
+                            -94.930000000000007,
+                            30.940000000000001
                         ]
                     ]
                 ]
             },
             "properties": {
-                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.76e63da48f029e807b78779cb7d7f691d3370026.001.1",
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57c7d7c0b93ba29a79802690dee3ba49f617e5f2.001.1",
                 "@type": "wx:Alert",
-                "id": "urn:oid:2.49.0.1.840.0.76e63da48f029e807b78779cb7d7f691d3370026.001.1",
-                "areaDesc": "Anderson, TX; Cherokee, TX; Houston, TX",
+                "id": "urn:oid:2.49.0.1.840.0.57c7d7c0b93ba29a79802690dee3ba49f617e5f2.001.1",
+                "areaDesc": "Trinity; Walker; San Jacinto; Polk",
                 "geocode": {
                     "SAME": [
-                        "048001",
-                        "048073",
-                        "048225"
+                        "048455",
+                        "048471",
+                        "048407",
+                        "048373"
                     ],
                     "UGC": [
-                        "TXC001",
-                        "TXC073",
-                        "TXC225"
+                        "TXZ164",
+                        "TXZ177",
+                        "TXZ178",
+                        "TXZ179"
                     ]
                 },
                 "affectedZones": [
-                    "https://api.weather.gov/zones/county/TXC001",
-                    "https://api.weather.gov/zones/county/TXC073",
-                    "https://api.weather.gov/zones/county/TXC225"
-                ],
-                "references": [
-                    {
-                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3898ca3d313e8358be686c2ffa641f7f4a04fb1b.001.1",
-                        "identifier": "urn:oid:2.49.0.1.840.0.3898ca3d313e8358be686c2ffa641f7f4a04fb1b.001.1",
-                        "sender": "w-nws.webmaster@noaa.gov",
-                        "sent": "2021-08-25T08:28:00-05:00"
-                    }
-                ],
-                "sent": "2021-08-25T20:22:00-05:00",
-                "effective": "2021-08-25T20:22:00-05:00",
-                "onset": "2021-08-25T20:22:00-05:00",
-                "expires": "2021-08-26T19:00:00-05:00",
-                "ends": "2021-08-26T19:00:00-05:00",
-                "status": "Actual",
-                "messageType": "Update",
-                "category": "Met",
-                "severity": "Severe",
-                "certainty": "Observed",
-                "urgency": "Immediate",
-                "event": "Flood Warning",
-                "sender": "w-nws.webmaster@noaa.gov",
-                "senderName": "NWS Shreveport LA",
-                "headline": "Flood Warning issued August 25 at 8:22PM CDT until August 26 at 7:00PM CDT by NWS Shreveport LA",
-                "description": "The Flood Warning continues for\nthe Neches River Near Neches.\n* Until tomorrow evening.\n* At 7:30 PM CDT Wednesday the stage was 12.1 feet.\n* Flood stage is 12.0 feet.\n* Minor flooding is occurring and minor flooding is forecast.\n* Forecast...The river is expected to fall below flood stage just\nafter midnight tonight and continue falling to 8.0 feet Monday\nevening.\n* Impact...At 12.0 feet, Expect minor lowland flooding of the\nheavily wooded floodplain. Ranchers that may have livestock and\nequipment in the river bottoms should move them to higher ground.\nExpect minor flooding of the boat ramp.",
-                "instruction": null,
-                "response": "Avoid",
-                "parameters": {
-                    "PIL": [
-                        "SHVFLSSHV"
-                    ],
-                    "NWSheadline": [
-                        "The Flood Warning is now in effect until tomorrow evening"
-                    ],
-                    "BLOCKCHANNEL": [
-                        "EAS",
-                        "NWEM",
-                        "CMAS"
-                    ],
-                    "EAS-ORG": [
-                        "WXR"
-                    ],
-                    "VTEC": [
-                        "/O.EXT.KSHV.FL.W.0134.000000T0000Z-210827T0000Z/"
-                    ],
-                    "eventEndingTime": [
-                        "2021-08-27T00:00:00+00:00"
-                    ],
-                    "expiredReferences": [
-                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.92d9f7088a562c173a0f0a51f44cd6065644fcb9.001.1,2021-08-24T19:48:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.be35c953dd8510545057a2f3337a70c8a597362f.001.1,2021-08-24T08:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6806a7935bf471a2271961f5ea4e610730a70148.001.1,2021-08-23T07:44:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9264b89529c943c739815f281a8b9029466a4472.001.1,2021-08-22T08:46:00-05:00"
-                    ]
-                }
-            }
-        },
-        {
-            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8709abe407e396ef5b8f10dbf938b5fc6153d498.001.1",
-            "type": "Feature",
-            "geometry": null,
-            "properties": {
-                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8709abe407e396ef5b8f10dbf938b5fc6153d498.001.1",
-                "@type": "wx:Alert",
-                "id": "urn:oid:2.49.0.1.840.0.8709abe407e396ef5b8f10dbf938b5fc6153d498.001.1",
-                "areaDesc": "Wise; Denton; Collin; Hunt; Parker; Tarrant; Dallas; Rockwall; Kaufman; Hood; Johnson; Ellis; Henderson",
-                "geocode": {
-                    "SAME": [
-                        "048497",
-                        "048121",
-                        "048085",
-                        "048231",
-                        "048367",
-                        "048439",
-                        "048113",
-                        "048397",
-                        "048257",
-                        "048221",
-                        "048251",
-                        "048139",
-                        "048213"
-                    ],
-                    "UGC": [
-                        "TXZ102",
-                        "TXZ103",
-                        "TXZ104",
-                        "TXZ105",
-                        "TXZ117",
-                        "TXZ118",
-                        "TXZ119",
-                        "TXZ120",
-                        "TXZ121",
-                        "TXZ131",
-                        "TXZ133",
-                        "TXZ134",
-                        "TXZ135"
-                    ]
-                },
-                "affectedZones": [
-                    "https://api.weather.gov/zones/forecast/TXZ102",
-                    "https://api.weather.gov/zones/forecast/TXZ103",
-                    "https://api.weather.gov/zones/forecast/TXZ104",
-                    "https://api.weather.gov/zones/forecast/TXZ105",
-                    "https://api.weather.gov/zones/forecast/TXZ117",
-                    "https://api.weather.gov/zones/forecast/TXZ118",
-                    "https://api.weather.gov/zones/forecast/TXZ119",
-                    "https://api.weather.gov/zones/forecast/TXZ120",
-                    "https://api.weather.gov/zones/forecast/TXZ121",
-                    "https://api.weather.gov/zones/forecast/TXZ131",
-                    "https://api.weather.gov/zones/forecast/TXZ133",
-                    "https://api.weather.gov/zones/forecast/TXZ134",
-                    "https://api.weather.gov/zones/forecast/TXZ135"
+                    "https://api.weather.gov/zones/forecast/TXZ164",
+                    "https://api.weather.gov/zones/forecast/TXZ177",
+                    "https://api.weather.gov/zones/forecast/TXZ178",
+                    "https://api.weather.gov/zones/forecast/TXZ179"
                 ],
                 "references": [],
-                "sent": "2021-08-25T14:06:00-05:00",
-                "effective": "2021-08-25T14:06:00-05:00",
-                "onset": "2021-08-25T14:06:00-05:00",
-                "expires": "2021-08-26T17:15:00-05:00",
+                "sent": "2021-08-26T20:06:00-05:00",
+                "effective": "2021-08-26T20:06:00-05:00",
+                "onset": "2021-08-26T20:06:00-05:00",
+                "expires": "2021-08-26T20:30:00-05:00",
                 "ends": null,
                 "status": "Actual",
                 "messageType": "Alert",
                 "category": "Met",
-                "severity": "Unknown",
-                "certainty": "Unknown",
-                "urgency": "Unknown",
-                "event": "Air Quality Alert",
-                "sender": "w-nws.webmaster@noaa.gov",
-                "senderName": "NWS Fort Worth TX",
-                "headline": "Air Quality Alert issued August 25 at 2:06PM CDT by NWS Fort Worth TX",
-                "description": "The Texas Commission on Environmental Quality (TCEQ) has issued\nan Ozone Action Day for the Dallas-Fort Worth area for Thursday,\nAugust 26, 2021.\n\nAtmospheric conditions are expected to be favorable for producing\nhigh levels of ozone air pollution in the Dallas-Fort Worth area\non Thursday. You can help prevent ozone pollution by sharing a\nride, walking, riding a bicycle, taking your lunch to work,\navoiding drive-through lanes, conserving energy, and keeping your\nvehicle properly tuned.\n\nFor more information on ozone:\n\nOzone: The Facts (www.tceq.texas.gov/goto/ozonefacts)\n\nAir North Texas: (www.airnorthtexas.org)\n\nEPA Air Now\n(www.airnow.gov/index.cfm?action.local_state&STATEID=45&TAB=0)\n\nTake care of Texas (www.takecareoftexas.org)\n\nNorth Central Texas Council of Governments Air Quality\n(www.nctcog.org/trans/air/index.asp)",
-                "instruction": null,
-                "response": "Monitor",
-                "parameters": {
-                    "PIL": [
-                        "FWDAQAFWD"
-                    ],
-                    "NWSheadline": [
-                        "OZONE ACTION DAY"
-                    ],
-                    "BLOCKCHANNEL": [
-                        "EAS",
-                        "NWEM",
-                        "CMAS"
-                    ]
-                }
-            }
-        },
-        {
-            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6806a7935bf471a2271961f5ea4e610730a70148.001.1",
-            "type": "Feature",
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [
-                            -95.439999999999998,
-                            32.039999999999999
-                        ],
-                        [
-                            -95.239999999999995,
-                            31.669999999999998
-                        ],
-                        [
-                            -95.36999999999999,
-                            31.659999999999997
-                        ],
-                        [
-                            -95.439999999999984,
-                            31.799999999999997
-                        ],
-                        [
-                            -95.47999999999999,
-                            31.879999999999995
-                        ],
-                        [
-                            -95.439999999999998,
-                            32.039999999999999
-                        ]
-                    ]
-                ]
-            },
-            "properties": {
-                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6806a7935bf471a2271961f5ea4e610730a70148.001.1",
-                "@type": "wx:Alert",
-                "id": "urn:oid:2.49.0.1.840.0.6806a7935bf471a2271961f5ea4e610730a70148.001.1",
-                "areaDesc": "Anderson, TX; Cherokee, TX; Houston, TX",
-                "geocode": {
-                    "SAME": [
-                        "048001",
-                        "048073",
-                        "048225"
-                    ],
-                    "UGC": [
-                        "TXC001",
-                        "TXC073",
-                        "TXC225"
-                    ]
-                },
-                "affectedZones": [
-                    "https://api.weather.gov/zones/county/TXC001",
-                    "https://api.weather.gov/zones/county/TXC073",
-                    "https://api.weather.gov/zones/county/TXC225"
-                ],
-                "references": [
-                    {
-                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9264b89529c943c739815f281a8b9029466a4472.001.1",
-                        "identifier": "urn:oid:2.49.0.1.840.0.9264b89529c943c739815f281a8b9029466a4472.001.1",
-                        "sender": "w-nws.webmaster@noaa.gov",
-                        "sent": "2021-08-22T08:46:00-05:00"
-                    }
-                ],
-                "sent": "2021-08-23T07:44:00-05:00",
-                "effective": "2021-08-23T07:44:00-05:00",
-                "onset": "2021-08-23T07:44:00-05:00",
-                "expires": "2021-08-24T07:45:00-05:00",
-                "ends": "2021-08-26T07:00:00-05:00",
-                "status": "Actual",
-                "messageType": "Update",
-                "category": "Met",
-                "severity": "Severe",
+                "severity": "Moderate",
                 "certainty": "Observed",
-                "urgency": "Immediate",
-                "event": "Flood Warning",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
                 "sender": "w-nws.webmaster@noaa.gov",
-                "senderName": "NWS Shreveport LA",
-                "headline": "Flood Warning issued August 23 at 7:44AM CDT until August 26 at 7:00AM CDT by NWS Shreveport LA",
-                "description": "The Flood Warning continues for\nthe Neches River Near Neches.\n* Until Thursday morning.\n* At 6:30 AM CDT Monday the stage was 12.3 feet.\n* Flood stage is 12.0 feet.\n* Minor flooding is occurring and minor flooding is forecast.\n* Forecast...The river is expected to rise to a crest of 12.3 feet\nthis afternoon. It will then fall below flood stage early\nWednesday afternoon.\n* Impact...At 12.0 feet, Expect minor lowland flooding of the\nheavily wooded floodplain. Ranchers that may have livestock and\nequipment in the river bottoms should move them to higher ground.\nExpect minor flooding of the boat ramp.",
-                "instruction": null,
-                "response": "Avoid",
+                "senderName": "NWS Houston/Galveston TX",
+                "headline": "Special Weather Statement issued August 26 at 8:06PM CDT by NWS Houston/Galveston TX",
+                "description": "At 806 PM CDT, Doppler radar was tracking a strong thunderstorm near\nOnalaska, or 13 miles northwest of Livingston, moving west at 30 mph.\n\nHAZARD...Winds in excess of 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nTrinity, Onalaska, Point Blank, Riverside, Sebastopol and Oakhurst.",
+                "instruction": "If outdoors, consider seeking shelter inside a building.\n\nFrequent cloud to ground lightning is occurring with this storm.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.\n\nIf on or near northern parts of Lake Livingston, get out of the\nwater and move indoors or inside a vehicle. Remember, lightning can\nstrike out to 10 miles from the parent thunderstorm. If you can hear\nthunder, you are close enough to be struck by lightning. Move to\nsafe shelter now! Do not be caught on the water in a thunderstorm.",
+                "response": "Execute",
                 "parameters": {
                     "PIL": [
-                        "SHVFLSSHV"
+                        "HGXSPSHGX"
                     ],
                     "NWSheadline": [
-                        "The Flood Warning is now in effect until Thursday morning"
+                        "A strong thunderstorm will impact portions of southwestern Trinity, northwestern San Jacinto, west central Polk and northeastern Walker Counties through 830 PM CDT"
+                    ],
+                    "eventMotionDescription": [
+                        "2021-08-27T01:06:00-00:00...storm...082DEG...27KT...30.86,-95.08"
+                    ],
+                    "maxWindGust": [
+                        "40 MPH"
+                    ],
+                    "maxHailSize": [
+                        0.25
                     ],
                     "BLOCKCHANNEL": [
                         "EAS",
@@ -304,17 +106,225 @@
                     ],
                     "EAS-ORG": [
                         "WXR"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7928b95d729b2b59de787491cb0b739ba6bae658.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -98.469999999999999,
+                            29.890000000000001
+                        ],
+                        [
+                            -98.519999999999996,
+                            29.850000000000001
+                        ],
+                        [
+                            -98.879999999999995,
+                            29.760000000000002
+                        ],
+                        [
+                            -99.049999999999997,
+                            29.84
+                        ],
+                        [
+                            -99.2099999,
+                            30.359999999999999
+                        ],
+                        [
+                            -98.700000000000003,
+                            30.370000000000001
+                        ],
+                        [
+                            -98.469999999999999,
+                            29.890000000000001
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7928b95d729b2b59de787491cb0b739ba6bae658.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.7928b95d729b2b59de787491cb0b739ba6bae658.001.1",
+                "areaDesc": "Kerr; Gillespie; Kendall",
+                "geocode": {
+                    "SAME": [
+                        "048265",
+                        "048171",
+                        "048259"
                     ],
-                    "VTEC": [
-                        "/O.EXT.KSHV.FL.W.0134.000000T0000Z-210826T1200Z/"
+                    "UGC": [
+                        "TXZ186",
+                        "TXZ188",
+                        "TXZ189"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ186",
+                    "https://api.weather.gov/zones/forecast/TXZ188",
+                    "https://api.weather.gov/zones/forecast/TXZ189"
+                ],
+                "references": [],
+                "sent": "2021-08-26T19:48:00-05:00",
+                "effective": "2021-08-26T19:48:00-05:00",
+                "onset": "2021-08-26T19:48:00-05:00",
+                "expires": "2021-08-26T20:30:00-05:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Observed",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Austin/San Antonio TX",
+                "headline": "Special Weather Statement issued August 26 at 7:48PM CDT by NWS Austin/San Antonio TX",
+                "description": "At 747 PM CDT, Doppler radar was tracking strong thunderstorms along\na line extending from near Rocky Hill to 6 miles north of Sisterdale.\nMovement was west at 15 mph.\n\nHAZARD...Winds in excess of 40 mph and half inch hail. The strong\nand gusty winds are occurring well ahead of the rain.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nKerrville, Boerne, Fredericksburg, Comfort, Stonewall, Walnut Grove,\nKendalia, Tivydale, Rocky Hill, Sisterdale, Kreutzberg, Welfare,\nBlumenthal, Nelson City, Center Point, Waring, Grapetown, Luckenbach,\nCain City and Old Tunnel State Park.",
+                "instruction": "If outdoors, consider seeking shelter inside a building.\n\nFrequent cloud to ground lightning is occurring with these storms.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "EWXSPSEWX"
                     ],
-                    "eventEndingTime": [
-                        "2021-08-26T12:00:00+00:00"
+                    "NWSheadline": [
+                        "Strong thunderstorms will impact portions of southeastern Kerr, southern Gillespie and Kendall Counties through 830 PM CDT"
+                    ],
+                    "eventMotionDescription": [
+                        "2021-08-27T00:47:00-00:00...storm...076DEG...13KT...30.31,-98.77 30.06,-98.71"
+                    ],
+                    "maxWindGust": [
+                        "40 MPH"
+                    ],
+                    "maxHailSize": [
+                        0.5
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5aa6a364f5c4b75fca69170c12f90d59e5a79478.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -98.040000000000006,
+                            29.420000000000002
+                        ],
+                        [
+                            -98.220000000000013,
+                            30.010000000000002
+                        ],
+                        [
+                            -97.600000000000009,
+                            30.030000000000001
+                        ],
+                        [
+                            -97.530000000000015,
+                            29.970000000000002
+                        ],
+                        [
+                            -97.38000000000001,
+                            29.650000000000002
+                        ],
+                        [
+                            -98.040000000000006,
+                            29.420000000000002
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5aa6a364f5c4b75fca69170c12f90d59e5a79478.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5aa6a364f5c4b75fca69170c12f90d59e5a79478.001.1",
+                "areaDesc": "Hays; Comal; Guadalupe; Caldwell; Gonzales",
+                "geocode": {
+                    "SAME": [
+                        "048209",
+                        "048091",
+                        "048187",
+                        "048055",
+                        "048177"
+                    ],
+                    "UGC": [
+                        "TXZ191",
+                        "TXZ206",
+                        "TXZ207",
+                        "TXZ208",
+                        "TXZ223"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ191",
+                    "https://api.weather.gov/zones/forecast/TXZ206",
+                    "https://api.weather.gov/zones/forecast/TXZ207",
+                    "https://api.weather.gov/zones/forecast/TXZ208",
+                    "https://api.weather.gov/zones/forecast/TXZ223"
+                ],
+                "references": [],
+                "sent": "2021-08-26T19:44:00-05:00",
+                "effective": "2021-08-26T19:44:00-05:00",
+                "onset": "2021-08-26T19:44:00-05:00",
+                "expires": "2021-08-26T20:30:00-05:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Observed",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Austin/San Antonio TX",
+                "headline": "Special Weather Statement issued August 26 at 7:44PM CDT by NWS Austin/San Antonio TX",
+                "description": "At 744 PM CDT, Doppler radar was tracking strong thunderstorms along\na line extending from 6 miles northeast of Lockhart to 8 miles\nnortheast of Palmeto State Park. Movement was west at 15 mph.\n\nHAZARD...Wind gusts up to 50 mph and half inch hail. The strong and\ngusty winds are occurring well ahead of the rain.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nNew Braunfels, San Marcos, Kyle, Seguin, Lockhart, Luling, Wimberley,\nCanyon Lake, McQueeney, Martindale, Uhland, Mustang Ridge, Kingsbury,\nNiederwald, Staples, Fentress, Palmeto State Park, Geronimo, Zorn and\nBrownsboro.",
+                "instruction": "If outdoors, consider seeking shelter inside a building.\n\nFrequent cloud to ground lightning is occurring with these storms.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "EWXSPSEWX"
+                    ],
+                    "NWSheadline": [
+                        "Strong thunderstorms will impact portions of Caldwell, southern Hays, Guadalupe, northwestern Gonzales and northeastern Comal Counties through 830 PM CDT"
+                    ],
+                    "eventMotionDescription": [
+                        "2021-08-27T00:44:00-00:00...storm...067DEG...12KT...29.94,-97.61 29.69,-97.49"
+                    ],
+                    "maxWindGust": [
+                        "50 MPH"
+                    ],
+                    "maxHailSize": [
+                        0.5
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
                     ]
                 }
             }
         }
     ],
     "title": "current watches, warnings, and advisories for Texas",
-    "updated": "2021-08-26T01:30:00+00:00"
+    "updated": "2021-08-27T01:07:19+00:00"
 }
