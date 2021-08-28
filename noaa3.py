@@ -646,7 +646,7 @@ def codeblock():
 
 # ------------------------------ START CODE BLOCK ---------------------------------------
 
-print('...getting user location input for information retrieval')
+print('...getting user location input for Weather and Tide information retrieval')
 
 auto_locate = False
 loclist = [] # create empty list
@@ -659,7 +659,12 @@ if location == "":
     print('...Autolocating and acquiring hostname, localip, public_ip, state, state_abrev using getuser_location() method')
     hostname, localip, public_ip, state, state_abrev, geo_dict, lat, lon, latlon = getuser_location()
 else: # Identify input as city,state or lat,lon via generating error below
+    # check user input for correct general format
     loclist = location.split(",")
+    if len(loclist) != 2:
+        print(f'  Error: {location} is not in correct format e.g. City,State where State is the 2 letter abbreviation.')
+        print(f'  and lat,lon where lat and lon are in decimal format e.g. 27.800254,-97.395574 ')
+        location = input('Enter {City,State}, {lat,lon} or press just press Enter to Autolocate your position (not always accurate)')
 
     try:
         float(loclist[0]) # True if element can be cast as int-> means that first value is latitude
@@ -696,8 +701,25 @@ if get_closest_station(lat,lon,state) != None:
     print(f"...Geting NOAA Tide Forecast for radarStation {station_id} in {city} {state}")
     tide_forecast_info, jsonobj = tide_forecast(station_id,30)
     print(tide_forecast_info) # json text
-    print()
-    print (len(jsonobj['predictions']))
+    print (f"Number of elements in Tide Predictions: {len(jsonobj['predictions'])}")
+    print('...converting JSON obj (dict) to Dataframe')
+    df = pd.DataFrame.from_dict(jsonobj, orient="index")
+    # print(df) # not the result we wanted...
+    # Normalizing data
+    df = pd.json_normalize(jsonobj, record_path=['predictions']) # this works!
+    print(df)
+
+    import matplotlib.pyplot as plt
+
+    # convert df columns from string to float so that they can be plotted
+    df["v"] = pd.to_numeric(df["v"], downcast="float")
+
+    # gca stands for 'get current axis'
+    ax = plt.gca()
+    df.plot(kind='line', x='t', y='v', ax=ax)
+    # df.plot(kind='line', x='t', y='type', color='red', ax=ax)
+    plt.show()
+
 else:
     print(f'Tide data not available for {state}.  No stations were found for this state.')
 

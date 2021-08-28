@@ -10,88 +10,121 @@
     "type": "FeatureCollection",
     "features": [
         {
-            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d9bc2108082cf3014696f954e81ebe3a7e8e7890.001.1",
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.47115092c41f0453ae267717f36a07c45cda51ea.001.1",
             "type": "Feature",
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [
-                            -99.560000000000002,
-                            30.879999999999999
-                        ],
-                        [
-                            -99.620000000000005,
-                            30.739999999999998
-                        ],
-                        [
-                            -100.25,
-                            30.829999999999998
-                        ],
-                        [
-                            -100.17,
-                            31.09
-                        ],
-                        [
-                            -99.560000000000002,
-                            30.879999999999999
-                        ]
-                    ]
-                ]
-            },
+            "geometry": null,
             "properties": {
-                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d9bc2108082cf3014696f954e81ebe3a7e8e7890.001.1",
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.47115092c41f0453ae267717f36a07c45cda51ea.001.1",
                 "@type": "wx:Alert",
-                "id": "urn:oid:2.49.0.1.840.0.d9bc2108082cf3014696f954e81ebe3a7e8e7890.001.1",
-                "areaDesc": "Schleicher; Menard",
+                "id": "urn:oid:2.49.0.1.840.0.47115092c41f0453ae267717f36a07c45cda51ea.001.1",
+                "areaDesc": "Vernon; Rapides; Avoyelles; Beauregard; Allen; Evangeline; St. Landry; Calcasieu; Jefferson Davis; Acadia; Lafayette; Upper St. Martin; Vermilion; Iberia; St. Mary; Lower St. Martin; West Cameron; East Cameron; Tyler; Hardin; Jefferson; Orange; Northern Jasper; Northern Newton; Southern Jasper; Southern Newton",
                 "geocode": {
                     "SAME": [
-                        "048413",
-                        "048327"
+                        "022115",
+                        "022079",
+                        "022009",
+                        "022011",
+                        "022003",
+                        "022039",
+                        "022097",
+                        "022019",
+                        "022053",
+                        "022001",
+                        "022055",
+                        "022099",
+                        "022113",
+                        "022045",
+                        "022101",
+                        "022023",
+                        "048457",
+                        "048199",
+                        "048245",
+                        "048361",
+                        "048241",
+                        "048351"
                     ],
                     "UGC": [
-                        "TXZ077",
-                        "TXZ168"
+                        "LAZ027",
+                        "LAZ028",
+                        "LAZ029",
+                        "LAZ030",
+                        "LAZ031",
+                        "LAZ032",
+                        "LAZ033",
+                        "LAZ041",
+                        "LAZ042",
+                        "LAZ043",
+                        "LAZ044",
+                        "LAZ045",
+                        "LAZ052",
+                        "LAZ053",
+                        "LAZ054",
+                        "LAZ055",
+                        "LAZ073",
+                        "LAZ074",
+                        "TXZ180",
+                        "TXZ201",
+                        "TXZ215",
+                        "TXZ216",
+                        "TXZ259",
+                        "TXZ260",
+                        "TXZ261",
+                        "TXZ262"
                     ]
                 },
                 "affectedZones": [
-                    "https://api.weather.gov/zones/forecast/TXZ077",
-                    "https://api.weather.gov/zones/forecast/TXZ168"
+                    "https://api.weather.gov/zones/forecast/LAZ027",
+                    "https://api.weather.gov/zones/forecast/LAZ028",
+                    "https://api.weather.gov/zones/forecast/LAZ029",
+                    "https://api.weather.gov/zones/forecast/LAZ030",
+                    "https://api.weather.gov/zones/forecast/LAZ031",
+                    "https://api.weather.gov/zones/forecast/LAZ032",
+                    "https://api.weather.gov/zones/forecast/LAZ033",
+                    "https://api.weather.gov/zones/forecast/LAZ041",
+                    "https://api.weather.gov/zones/forecast/LAZ042",
+                    "https://api.weather.gov/zones/forecast/LAZ043",
+                    "https://api.weather.gov/zones/forecast/LAZ044",
+                    "https://api.weather.gov/zones/forecast/LAZ045",
+                    "https://api.weather.gov/zones/forecast/LAZ052",
+                    "https://api.weather.gov/zones/forecast/LAZ053",
+                    "https://api.weather.gov/zones/forecast/LAZ054",
+                    "https://api.weather.gov/zones/forecast/LAZ055",
+                    "https://api.weather.gov/zones/forecast/LAZ073",
+                    "https://api.weather.gov/zones/forecast/LAZ074",
+                    "https://api.weather.gov/zones/forecast/TXZ180",
+                    "https://api.weather.gov/zones/forecast/TXZ201",
+                    "https://api.weather.gov/zones/forecast/TXZ215",
+                    "https://api.weather.gov/zones/forecast/TXZ216",
+                    "https://api.weather.gov/zones/forecast/TXZ259",
+                    "https://api.weather.gov/zones/forecast/TXZ260",
+                    "https://api.weather.gov/zones/forecast/TXZ261",
+                    "https://api.weather.gov/zones/forecast/TXZ262"
                 ],
                 "references": [],
-                "sent": "2021-08-27T19:06:00-05:00",
-                "effective": "2021-08-27T19:06:00-05:00",
-                "onset": "2021-08-27T19:06:00-05:00",
-                "expires": "2021-08-27T19:45:00-05:00",
+                "sent": "2021-08-27T22:29:00-05:00",
+                "effective": "2021-08-27T22:29:00-05:00",
+                "onset": "2021-08-27T22:29:00-05:00",
+                "expires": "2021-08-28T06:30:00-05:00",
                 "ends": null,
                 "status": "Actual",
                 "messageType": "Alert",
                 "category": "Met",
                 "severity": "Moderate",
-                "certainty": "Observed",
+                "certainty": "Likely",
                 "urgency": "Expected",
-                "event": "Special Weather Statement",
+                "event": "Tropical Cyclone Statement",
                 "sender": "w-nws.webmaster@noaa.gov",
-                "senderName": "NWS San Angelo TX",
-                "headline": "Special Weather Statement issued August 27 at 7:06PM CDT by NWS San Angelo TX",
-                "description": "At 705 PM CDT, Doppler radar was tracking a strong thunderstorm near\nMenard, moving west at 20 mph.\n\nHAZARD...Winds in excess of 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nMenard, Fort Mckavett, Camp Sol Mayer, The Intersection Of Us-\n83 And Ranch Road 1773 and The Intersection Of Us-83 And Highway 29.",
-                "instruction": "If outdoors, consider seeking shelter inside a building.",
-                "response": "Execute",
+                "senderName": "NWS Lake Charles LA",
+                "headline": "Tropical Cyclone Statement issued August 27 at 10:29PM CDT by NWS Lake Charles LA",
+                "description": "This product covers Southwest Louisiana and Southeast Texas\n\n**IDA NOW ENTERING THE GULF OF MEXICO, FORECAST TO RAPIDLY INTENSIFY\nBEFORE REACHING THE NORTHERN GULF COAST**\n\n\nNEW INFORMATION\n---------------\n\n* CHANGES TO WATCHES AND WARNINGS:\n- None\n\n* CURRENT WATCHES AND WARNINGS:\n- A Tropical Storm Warning is in effect for Allen, Beauregard,\nCalcasieu, Jefferson Davis, Rapides, and Vernon\n- A Storm Surge Warning and Hurricane Warning are in effect for\nIberia, Lower St. Martin, St. Mary, and Vermilion\n- A Storm Surge Watch is in effect for West Cameron\n- A Hurricane Warning is in effect for Acadia, Avoyelles,\nEvangeline, Lafayette, St. Landry, and Upper St. Martin\n- A Tropical Storm Warning, Storm Surge Watch, and Hurricane\nWatch are in effect for East Cameron\n\n* STORM INFORMATION:\n- About 690 miles southeast of Intracoastal City LA or about 640\nmiles southeast of Morgan City LA\n- 23.0N 84.0W\n- Storm Intensity 80 mph\n- Movement Northwest or 320 degrees at 15 mph\n\nSITUATION OVERVIEW\n------------------\n\nHurricane Ida is now entering the southeast Gulf of Mexico. The center\nof Hurricane Ida was located near latitude 23.0 North, longitude\n84.0 West. Ida is moving toward the northwest near 15 mph and this\ngeneral motion should continue until Ida reaches the northern Gulf\ncoast on Sunday. A slower northward motion is forecast after Ida moves\ninland. On the forecast track, the center of Ida will move over the\nsoutheastern and central Gulf of Mexico during the next day or two and\nmake landfall along the U.S. northern Gulf coast within the hurricane\nwarning area by late Sunday.\n\nPOTENTIAL IMPACTS\n-----------------\n\n* WIND:\nProtect against life-threatening wind having possible devastating\nimpacts across South Central and East Central Louisiana. Potential impacts in\nthis area include:\n- Structural damage to sturdy buildings, some with complete roof\nand wall failures. Complete destruction of mobile homes. Damage\ngreatly accentuated by large airborne projectiles. Locations\nmay be uninhabitable for weeks or months.\n- Numerous large trees snapped or uprooted along with fences and\nroadway signs blown over.\n- Many roads impassable from large debris, and more within urban\nor heavily wooded places. Many bridges and access routes\nimpassable.\n- Widespread power and communications outages.\n\nAlso, protect against life-threatening wind having possible limited\nto extensive impacts across Southwest Louisiana.\n\n* SURGE:\nProtect against life-threatening surge having possible extensive\nimpacts from Pecan Island eastward across Vermilion and Atchafalaya\nBays. Potential impacts in this area include:\n- Large areas of deep inundation with storm surge flooding\naccentuated by battering waves. Structural damage to buildings,\nwith several washing away. Damage compounded by floating\ndebris. Locations may be uninhabitable for an extended period.\n- Large sections of escape routes and secondary roads washed out\nor severely flooded. Flood control systems and barriers may\nbecome stressed.\n- Severe beach erosion with significant dune loss.\n- Major damage to marinas, docks, and piers. Many small craft\nbroken away from moorings, especially in unprotected anchorages\nwith some lifted onshore and stranded.\n\nAlso, protect against life-threatening surge having possible\nsignificant impacts across the Cameron and Vermilion parish line to Pecan Island.\n\nAlso, protect against locally hazardous surge having possible limited\nimpacts across Cameron Parish.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\n* FLOODING RAIN:\nProtect against life-threatening rainfall flooding having possible\nextensive impacts across South Central Louisiana. Potential\nimpacts include:\n- Major rainfall flooding may prompt many evacuations and rescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, and ditches may\nbecome dangerous rivers. Flood control systems and barriers may\nbecome stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or washed\naway. Many places where flood waters may cover escape routes.\nStreets and parking lots become rivers of moving water with\nunderpasses submerged. Driving conditions become dangerous.\nMany road and bridge closures with some weakened or washed out.\n\nProtect against dangerous rainfall flooding having possible limited\nto significant impacts across Central and Southwest Louisiana.\n\n* TORNADOES:\nProtect against a tornado event having possible limited impacts\nacross Central and South Central Louisiana. Potential impacts include:\n- The occurrence of isolated tornadoes can hinder the execution\nof emergency plans during tropical events.\n- A few places may experience tornado damage, along with power\nand communications disruptions.\n- Locations could realize roofs peeled off buildings, chimneys\ntoppled, mobile homes pushed off foundations or overturned,\nlarge tree tops and branches snapped off, shallow-rooted trees\nknocked over, moving vehicles blown off roads, and small boats\npulled from moorings.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\nPRECAUTIONARY/PREPAREDNESS ACTIONS\n----------------------------------\n\n* EVACUATIONS:\nListen to local official for recommended preparedness actions, including\npossible evacuation. If ordered to evacuate, do so immediately.\n\nIf evacuating, leave with a destination in mind and allow extra time to\nget there. Take your emergency supplies kit. Gas up your vehicle ahead of time.\n\n* OTHER PREPAREDNESS INFORMATION:\nNow is the time to complete all preparations to protect life and\nproperty in accordance with your emergency plan. Ensure you are in a\nsafe location before the onset of strong winds or possible flooding.\n\nIf you are relocating to safe shelter, leave as early as possible.\nAllow extra time to reach your destination. Many roads and bridges\nwill be closed once strong winds arrive. Check the latest weather\nforecast before departing and drive with caution.\n\nIf heading to a community shelter, become familiar with the shelter\nrules before arrival, especially if you have special needs or have\npets. Take essential items with you from your Emergency Supplies Kit.\n\nClosely monitor weather.gov, NOAA Weather radio or local news outlets\nfor official storm information. Be ready to adapt to possible changes\nto the forecast. Ensure you have multiple ways to receive weather\nwarnings.\n\n* ADDITIONAL SOURCES OF INFORMATION:\n- For information on appropriate preparations see ready.gov\n- For information on creating an emergency plan see getagameplan.org\n- For additional disaster preparedness information see redcross.org\n\nNEXT UPDATE\n-----------\n\nThe next local statement will be issued by the National Weather\nService in Lake Charles LA around 5 AM CDT, or sooner if conditions\nwarrant.",
+                "instruction": null,
+                "response": "Monitor",
                 "parameters": {
                     "PIL": [
-                        "SJTSPSSJT"
+                        "LCHHLSLCH"
                     ],
                     "NWSheadline": [
-                        "A strong thunderstorm will impact portions of northeastern Schleicher and central Menard Counties through 745 PM CDT"
-                    ],
-                    "eventMotionDescription": [
-                        "2021-08-28T00:05:00-00:00...storm...105DEG...17KT...30.89,-99.89"
-                    ],
-                    "maxWindGust": [
-                        "40 MPH"
-                    ],
-                    "maxHailSize": [
-                        0.25
+                        "IDA NOW ENTERING THE GULF OF MEXICO, FORECAST TO RAPIDLY INTENSIFY\nBEFORE REACHING THE NORTHERN GULF COAST"
                     ],
                     "BLOCKCHANNEL": [
                         "EAS",
@@ -234,5 +267,5 @@
         }
     ],
     "title": "current watches, warnings, and advisories for Texas",
-    "updated": "2021-08-28T00:06:37+00:00"
+    "updated": "2021-08-28T03:29:28+00:00"
 }
