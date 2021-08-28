@@ -12,6 +12,7 @@ from urllib.request import urlopen
 import math
 import pandas as pd
 import json
+import smtplib, ssl
 
 # ------------------------------ CONSTANTS ---------------------------------------
 WELCOME_MSG = 'Welcome to NOAA Weather API Collection.'
@@ -40,6 +41,63 @@ The Haversine formula calculates the great-circle distance between two points. S
 
 Reference:  https://www.kite.com/python/answers/how-to-find-the-distance-between-two-lat-long-coordinates-in-python
 
+
+"""
+
+
+def sendmail(receiver_email):  # must change google account to allow less secure apps ON in google email account setup
+    sender_email = "wwcdevtest@gmail.com"
+    receiver_email = "williamwcollinsjr@gmail.com"
+    # password = input("Type your password and press enter:") #!@Tyler555 for wwcdevtest@gmail.com
+    password = "!@Tyler555"  # for wwcdevtest@gmail.com.  Need to store these and keys outside of script as hashed or non-hashed
+
+    message = MIMEMultipart("alternative")
+    message["Subject"] = "Test of Weather, Solunar and Tides Python App with optional LCD output"
+    message["From"] = sender_email
+    message["To"] = receiver_email
+
+    # Create the plain-text and HTML version of your message
+    text = """\
+    Greetings!
+           <a href="http://weathercommander.net">Weather Commander</a> 
+           Weather Commander currently has great features for Weather and Solunar data forecasts!  Check it out...
+    """
+    html = """\
+    <html>
+      <body>
+        <p>Greetings!<br>
+           <br>
+           Weather Commander currently has great features for Weather and Solunar data forecasts!  Check it out...
+           <a href="http://weathercommander.net">Weather Commander</a> 
+        </p>
+      </body>
+    </html>
+    """
+
+    # Turn these into plain/html MIMEText objects
+    part1 = MIMEText(text, "plain")
+    part2 = MIMEText(html, "html")
+
+    # Add HTML/plain-text parts to MIMEMultipart message
+    # The email client will try to render the last part first
+    message.attach(part1)
+    message.attach(part2)
+
+    # Create secure connection with server and send email
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(
+            sender_email, receiver_email, message.as_string()
+        )
+
+
+# test
+"""
+if (CONST_SENDMAIL == True):
+    recipient = "williamwcollinsjr@gmail"
+    sendmail(recipient)
+# quit()
 
 """
 
@@ -685,7 +743,7 @@ print('...retrieved data for selected location')
 print('...data for location: ',city,state,lat,lon,' latlon:',latlon)
 
 # now get extreme weather alerts -> TBD Done
-print('...Geting NOAA extreme weather alerts for state' + state)
+print('...Getting NOAA extreme weather alerts for state' + state)
 alerts(state)
 
 # now get points -> TBD in progress -> Done
@@ -703,7 +761,7 @@ if get_closest_station(lat,lon,state) != None:
     print(tide_forecast_info) # json text
     print (f"Number of elements in Tide Predictions: {len(jsonobj['predictions'])}")
     print('...converting JSON obj (dict) to Dataframe')
-    df = pd.DataFrame.from_dict(jsonobj, orient="index")
+    # df = pd.DataFrame.from_dict(jsonobj, orient="index")
     # print(df) # not the result we wanted...
     # Normalizing data
     df = pd.json_normalize(jsonobj, record_path=['predictions']) # this works!
@@ -716,7 +774,11 @@ if get_closest_station(lat,lon,state) != None:
 
     # gca stands for 'get current axis'
     ax = plt.gca()
-    df.plot(kind='line', x='t', y='v', ax=ax)
+    plt.title(location)
+    plt.xlabel('date time')
+    plt.ylabel('volume')
+
+    df.plot(kind='bar', x='t', y='v', ax=ax)
     # df.plot(kind='line', x='t', y='type', color='red', ax=ax)
     plt.show()
 
