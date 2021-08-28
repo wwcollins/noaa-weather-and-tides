@@ -641,6 +641,13 @@ write2file(filename,attrib,content)
 # --------------  END METHOD MOVE SECTION --------------------------
 
 # Start main code block ....
+def codeblock():
+    print('...start codeblock')
+
+# ------------------------------ START CODE BLOCK ---------------------------------------
+
+print('...getting user location input for information retrieval')
+
 auto_locate = False
 loclist = [] # create empty list
 location = input ('Enter {City,State}, {lat,lon} or press just press Enter to Autolocate your position (not always accurate)')
@@ -696,7 +703,7 @@ else:
 
 quit()
 
-print('-------------------Getting TIDES AND CURRRENTS for location --------------------------------')
+print('-------------------Getting TIDES PREDICTIONS AND CURRRENTS for location --------------------------------')
 #TBD - implement - levarage with WeatherX.py with LCD output
 #https://tidesandcurrents.noaa.gov/api/#products
 #Water Temp
@@ -711,8 +718,7 @@ print('-------------------Getting TIDES AND CURRRENTS for location -------------
 #This is the format to use! Finally!!!
 #https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=20200801&end_date=20200831&datum=MLLW&station=8775241&time_zone=lst_ldt&units=english&interval=hilo&format=json
 
-print('*********************TIDE INFORMATION - FORECAST****************')
-print()
+# print('*********************TIDE INFORMATION - FORECAST****************')
 for n in range(0,100): 
     try:
         #print("***************************** ID=" + str(n) + "***************************")

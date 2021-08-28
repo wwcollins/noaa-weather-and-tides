@@ -10,13 +10,108 @@
     "type": "FeatureCollection",
     "features": [
         {
-            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.28be5c496913970c6f4e05cea37513a94452818b.001.1",
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d9bc2108082cf3014696f954e81ebe3a7e8e7890.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -99.560000000000002,
+                            30.879999999999999
+                        ],
+                        [
+                            -99.620000000000005,
+                            30.739999999999998
+                        ],
+                        [
+                            -100.25,
+                            30.829999999999998
+                        ],
+                        [
+                            -100.17,
+                            31.09
+                        ],
+                        [
+                            -99.560000000000002,
+                            30.879999999999999
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d9bc2108082cf3014696f954e81ebe3a7e8e7890.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.d9bc2108082cf3014696f954e81ebe3a7e8e7890.001.1",
+                "areaDesc": "Schleicher; Menard",
+                "geocode": {
+                    "SAME": [
+                        "048413",
+                        "048327"
+                    ],
+                    "UGC": [
+                        "TXZ077",
+                        "TXZ168"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/TXZ077",
+                    "https://api.weather.gov/zones/forecast/TXZ168"
+                ],
+                "references": [],
+                "sent": "2021-08-27T19:06:00-05:00",
+                "effective": "2021-08-27T19:06:00-05:00",
+                "onset": "2021-08-27T19:06:00-05:00",
+                "expires": "2021-08-27T19:45:00-05:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Observed",
+                "urgency": "Expected",
+                "event": "Special Weather Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Angelo TX",
+                "headline": "Special Weather Statement issued August 27 at 7:06PM CDT by NWS San Angelo TX",
+                "description": "At 705 PM CDT, Doppler radar was tracking a strong thunderstorm near\nMenard, moving west at 20 mph.\n\nHAZARD...Winds in excess of 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nMenard, Fort Mckavett, Camp Sol Mayer, The Intersection Of Us-\n83 And Ranch Road 1773 and The Intersection Of Us-83 And Highway 29.",
+                "instruction": "If outdoors, consider seeking shelter inside a building.",
+                "response": "Execute",
+                "parameters": {
+                    "PIL": [
+                        "SJTSPSSJT"
+                    ],
+                    "NWSheadline": [
+                        "A strong thunderstorm will impact portions of northeastern Schleicher and central Menard Counties through 745 PM CDT"
+                    ],
+                    "eventMotionDescription": [
+                        "2021-08-28T00:05:00-00:00...storm...105DEG...17KT...30.89,-99.89"
+                    ],
+                    "maxWindGust": [
+                        "40 MPH"
+                    ],
+                    "maxHailSize": [
+                        0.25
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4c69e5ae16a64927f75778612a5dff4e8196d6c.001.1",
             "type": "Feature",
             "geometry": null,
             "properties": {
-                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.28be5c496913970c6f4e05cea37513a94452818b.001.1",
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4c69e5ae16a64927f75778612a5dff4e8196d6c.001.1",
                 "@type": "wx:Alert",
-                "id": "urn:oid:2.49.0.1.840.0.28be5c496913970c6f4e05cea37513a94452818b.001.1",
+                "id": "urn:oid:2.49.0.1.840.0.c4c69e5ae16a64927f75778612a5dff4e8196d6c.001.1",
                 "areaDesc": "Vernon; Rapides; Avoyelles; Beauregard; Allen; Evangeline; St. Landry; Calcasieu; Jefferson Davis; Acadia; Lafayette; Upper St. Martin; Vermilion; Iberia; St. Mary; Lower St. Martin; West Cameron; East Cameron; Tyler; Hardin; Jefferson; Orange; Northern Jasper; Northern Newton; Southern Jasper; Southern Newton",
                 "geocode": {
                     "SAME": [
@@ -101,10 +196,10 @@
                     "https://api.weather.gov/zones/forecast/TXZ262"
                 ],
                 "references": [],
-                "sent": "2021-08-26T23:00:00-05:00",
-                "effective": "2021-08-26T23:00:00-05:00",
-                "onset": "2021-08-26T23:00:00-05:00",
-                "expires": "2021-08-27T07:00:00-05:00",
+                "sent": "2021-08-27T16:51:00-05:00",
+                "effective": "2021-08-27T16:51:00-05:00",
+                "onset": "2021-08-27T16:51:00-05:00",
+                "expires": "2021-08-28T01:00:00-05:00",
                 "ends": null,
                 "status": "Actual",
                 "messageType": "Alert",
@@ -115,8 +210,8 @@
                 "event": "Tropical Cyclone Statement",
                 "sender": "w-nws.webmaster@noaa.gov",
                 "senderName": "NWS Lake Charles LA",
-                "headline": "Tropical Cyclone Statement issued August 26 at 11:00PM CDT by NWS Lake Charles LA",
-                "description": "This product covers Southwest Louisiana and Southeast Texas\n\n**HURRICANE WATCHES HAVE BEEN ISSUED FOR PORTIONS OF THE NORTHERN\nGULF COAST**\n\nNEW INFORMATION\n---------------\n\n* CHANGES TO WATCHES AND WARNINGS:\n- A Storm Surge Watch and Hurricane Watch have been issued for\nEast Cameron, Iberia, St. Mary, and Vermilion\n- A Storm Surge Watch has been issued for Lower St. Martin and\nWest Cameron\n\n* CURRENT WATCHES AND WARNINGS:\n- A Storm Surge Watch and Hurricane Watch are in effect for East\nCameron, Iberia, St. Mary, and Vermilion\n- A Storm Surge Watch is in effect for Lower St. Martin and West\nCameron\n\n* STORM INFORMATION:\n- About 1110 miles southeast of Cameron LA or about 1020 miles\nsoutheast of Morgan City LA\n- 18.6N 80.5W\n- Storm Intensity 40 mph\n- Movement Northwest or 320 degrees at 12 mph\n\nSITUATION OVERVIEW\n------------------\n\nTropical Storm Ida was located near latitude 18.6 North, longitude 80.5 West.\nIda is moving toward the northwest near 12 mph and this general motion should\ncontinue over the next few days.  On the forecast track, the center of Ida will\npass near or over the Cayman Islands during the next few hours, the Isle of Youth\nand western Cuba Friday, and over the southeastern and central Gulf of Mexico Friday\nnight and Saturday. It is expected to make landfall as a strong hurricane on the northern\nGulf Coast Sunday and will bring life-threatening storm surge flooding, damaging winds,\nand flash flooding to portions of south central and central Louisiana. Conditions are\ncurrently expected to deteriorate overnight Saturday into Sunday, so all residents should\ntake Friday and Saturday to prepare for this storm. Remember, if your\nlocal officials order an evacuation, you need to leave!\n\nPOTENTIAL IMPACTS\n-----------------\n\n* WIND:\nPrepare for life-threatening wind having possible extensive impacts\nacross south central Louisiana. Potential impacts in this area\ninclude:\n- Considerable roof damage to sturdy buildings, with some having\nwindow, door, and garage door failures leading to structural\ndamage. Mobile homes severely damaged, with some destroyed.\nDamage accentuated by airborne projectiles. Locations may be\nuninhabitable for weeks.\n- Many large trees snapped or uprooted along with fences and\nroadway signs blown over.\n- Some roads impassable from large debris, and more within urban\nor heavily wooded places. Several bridges and access routes\nimpassable.\n- Large areas with power and communications outages.\n\nAlso, prepare for dangerous wind having possible limited to\nsignificant impacts across southwest and central Louisiana.\n\n* SURGE:\nPrepare for life-threatening surge having possible significant\nimpacts across coastal south central Louisiana. Potential impacts in\nthis area include:\n- Areas of inundation with storm surge flooding accentuated by\nwaves. Damage to non-elevated structures is possible.\n- Sections of escape routes and secondary roads become weakened\nor washed out, especially in usually vulnerable low spots.\n- Major beach erosion with heavy surf breaching dunes. Strong and\nnumerous rip currents.\n- Moderate damage to marinas, docks, and piers. Several small\ncraft broken away from moorings, especially in unprotected\nanchorages.\n\nAlso, prepare for locally hazardous surge having possible limited\nimpacts across coastal southwest Louisiana.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\n* FLOODING RAIN:\nPrepare for dangerous rainfall flooding having possible significant\nimpacts across south central Louisiana. Potential impacts\ninclude:\n- Moderate rainfall flooding may prompt several evacuations and\nrescues.\n- Rivers and tributaries may quickly become swollen with swifter\ncurrents and overspill their banks in a few places, especially\nin usually vulnerable spots. Small streams, creeks, canals, and\nditches overflow.\n- Flood waters can enter some structures or weaken foundations.\nSeveral places may experience expanded areas of rapid\ninundation at underpasses, low-lying spots, and poor drainage\nareas. Some streets and parking lots take on moving water as\nstorm drains and retention ponds overflow. Driving conditions\nbecome hazardous. Some road and bridge closures.\n\nPrepare for locally hazardous rainfall flooding having possible\nlimited impacts across southwest Louisiana.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\n* TORNADOES:\nPrepare for a tornado event having possible limited impacts across south\ncentral Louisiana. Potential impacts include:\n- The occurrence of isolated tornadoes can hinder the execution\nof emergency plans during tropical events.\n- A few places may experience tornado damage, along with power\nand communications disruptions.\n- Locations could realize roofs peeled off buildings, chimneys\ntoppled, mobile homes pushed off foundations or overturned,\nlarge tree tops and branches snapped off, shallow-rooted trees\nknocked over, moving vehicles blown off roads, and small boats\npulled from moorings.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\nPRECAUTIONARY/PREPAREDNESS ACTIONS\n----------------------------------\n\n* EVACUATIONS:\nListen to local official for recommended\npreparedness actions, including possible evacuation. If ordered to\nevacuate, do so immediately.\n\nIf evacuating, leave with a destination in mind and allow extra time\nto get there. Take your emergency supplies kit. Gas up your vehicle\nahead of time.\n\n* OTHER PREPAREDNESS INFORMATION:\nNow is the time to check your emergency plan and emergency supplies\nkit and take necessary actions to protect your family and secure your\nhome or business.\n\nWhen making safety and preparedness decisions, do not focus on the\nexact forecast track since hazards such as flooding rain, damaging\nwind gusts, storm surge, and tornadoes extend well away from the\ncenter of the storm.\n\n* ADDITIONAL SOURCES OF INFORMATION:\n- For information on appropriate preparations see ready.gov\n- For information on creating an emergency plan see getagameplan.org\n- For additional disaster preparedness information see redcross.org\n\nNEXT UPDATE\n-----------\n\nThe next local statement will be issued by the National Weather\nService in Lake Charles LA around 5 AM CDT, or sooner if conditions\nwarrant.",
+                "headline": "Tropical Cyclone Statement issued August 27 at 4:51PM CDT by NWS Lake Charles LA",
+                "description": "This product covers Southwest Louisiana and Southeast Texas\n\n**CENTER OF IDA APPROACHING WESTERN CUBA**\n\nNEW INFORMATION\n---------------\n\n* CHANGES TO WATCHES AND WARNINGS:\n- The Hurricane Watch has been upgraded to a Tropical Storm\nWarning for Jefferson Davis\n- The Hurricane Watch has been upgraded to a Hurricane Warning\nand the Storm Surge Watch has been upgraded to a Storm Surge\nWarning for Iberia, Lower St. Martin, St. Mary, and Vermilion\n- The Tropical Storm Watch has been upgraded to a Tropical Storm\nWarning for Allen, Beauregard, Calcasieu, Rapides, and Vernon\n- The Hurricane Watch has been upgraded to a Hurricane Warning\nfor Acadia, Avoyelles, Evangeline, Lafayette, St. Landry, and\nUpper St. Martin\n- A Tropical Storm Warning has been issued for East Cameron\n\n* CURRENT WATCHES AND WARNINGS:\n- A Tropical Storm Warning is in effect for Allen, Beauregard,\nCalcasieu, Jefferson Davis, Rapides, and Vernon\n- A Storm Surge Warning and Hurricane Warning are in effect for\nIberia, Lower St. Martin, St. Mary, and Vermilion\n- A Storm Surge Watch is in effect for West Cameron\n- A Hurricane Warning is in effect for Acadia, Avoyelles,\nEvangeline, Lafayette, St. Landry, and Upper St. Martin\n- A Tropical Storm Warning, Storm Surge Watch, and Hurricane\nWatch are in effect for East Cameron\n\n* STORM INFORMATION:\n- About 820 miles southeast of Cameron LA or about 720 miles\nsoutheast of Morgan City LA\n- 22.1N 83.2W\n- Storm Intensity 80 mph\n- Movement Northwest or 320 degrees at 15 mph\n\nSITUATION OVERVIEW\n------------------\nHurricane Ida was located near Cuba. Ida is moving toward the\nnorthwest near 15 mph and this general motion should continue over the\nnext few days. On the forecast track, the center of Ida will move\nacross western Cuba today, and over the southeastern and\ncentral Gulf of Mexico tonight and Saturday. The system is forecast to\napproach the U.S. northern Gulf coast on Sunday as a Major hurricane.\n\n\nPOTENTIAL IMPACTS\n-----------------\n\n* WIND:\nProtect against life-threatening wind having possible devastating\nimpacts across south central and east central Louisianan. Potential\nimpacts in this area include:\n- Structural damage to sturdy buildings, some with complete roof\nand wall failures. Complete destruction of mobile homes. Damage\ngreatly accentuated by large airborne projectiles. Locations\nmay be uninhabitable for weeks or months.\n- Numerous large trees snapped or uprooted along with fences and\nroadway signs blown over.\n- Many roads impassable from large debris, and more within urban\nor heavily wooded places. Many bridges and access routes\nimpassable.\n- Widespread power and communications outages.\n\nAlso, protect against life-threatening wind having possible limited\nto extensive impacts across elsewhere across the remainder of southwest\nand central Louisiana.\n\n* SURGE:\nProtect against life-threatening surge having possible extensive\nimpacts across from Pecan Island around Vermilion Bay and Atchafalaya\nBay Potential impacts in this area include:\n- Large areas of deep inundation with storm surge flooding\naccentuated by battering waves. Structural damage to buildings,\nwith several washing away. Damage compounded by floating\ndebris. Locations may be uninhabitable for an extended period.\n- Large sections of escape routes and secondary roads washed out\nor severely flooded. Flood control systems and barriers may\nbecome stressed.\n- Severe beach erosion with significant dune loss.\n- Major damage to marinas, docks, and piers. Many small craft\nbroken away from moorings, especially in unprotected anchorages\nwith some lifted onshore and stranded.\n\nAlso, protect against life-threatening surge having possible\nsignificant impacts across Cameron Vermimilion Parish line to Pecan Island.\n\nAlso, protect against locally hazardous surge having possible limited\nimpacts across Cameron Parish.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\n* FLOODING RAIN:\nProtect against life-threatening rainfall flooding having possible\nextensive impacts across . Potential\nimpacts include:\n- Major rainfall flooding may prompt many evacuations and rescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, and ditches may\nbecome dangerous rivers. Flood control systems and barriers may\nbecome stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or washed\naway. Many places where flood waters may cover escape routes.\nStreets and parking lots become rivers of moving water with\nunderpasses submerged. Driving conditions become dangerous.\nMany road and bridge closures with some weakened or washed out.\n\nProtect against dangerous rainfall flooding having possible limited\nto significant impacts across South Central Louisiana.\n\n* TORNADOES:\nProtect against a tornado event having possible limited impacts\nacross East Central and South Central Louisiana. Potential impacts\ninclude:\n- The occurrence of isolated tornadoes can hinder the execution\nof emergency plans during tropical events.\n- A few places may experience tornado damage, along with power\nand communications disruptions.\n- Locations could realize roofs peeled off buildings, chimneys\ntoppled, mobile homes pushed off foundations or overturned,\nlarge tree tops and branches snapped off, shallow-rooted trees\nknocked over, moving vehicles blown off roads, and small boats\npulled from moorings.\n\nElsewhere across Southwest Louisiana and Southeast Texas, little to\nno impact is anticipated.\n\nPRECAUTIONARY/PREPAREDNESS ACTIONS\n----------------------------------\n\n* EVACUATIONS:\nListen to local official for recommended preparedness actions,\nincluding possible evacuation. If ordered to evacuate, do so\nimmediately.\n\nIf evacuating, leave with a destination in mind\nand allow extra time to get there. Take your emergency supplies kit.\nGas up your vehicle ahead of time.\n\n\n\nOTHER PREPAREDNESS INFORMATION:\nNow is the time to complete all preparations to protect life and\nproperty in accordance with your emergency plan. Ensure you are in a\nsafe location before the onset of strong winds or possible flooding.\n\nIf you are relocating to safe shelter, leave as early as possible.\nAllow extra time to reach your destination. Many roads and bridges\nwill be closed once strong winds arrive. Check the latest weather\nforecast before departing and drive with caution.\n\nFailure to adequately shelter may result in serious injury or loss of\nlife. Always heed the advice of local officials and comply with any\norders that are issued. Remember, during the storm 9 1 1 Emergency\nServices may not be able to immediately respond if conditions are\nunsafe. This should be a big factor in your decision making.\n\nKeep cell phones well charged. Cell phone chargers for automobiles\ncan be helpful, but be aware of your risk for deadly carbon monoxide\npoisoning if your car is left idling in a garage or other poorly\nventilated area.\n\nIt is important to remain calm, informed, and focused during an\nemergency. Be patient and helpful with those you encounter.\n\nStorm surge is the leading killer associated with tropical storms and\nhurricanes! Make sure you are in a safe area away from the surge\nzone. Even if you are not in a surge-prone area, you could find\nyourself cutoff by flood waters during and after the storm. Heed\nevacuation orders issued by the local authorities.\n\nIf in a place that is vulnerable to high wind, such as near large\ntrees, a manufactured home, upper floors of a high-rise building, or\non a boat, consider moving to a safer shelter before the onset of\nstrong winds or flooding.\n\nClosely monitor weather.gov, NOAA Weather radio or local news outlets\nfor official storm information. Be ready to adapt to possible changes\nto the forecast. Ensure you have multiple ways to receive weather\nwarnings.\n\n* ADDITIONAL SOURCES OF INFORMATION:\n- For information on appropriate preparations see ready.gov\n- For information on creating an emergency plan see getagameplan.org\n- For additional disaster preparedness information see redcross.org\n\nNEXT UPDATE\n-----------\n\nThe next local statement will be issued by the National Weather\nService in Lake Charles LA around 1030 PM CDT, or sooner if\nconditions warrant.",
                 "instruction": null,
                 "response": "Monitor",
                 "parameters": {
@@ -124,7 +219,7 @@
                         "LCHHLSLCH"
                     ],
                     "NWSheadline": [
-                        "HURRICANE WATCHES HAVE BEEN ISSUED FOR PORTIONS OF THE NORTHERN\nGULF COAST"
+                        "CENTER OF IDA APPROACHING WESTERN CUBA"
                     ],
                     "BLOCKCHANNEL": [
                         "EAS",
@@ -139,5 +234,5 @@
         }
     ],
     "title": "current watches, warnings, and advisories for Texas",
-    "updated": "2021-08-27T04:01:14+00:00"
+    "updated": "2021-08-28T00:06:37+00:00"
 }
