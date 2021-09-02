@@ -13,6 +13,14 @@ import math
 import pandas as pd
 import json
 import smtplib, ssl
+import matplotlib.pyplot as plt
+
+from timezonefinder import TimezoneFinder
+from geopy.geocoders import Nominatim # pip install geopy
+
+import pytz
+from pytz import timezone
+import datetime
 
 # ------------------------------ CONSTANTS ---------------------------------------
 WELCOME_MSG = 'Welcome to NOAA Weather API Collection.'
@@ -32,18 +40,120 @@ print('Todays date is ' + str(date.today()))
 time.sleep(1)
 
 # ------------------------------- METHODS ------------------------------------------
-"""
-How to find the distance between two lat-long coordinates in Python
-Finding the distance between two latitude-longitude coordinates involves using the Haversine Formula. This formula takes the curvature of the Earth into consideration, which is why it is significantly more accurate than the traditional distance formula.
-
-USE THE HAVERSINE FORMULA
-The Haversine formula calculates the great-circle distance between two points. Start by calculating the change in latitude and longitude, in radians, and input the result into the Haversine formula (implemented below). Use the functions in the math library for trigonometry related calculations.
-
-Reference:  https://www.kite.com/python/answers/how-to-find-the-distance-between-two-lat-long-coordinates-in-python
-
 
 """
+import pytz
+example timzone is ('Europe/Madrid')
+pytz timezone objects obey tzinfo API specification defined in the datetime module. Therefore you can use their .utcoffset() and .dst() methods:  timestamp = datetime(2009, 1, 1)  # any unambiguous timestamp will work here
+"""
 
+def get_timezone_list():
+    print('the supported timezones by the pytz module:', pytz.all_timezones, '\n')
+    timezones = json.dumps(pytz.all_timezones)
+    return timezones
+
+get_timezone_list()    
+  
+quit()
+    
+def getOffset(tzn):
+    # print (datetime.datetime.now(pytz.timezone("US/Pacific")).strftime('%z'))
+
+    print(tzn)
+    utc_timestamp = time.time()
+    tz = timezone(tzn)
+    print ('timezone is ',tz) 
+    print(utc_timestamp)
+    tzo = datetime.datetime.now(pytz.timezone("US/Pacific")).strftime('%z')
+    print ('offset is ', datetime.datetime.now(pytz.timezone("US/Pacific")).strftime('%z'))
+
+    # print(tz.utcoffset(utc_timestamp))
+    return tzo, tzn
+
+tzn = "America/Chicago"
+tzo, tzn = getOffset(tzn)
+print (f'timezone offset for {tzn} is {tzo}')
+    
+def solunar(lat, lon, utc_timestamp, tz):
+    if (utc_timestamp == ''):
+        # utc = datetime.utcnow()
+        # dt = datetime.now(timezone.utc)
+        # utc_time = dt.replace(tzinfo=timezone.utc)
+        # utc_timestamp = utc_time.timestamp()
+        utc_timestamp = time.time()
+    if tz == '':
+        tz = -6
+  
+    url = 'https://api.solunar.org/solunar/' + str(lat) + ',' + str(lon) + ',' + str(utc_timestamp) + ',' + str(tz)
+    url2 = 'http://api.solunar.org/solunar/' + str(lat) + ',' + str(lon) + ',' + str(utc_timestamp) + ',' + str(tz)
+    print(url)
+
+    try:
+        print(url)
+        r = requests.get(url)
+        print(r.status)
+        jsonobj = r.json()
+        if (r.status != 200):
+            print("retrying connection to " + url)
+            time.sleep(2)
+            solunar(lat, lon, utc_timestamp, tz)
+    except Exception as e:  # if https: request fails try http:
+        print(e)
+        r = requests.get(url2)
+        print(r.status_code)
+        jsonobj = r.json()
+
+    # return jsonobj
+    return r.text
+
+lat = 30.266666
+lon =  -97.733330
+lat = 32.715736
+lon = -117.161087
+utc = ''
+timez = -6
+
+# https://api.solunar.org/solunar/42.66,-84.07,20180207,-4
+
+# mine https://api.solunar.org/solunar/32.715736,-117.161087,2021-09-01 03:38:12.904414,-6
+# mine https://api.solunar.org/solunar/32.715736,-117.161087,20180207,-6
+
+ret = solunar(lat, lon, utc, timez)
+print(ret)
+   
+def get_timezone_data(lad): # initialize Nominatim API.  in: location address   out: lat,lon,time zone.  
+    geolocator = Nominatim(user_agent="geoapiExercises")
+    # input location addresss
+    lad = "Dhaka"
+    print("Location address:", lad)
+      
+    # getting Latitude and Longitude 
+    location = geolocator.geocode(lad)
+      
+    print("Latitude and Longitude of the said address:")
+    print((location.latitude, location.longitude))
+    latlon = (location.latitude, location.longitude)
+      
+    """
+    pass the Latitude and Longitude
+    # into a timezone_at
+    # and it return timezone
+    """
+    obj = TimezoneFinder()
+      
+    # returns 'Europe/Berlin'
+    tz = obj.timezone_at(lng=location.longitude, lat=location.latitude)
+    data = json.dumps({'location':lad, 'lat':location.latitude, 'lon':location.longitude, 'tz':tz})
+    
+    return lad, latlon, tz, data
+    
+
+lad = 'Dhaka'
+lad, latlon, tz, data = get_timezone_data(lad)
+print(lad, latlon, tz)
+print (data)
+
+quit()
 
 def sendmail(receiver_email):  # must change google account to allow less secure apps ON in google email account setup
     sender_email = "wwcdevtest@gmail.com"
@@ -101,6 +211,16 @@ if (CONST_SENDMAIL == True):
 
 """
 
+"""
+How to find the distance between two lat-long coordinates in Python
+Finding the distance between two latitude-longitude coordinates involves using the Haversine Formula. This formula takes the curvature of the Earth into consideration, which is why it is significantly more accurate than the traditional distance formula.
+
+USE THE HAVERSINE FORMULA
+The Haversine formula calculates the great-circle distance between two points. Start by calculating the change in latitude and longitude, in radians, and input the result into the Haversine formula (implemented below). Use the functions in the math library for trigonometry related calculations.
+
+Reference:  https://www.kite.com/python/answers/how-to-find-the-distance-between-two-lat-long-coordinates-in-python
+
+"""
 def calc_distance_between_station_locations(lat,lon,lat2,lon2):
     lat = float(lat)
     lon = float(lon)
@@ -358,7 +478,6 @@ def tide_forecast(stationID, days_out=30):
                 content = r.text
                 print(f".....Writing Tide Prediction content for {stationID} to " + filename)
                 write2file(filename, attrib, content)
-
                 return r.text, jsonobj
             else:
                 print("status=" + str(r.status_code))
@@ -696,13 +815,13 @@ write2file(filename,attrib,content)
 """
 
 # quit()
-# --------------  END METHOD MOVE SECTION --------------------------
+# -------------------------- END METHOD MOVE SECTION --------------------------
 
+
+# ------------------------------ START CODE BLOCK ---------------------------------------
 # Start main code block ....
 def codeblock():
     print('...start codeblock')
-
-# ------------------------------ START CODE BLOCK ---------------------------------------
 
 print('...getting user location input for Weather and Tide information retrieval')
 
@@ -753,21 +872,25 @@ if getpoints(lat,lon) != None:
     print(radarStation,forecastZone,county,fireWeatherZone,timeZone, forecast, forecastHourly)
 
 # now get Tide Forecast -> TBD in progress ->
+
+#  tide_forecast_info<-f:tide_forecast_info()<-station_ID<-f:get_closest_station()<-json obj<-xls<-noaa tide forecast data from website
 if get_closest_station(lat,lon,state) != None:
+    print('...calling get_closest_station to return station_ID ')
+
     station_id, least_distance_loc = get_closest_station(lat,lon,state)
     print(f'returned values from get_closest_station are closest station id {station_id} and data list {least_distance_loc}')
-    print(f"...Geting NOAA Tide Forecast for radarStation {station_id} in {city} {state}")
+
+    print(f"...getting NOAA Tide Forecast for radarStation {station_id} in {city} {state}")
     tide_forecast_info, jsonobj = tide_forecast(station_id,30)
     print(tide_forecast_info) # json text
     print (f"Number of elements in Tide Predictions: {len(jsonobj['predictions'])}")
-    print('...converting JSON obj (dict) to Dataframe')
+
+    print('...converting JSON obj (dict) to normalized Dataframe for JSON element predictions')
     # df = pd.DataFrame.from_dict(jsonobj, orient="index")
     # print(df) # not the result we wanted...
     # Normalizing data
     df = pd.json_normalize(jsonobj, record_path=['predictions']) # this works!
     print(df)
-
-    import matplotlib.pyplot as plt
 
     # convert df columns from string to float so that they can be plotted
     df["v"] = pd.to_numeric(df["v"], downcast="float")
