@@ -24,7 +24,7 @@ isodate==0.6.0
 isort==4.3.4
 keyring==21.3.0
 lazy-object-proxy==1.4.0
-lxml==4.5.2
+lxml==4.6.5
 maxminddb==2.0.2
 mccabe==0.6.1
 multidict==4.7.6
